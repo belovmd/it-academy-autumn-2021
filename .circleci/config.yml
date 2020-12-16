@@ -1,0 +1,39 @@
+version: 2
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-flake8
+      - check-tasks
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+  test-flake8:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run: sudo pip install tox
+      - run: tox -eflake8
+  check-tasks:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install
+            sudo pip install -r requirements.txt
+            mkdir test-results
+      - run:
+          command: |
+            nosetests --with-xunit --xunit-file ./test-results/nose.xml
+      - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: ./test-results
+      - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: test-results
+          destination: tr1
