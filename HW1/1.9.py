@@ -11,4 +11,3 @@ for file_name in sorted(python_files):
             print ('    ' + line.rstrip())
 
     print()
-    
