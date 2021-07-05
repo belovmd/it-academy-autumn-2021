@@ -4,3 +4,4 @@ for test_string in ['555-1212', 'ILL-EGAL']:
         print (test_string, 'is a valid US local phone number')
     else:
         print (test_string, 'rejected')
+        

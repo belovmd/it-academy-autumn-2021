@@ -21,3 +21,4 @@ with open('stocks.csv', 'r') as stocksFile:
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
         print ('%s is %s (%.2f)' % (name, status, float(pct)))
+        

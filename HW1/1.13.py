@@ -11,3 +11,4 @@ class TestMedian(unittest.TestCase):
         self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
 if __name__ == '__main__':
     unittest.main()
+    
