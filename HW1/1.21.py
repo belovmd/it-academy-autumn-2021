@@ -15,8 +15,8 @@ tree = etree.fromstring(dinner_recipe)
 # tree = ElementSoup.parse(StringIO.StringIO(dinner_recipe))
 
 pantry = set(['olive oil', 'pesto'])
+
 for ingredient in tree.getiterator('tr'):
     amt, unit, item = ingredient
     if item.tag == "td" and item.text not in pantry:
         print ("%s: %s %s" % (item.text, amt.text, unit.text))
-        
