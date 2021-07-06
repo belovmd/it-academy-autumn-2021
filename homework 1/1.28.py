@@ -8,7 +8,7 @@ class BailOut(Exception):
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
+        left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
 
@@ -28,5 +28,5 @@ def add_queen(queens):
 
 
 queens = add_queen([])
-print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+print(queens)
+print("\n".join(". " * q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
