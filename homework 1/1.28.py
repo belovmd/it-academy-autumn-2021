@@ -1,7 +1,9 @@
 BOARD_SIZE = 8
 
+
 class BailOut(Exception):
     pass
+
 
 def validate(queens):
     left = right = col = queens[-1]
@@ -9,6 +11,7 @@ def validate(queens):
         left, right = left-1, right+1
         if r in (left, col, right):
             raise BailOut
+
 
 def add_queen(queens):
     for i in range(BOARD_SIZE):
@@ -22,6 +25,7 @@ def add_queen(queens):
         except BailOut:
             pass
     raise BailOut
+
 
 queens = add_queen([])
 print (queens)

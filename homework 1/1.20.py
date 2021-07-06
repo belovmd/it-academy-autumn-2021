@@ -1,5 +1,6 @@
 import itertools
 
+
 def iter_primes():
      # an iterator of all numbers between 2 and +infinity
      numbers = itertools.count(2)
@@ -14,7 +15,8 @@ def iter_primes():
          # filters...slightly tricky, but ponder it a bit
          numbers = filter(prime.__rmod__, numbers)
 
+
 for p in iter_primes():
     if p > 1000:
         break
-    print (p)
+    print(p)
