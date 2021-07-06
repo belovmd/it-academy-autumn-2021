@@ -1,12 +1,12 @@
-import re
-import sys
 import glob
 from time import localtime
+import re
+import sys
+
 
 # 1 line: Output
 print('Hello, world!')
 
-# 2 lines: Input, assignment
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
