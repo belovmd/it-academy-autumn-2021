@@ -1,5 +1,5 @@
-import glob
 from time import localtime
+import glob
 import re
 import sys
 
