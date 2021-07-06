@@ -4,10 +4,10 @@ import glob
 from time import localtime
 
 # 1 line: Output
-print('Hello, world!\n')
+print('Hello, world!')
 
 # 2 lines: Input, assignment
-name = input('What is your name?')
+name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
 # 3 lines: For loop, built-in enumerate function, new style formatting
@@ -34,7 +34,7 @@ greet('Bob')
 
 # 6 lines: Import, regular expressions
 
-for test_string in ['555-1212', 'ILL-EGAL']:
+for test_string in ['555-1212', 'ILL-LEGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
     else:
