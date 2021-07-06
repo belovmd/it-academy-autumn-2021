@@ -1,3 +1,4 @@
+import re
 print('Hello, world!')
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
@@ -17,7 +18,7 @@ def greet(name):
 greet('Jack')
 greet('Jill')
 greet('Bob')
-import re
+
 
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
