@@ -4,6 +4,7 @@ class BailOut(Exception):
     pass
 
 
+
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[: -1]):
@@ -28,4 +29,4 @@ def add_queen(queens):
 
 queens = add_queen([])
 print(queens)
-print("\n".join(". " * q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
+print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))

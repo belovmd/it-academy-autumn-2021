@@ -15,7 +15,9 @@ def solve(n):
     if n == 0:
         return [[]]
 
+
     smaller_solutions = solve(n - 1)
+
 
     return [solution + [(n, i + 1)]
     for i in range(BOARD_SIZE)
@@ -25,4 +27,3 @@ def solve(n):
 
 for answer in solve(BOARD_SIZE):
     print(answer)
-
