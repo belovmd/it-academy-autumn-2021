@@ -10,7 +10,7 @@ This is the second.
 
 for has_chars, frags in groupby(lines, bool):
     if has_chars:
-        print (' '.join(frags))
+        print(' '.join(frags))
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
