@@ -1,5 +1,5 @@
 import glob
-import localtime
+from time import localtime
 import re
 import sys
 print('Hello, world!')
@@ -54,7 +54,6 @@ for file_name in sorted(python_files):
             print('    ' + line.rstrip())
 
     print()
-from time
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
