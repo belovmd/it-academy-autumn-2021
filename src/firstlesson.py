@@ -1,7 +1,7 @@
 import glob
-from time import localtime
 import re
 import sys
+from time import localtime
 print('Hello, world!')
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
