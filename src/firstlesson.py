@@ -1,6 +1,7 @@
+import glob
+import localtime
 import re
 import sys
-import glob
 print('Hello, world!')
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
@@ -53,14 +54,14 @@ for file_name in sorted(python_files):
             print('    ' + line.rstrip())
 
     print()
-from time import localtime
+from time
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
               18: 'Commuting',
               20: 'Eating',
-              22: 'Resting' }
+              22: 'Resting'}
 
 time_now = localtime()
 hour = time_now.tm_hour
@@ -79,6 +80,6 @@ take one down, pass it around,
 '''
 bottles_of_beer = 9
 while bottles_of_beer > 1:
-    print(REFRAIN % (bottles_of_beer, bottles_of_beer,
-        bottles_of_beer - 1))
+    print(REFRAIN %
+          (bottles_of_beer, bottles_of_beer, bottles_of_beer - 1))
     bottles_of_beer -= 1
