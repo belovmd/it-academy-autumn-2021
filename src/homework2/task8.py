@@ -2,7 +2,9 @@
 
 https://py.checkio.org/en/mission/multiply-intro/
 
-Write a function that will receive 2 numbers as input and it should return the multiplication of these 2 numbers.
+Write a function that will receive 2 numbers as input and it should return
+
+the multiplication of these 2 numbers.
 
 Input: Two arguments. Both are of type int
 
@@ -24,12 +26,12 @@ You are given a string and you have to find its first word.
  This is a simplified version of the First Word mission, which can be solved later.
 
     The input string consists of only English letters and spaces.
-    
+
     There aren’t any spaces at the beginning and the end of the string.
 
 Input: A string.
 
-Output: A string.  
+Output: A string.
 
 """
 
@@ -42,9 +44,9 @@ def first_word(text: str) -> str:
 
 https://py.checkio.org/en/mission/acceptable-password-i/
 
- You are at the beginning of a password series. Every mission is based on the previous one. 
- 
- The missions that follow will become slightly more complex.
+You are at the beginning of a password series. Every mission is based on the previous one.
+
+The missions that follow will become slightly more complex.
 
 In this mission, you need to create a password verification function.
 
@@ -54,7 +56,7 @@ The verification condition is:
 
 Input: A string.
 
-Output: A bool. 
+Output: A bool.
 
 """
 
@@ -67,14 +69,16 @@ def is_acceptable_password(password: str) -> bool:
 
 https://www.codewars.com/kata/514b92a657cdc65150000006/python
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
 
 The sum of these multiples is 23.
 
-Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number
 
-    Note: If the number is a multiple of both 3 and 5, only count it once. 
-    
+passed in.
+
+    Note: If the number is a multiple of both 3 and 5, only count it once.
+
     Also, if a number is negative, return 0(for languages that do have them)
 
 """

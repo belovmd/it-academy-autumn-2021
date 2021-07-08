@@ -17,4 +17,4 @@ if __name__ == '__main__':
     if is_triangle(input_a, input_b, input_c):
         print(f"Square is {calc_square_triangle(input_a, input_b, input_c)}")
     else:
-        print(f"It is not triangle")
+        print("It is not triangle")
