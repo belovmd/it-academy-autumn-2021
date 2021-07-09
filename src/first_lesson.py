@@ -13,8 +13,9 @@ while babies < 100:
     parents, babies = (babies, parents + babies)
 
 def greet(name):
-    print('Hello', name)
     
+    print('Hello', name)
+
 greet('Jack')
 greet('Jill')
 greet('Bob')
@@ -54,8 +55,7 @@ for file_name in sorted(python_files):
             print('    ' + line.rstrip())
     print()
 
-from time
-import localtime
+from time import localtime
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
