@@ -1,11 +1,12 @@
 import glob
-import re
-import sys
-from itertools import groupby
-from time import localtime
 import csv
 import itertools
+import re
+import sys
 import unittest
+import xml.etree.ElementTree as etree
+from itertools import groupby
+from time import localtime
 
 # 1 line: Output
 
@@ -29,6 +30,8 @@ parents, babies = (1, 1)
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
+
+
 # 5 lines: Functions
 
 
@@ -113,7 +116,7 @@ take one down, pass it around,
 bottles_of_beer = 9
 while bottles_of_beer > 1:
     print(REFRAIN % (bottles_of_beer, bottles_of_beer,
-          bottles_of_beer - 1))
+                     bottles_of_beer - 1))
     bottles_of_beer -= 1
 
 
@@ -122,18 +125,23 @@ while bottles_of_beer > 1:
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
+
     def deposit(self, amount):
         self.balance += amount
+
     def withdraw(self, amount):
         self.balance -= amount
+
     def overdrawn(self):
         return self.balance < 0
+
 
 my_account = BankAccount(15)
 
 my_account.withdraw(50)
 
 print(my_account.balance, my_account.overdrawn())
+
 
 # 13 lines: Unit testing with unittest
 
@@ -143,60 +151,62 @@ def median(pool):
     if size % 2 == 1:
         return copy[int((size - 1) / 2)]
     else:
-        return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+        return (copy[int(size / 2 - 1)] + copy[int(size / 2)]) / 2
+
 
 class TestMedian(unittest.TestCase):
     def testMedian(self):
         self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
 
+
 if __name__ == '__main__':
     unittest.main()
+
 
 # 14 lines: Doctest-based testing
 
 
 def median(pool):
-    '''Statistical median to demonstrate doctest.
+    """Statistical median to demonstrate doctest.
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
-    6 #change to 7 in order to pass the test
-    '''
+    6 #change to 7 in order to pass the test"""
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
         return copy[int((size - 1) / 2)]
     else:
-        return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+        return (copy[int(size / 2 - 1)] + copy[int(size / 2)]) / 2
+
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()
 
 # 15 lines: itertools
 
 
+lines = '''This is the first paragraph.
+This is thimport xml.etree.
+ElementTree as etreee second.'''.splitlines()
 
-lines = '''
-This is the
-first paragraph.
-
-This is the second.
-'''.splitlines()
 # Use itertools.groupby and bool to return groups of
 # consecutive lines that either have content or don't.
 for has_chars, frags in groupby(lines, bool):
     if has_chars:
-        print (' '.join(frags))
+        print(' '.join(frags))
+
+
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
 # 16 lines: csv module, tuple unpacking, cmp() built-in
 
 
-
-
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
+
 
 # write stocks data as comma-separated values
 with open('stocks.csv', 'w', newline='') as stocksFileW:
@@ -214,11 +224,12 @@ with open('stocks.csv', 'r') as stocksFile:
     status_labels = {-1: 'down', 0: 'unchanged', 1: 'up'}
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
-        print ('%s is %s (%.2f)' % (name, status, float(pct)))
+        print('%s is %s (%.2f)' % (name, status, float(pct)))
 # 18 lines: 8-Queens Problem (recursion)
 
 
 BOARD_SIZE = 8
+
 
 def under_attack(col, queens):
     left = right = col
@@ -230,16 +241,19 @@ def under_attack(col, queens):
             return True
     return False
 
+
 def solve(n):
     if n == 0:
         return [[]]
 
     smaller_solutions = solve(n - 1)
 
-    return [solution+[(n,i+1)]
-        for i in range(BOARD_SIZE)
+    return [solution + [(n, i + 1)]
+
+            for i in range(BOARD_SIZE)
             for solution in smaller_solutions
-                if not under_attack(i+1, solution)]
+            if not under_attack(i + 1, solution)]
+
 
 for answer in solve(BOARD_SIZE):
     print(answer)
@@ -248,24 +262,24 @@ for answer in solve(BOARD_SIZE):
 # 20 lines: Prime numbers sieve w/fancy generators
 
 def iter_primes():
-     # an iterator of all numbers between 2 and +infinity
-     numbers = itertools.count(2)
+    # an iterator of all numbers between 2 and +infinity
+    numbers = itertools.count(2)
 
-     # generate primes forever
-     while True:
-         # get the first number from the iterator (always a prime)
-         prime = next(numbers)
-         yield prime
+    # generate primes forever
+    while True:
+        # get the first number from the iterator (always a prime)
+        prime = next(numbers)
+        yield prime
 
-         # this code iteratively builds up a chain of
-         # filters...slightly tricky, but ponder it a bit
-         numbers = filter(prime.__rmod__, numbers)
+        # this code iteratively builds up a chain of
+        # filters...slightly tricky, but ponder it a bit
+        numbers = filter(prime.__rmod__, numbers)
+
 
 for p in iter_primes():
     if p > 1000:
         break
     print(p)
-
 
 # 21 lines: XML/HTML parsing
 
@@ -279,7 +293,7 @@ dinner_recipe = '''<html><body><table>
 </table></body></html>'''
 
 # From http://effbot.org/zone/element-index.htm
-import xml.etree.ElementTree as etree
+
 tree = etree.fromstring(dinner_recipe)
 
 # For invalid HTML use http://effbot.org/zone/element-soup.htm
@@ -296,15 +310,18 @@ for ingredient in tree.getiterator('tr'):
 
 BOARD_SIZE = 8
 
+
 class BailOut(Exception):
     pass
+
 
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
+        left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
+
 
 def add_queen(queens):
     for i in range(BOARD_SIZE):
@@ -319,9 +336,10 @@ def add_queen(queens):
             pass
     raise BailOut
 
+
 queens = add_queen([])
-print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+print(queens)
+print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 # 33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com
 
 
