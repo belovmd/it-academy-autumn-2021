@@ -1,12 +1,11 @@
+import glob
 import re
 import sys
-import glob
-from time import localtime
-import unittest
 from itertools import groupby
+from time import localtime
 import csv
 import itertools
-
+import unittest
 
 # 1 line: Output
 
@@ -129,12 +128,14 @@ class BankAccount(object):
         self.balance -= amount
     def overdrawn(self):
         return self.balance < 0
+
 my_account = BankAccount(15)
+
 my_account.withdraw(50)
+
 print(my_account.balance, my_account.overdrawn())
+
 # 13 lines: Unit testing with unittest
-
-
 
 def median(pool):
     copy = sorted(pool)
