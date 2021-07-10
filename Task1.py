@@ -91,7 +91,7 @@ activities = {8: 'Sleeping',
               17: 'Working',
               18: 'Commuting',
               20: 'Eating',
-              22: 'Resting' }
+              22: 'Resting'}
 
 time_now = localtime()
 hour = time_now.tm_hour
@@ -102,7 +102,7 @@ for activity_time in sorted(activities.keys()):
         break
 else:
     print('Unknown, AFK or sleeping!')
-#11 lines: Triple-quoted strings, while loop
+# 11 lines: Triple-quoted strings, while loop
 
 
 REFRAIN = '''
@@ -114,7 +114,7 @@ take one down, pass it around,
 bottles_of_beer = 9
 while bottles_of_beer > 1:
     print(REFRAIN % (bottles_of_beer, bottles_of_beer,
-        bottles_of_beer - 1))
+          bottles_of_beer - 1))
     bottles_of_beer -= 1
 
 
