@@ -12,8 +12,9 @@ while babies < 100:
 
 
 def greet(name):
-    print ('Hello', name)
+    print('Hello', name)
 
+    
 greet('Jack')
 greet('Jill')
 greet('Bob')
@@ -80,7 +81,6 @@ except ValueError:
                 print(REFRAIN % (bottles_of_beer, bottles_of_beer,
                                  bottles_of_beer - 1))
                 bottles_of_beer -= 1
-
 
     class BankAccount(object):
         def __init__(self, initial_balance=0):
