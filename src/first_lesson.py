@@ -1,3 +1,8 @@
+import glob
+import re
+import sys
+from time import localtime
+
 print('Hello, world!')
 
 name = input('What is your name?\n')
@@ -12,15 +17,15 @@ while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
+
 def greet(name):
-    
     print('Hello', name)
+
 
 greet('Jack')
 greet('Jill')
 greet('Bob')
 
-import re
 
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
@@ -37,7 +42,7 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
 print('I owe the grocer $%.2f' % grocery_bill)
 
 # This program adds up integers that have been passed as arguments in the command line
-import sys
+
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
     print('sum =', total)
@@ -45,7 +50,7 @@ except ValueError:
     print('Please supply integer arguments')
 
 # indent your Python code to put into an email
-import glob
+
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
 for file_name in sorted(python_files):
@@ -54,8 +59,6 @@ for file_name in sorted(python_files):
         for line in f:
             print('    ' + line.rstrip())
     print()
-
-from time import localtime
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
