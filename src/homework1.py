@@ -1,9 +1,10 @@
 import glob
 import re
 import sys
+import unittest
 from itertools import groupby
 from time import localtime
-import unittest
+
 
 # 1 line: Output
 print('Hello, world!')
