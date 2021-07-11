@@ -11,11 +11,11 @@ while babies < 100:
     parents, babies = (babies, parents + babies)
 
 
-    def greet(imia):
+def greet(imia):
         print('Hello', imia)
 
 
-    greet('Jack')
+greet('Jack')
     greet('Jill')
     greet('Bob')
     import re
@@ -83,20 +83,20 @@ except ValueError:
                 bottles_of_beer -= 1
 
 
-                class BankAccount(object):
-                    def __init__(self, initial_balance=0):
-                        self.balance = initial_balance
+class BankAccount(object):
+    def __init__(self, initial_balance=0):
+    self.balance = initial_balance
 
-                    def deposit(self, amount):
-                        self.balance += amount
+    def deposit(self, amount):
+    self.balance += amount
 
-                    def withdraw(self, amount):
-                        self.balance -= amount
+    def withdraw(self, amount):
+    self.balance -= amount
 
-                    def overdrawn(self):
-                        return self.balance < 0
+    def overdrawn(self):
+    return self.balance < 0
 
 
-                my_account = BankAccount(15)
-                my_account.withdraw(50)
-                print(my_account.balance, my_account.overdrawn())
+my_account = BankAccount(15)
+my_account.withdraw(50)
+print(my_account.balance, my_account.overdrawn())
