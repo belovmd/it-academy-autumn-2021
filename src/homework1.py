@@ -12,12 +12,12 @@ while babies < 100:
 
 
 def greet(imia):
-        print('Hello', imia)
+    print('Hello', imia)
 
 
 greet('Jack')
-    greet('Jill')
-    greet('Bob')
+greet('Jill')
+greet('Bob')
     import re
 
     for test_string in ['555-1212', 'ILL-EGAL']:
@@ -86,10 +86,13 @@ except ValueError:
         class BankAccount(object):
             def __init__(self, initial_balance=0):
                 self.balance = initial_balance
+                
             def deposit(self, amount):
                 self.balance += amount
+                
             def withdraw(self, amount):
                 self.balance -= amount
+                
             def overdrawn(self):
                 return self.balance < 0
         my_account = BankAccount(15)
