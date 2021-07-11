@@ -17,15 +17,15 @@ def count():
                 data[keylist[i]] = number
                 i = i + 1
                 break
-            except:
+            except ValueError:
                 print("Введите целое число!")
                 continue
 
     print(data)
 
     summa = data['quantity'] * data['rubles'] + \
-            (data['quantity'] * data['centimes']) // 100 + \
-            (data['quantity'] * data['centimes'] % 100) / 100
+        (data['quantity'] * data['centimes']) // 100 + \
+        (data['quantity'] * data['centimes'] % 100) / 100
     print("Цена партии товара %.f рублей" % summa)
 
 
