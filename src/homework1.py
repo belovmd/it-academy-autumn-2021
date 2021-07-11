@@ -1,6 +1,7 @@
 import glob
 import re
 import sys
+from itertools import groupby
 from time import localtime
 import unittest
 
@@ -172,7 +173,6 @@ if __name__ == '__main__':
 
 
 # 15 lines: itertools
-from itertools import groupby
 lines = '''
 This is the
 first paragraph.
