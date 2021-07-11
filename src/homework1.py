@@ -43,7 +43,7 @@ for test_string in ['555-1212', 'ILL-EGAL']:
     else:
         print(test_string, 'rejected')
 
-        
+    
 # 7 lines: Dictionaries, generator expressions
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
@@ -95,7 +95,7 @@ for activity_time in sorted(activities.keys()):
 else:
     print('Unknown, AFK or sleeping!')
 
-    
+ 
 # 11 lines: Triple-quoted strings, while loop
 REFRAIN = '''
 %d bottles of beer on the wall,
@@ -147,11 +147,12 @@ class TestMedian(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+
 # 14 lines: Doctest-based testing
 def median2(pool):
 
-    
-    """Statistical median to demonstrate doctest.
+  
+"""Statistical median to demonstrate doctest.
 >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
 6 #change to 7 in order to pass the test"""
 
