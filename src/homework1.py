@@ -1,7 +1,7 @@
 import glob
+from itertools import groupby
 import re
 import sys
-from itertools import groupby
 from time import localtime
 import unittest
 
