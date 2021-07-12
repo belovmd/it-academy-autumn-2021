@@ -71,9 +71,10 @@ class BailOut(Exception):
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
+        left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
+
 
 def add_queen(queens):
     for i in range(BOARD_SIZE):
@@ -88,9 +89,10 @@ def add_queen(queens):
             pass
     raise BailOut
 
+
 queens = add_queen([])
 print(queens)
-print("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+print("\n".join(". " * q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
 
 from itertools import groupby
 lines = '''
@@ -103,7 +105,7 @@ This is the second.
 # consecutive lines that either have content or don't.
 for has_chars, frags in groupby(lines, bool):
     if has_chars:
-        print (' '.join(frags))
+        print(' '.join(frags))
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
