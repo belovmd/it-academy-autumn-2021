@@ -105,13 +105,8 @@ for has_chars, frags in groupby(lines, bool):
 queens = add_queen([])
 print(queens)
 print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
-
-
-
-
 # Use itertools.groupby and bool to return groups of
 # consecutive lines that either have content or don't.
-
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
