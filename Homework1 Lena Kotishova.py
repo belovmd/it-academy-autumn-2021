@@ -35,8 +35,8 @@ greet('Jack')
 greet('Jill')
 greet('Bob')
 """task 6"""
-import re
 for test_string in ['555-1212', 'ILL-EGAL']:
+    import re
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
     else:
@@ -57,31 +57,29 @@ try:
     print('sum =', total)
 
 except ValueError:
-    print ('Please supply integer arguments')
+    print('Please supply integer arguments')
 """task 9"""
 # indent your Python code to put into an email
-import glob
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
+import glob
 for file_name in sorted(python_files):
-    print ('    ------' + file_name)
+    print('    ------' + file_name)
 
     with open(file_name) as f:
         for line in f:
-            print ('    ' + line.rstrip())
+            print('    ' + line.rstrip())
 
     print()
 """task 10"""
-from time import localtime
+
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
               18: 'Commuting',
               20: 'Eating',
-              22: 'Resting' }
-
+              22: 'Resting'}
+from time import localtime
 time_now = localtime()
 hour = time_now.tm_hour
-
-
