@@ -58,29 +58,50 @@ try:
 
 except ValueError:
     print('Please supply integer arguments')
-"""task 9"""
-import glob
-python_files = glob.glob('*.py')
-# indent your Python code to put into an email
-# glob supports Unix style pathname extensions
-for file_name in sorted(python_files):
-    print('    ------' + file_name)
-    with open(file_name) as f:
-        for line in f:
-            print('    ' + line.rstrip())
-
-    print()
 
 """task 10"""
 
-from time import localtime
-time_now = localtime()
-hour = time_now.tm_hour
+BOARD_SIZE = 8
 
-activities = {8: 'Sleeping',
-              9: 'Commuting',
-              17: 'Working',
-              18: 'Commuting',
-              20: 'Eating',
-              22: 'Resting'
-              }
+class BailOut(Exception):
+    pass
+
+def validate(queens):
+    left = right = col = queens[-1]
+    for r in reversed(queens[:-1]):
+        left, right = left-1, right+1
+        if r in (left, col, right):
+            raise BailOut
+
+def add_queen(queens):
+    for i in range(BOARD_SIZE):
+        test_queens = queens + [i]
+        try:
+            validate(test_queens)
+            if len(test_queens) == BOARD_SIZE:
+                return test_queens
+            else:
+                return add_queen(test_queens)
+        except BailOut:
+            pass
+    raise BailOut
+
+queens = add_queen([])
+print (queens)
+print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+
+from itertools import groupby
+lines = '''
+This is the
+first paragraph.
+
+This is the second.
+'''.splitlines()
+# Use itertools.groupby and bool to return groups of
+# consecutive lines that either have content or don't.
+for has_chars, frags in groupby(lines, bool):
+    if has_chars:
+        print (' '.join(frags))
+# PRINTS:
+# This is the first paragraph.
+# This is the second.
