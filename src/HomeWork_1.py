@@ -34,5 +34,3 @@ def greet(name1):
 greet('Jack')
 greet('Jill')
 greet('Bob')
-
-
