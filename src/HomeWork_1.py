@@ -1,3 +1,11 @@
+# 6 lines: Import, regular expressions
+import re
+for test_string in ['555-1212', 'ILLEGAL']:
+    if re.match(r'^\d{3}-\d{4}$', test_string):
+        print(test_string, 'is a valid US local phone number')
+    else:
+        print(test_string, 'rejected')
+
 # 1 line: Output
 print('Hello, world!')
 
@@ -27,10 +35,4 @@ greet('Jack')
 greet('Jill')
 greet('Bob')
 
-# 6 lines: Import, regular expressions
-import re
-for test_string in ['555-1212', 'ILLEGAL']:
-    if re.match(r'^\d{3}-\d{4}$', test_string):
-        print(test_string, 'is a valid US local phone number')
-    else:
-        print(test_string, 'rejected')
+
