@@ -36,6 +36,8 @@ while babies < 100:
 
 
 """task 5"""
+
+
 def greet(name):
     print('Hello', name)
 
