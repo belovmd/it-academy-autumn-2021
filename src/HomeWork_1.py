@@ -30,7 +30,7 @@ while babies < 100:
 def greet(name1):
     print('Hello', name1)
 
-    
+
 greet('Jack')
 greet('Jill')
 greet('Bob')
