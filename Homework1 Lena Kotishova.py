@@ -64,6 +64,7 @@ except ValueError:
 python_files = glob.glob('*.py')
 import glob
 for file_name in sorted(python_files):
+
     print('    ------' + file_name)
 
     with open(file_name) as f:
@@ -79,7 +80,8 @@ activities = {8: 'Sleeping',
               17: 'Working',
               18: 'Commuting',
               20: 'Eating',
-              22: 'Resting'}
+              22: 'Resting'
+              }
 from time import localtime
 time_now = localtime()
 hour = time_now.tm_hour
