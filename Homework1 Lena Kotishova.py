@@ -1,18 +1,34 @@
+print('Введите цену, которую Вы заплатили, за указанное количество товаров: ')
+M=int(input('рублей: '))
+N=int(input('копеек: '))
+S=int(input('Введите приобретенное количество товара: '))
+Rprice=M/S #цена одной штуки в рублях
+Kprice=N/S # цена одной штуки в копейках
+print('Цена за одну единицу составила: ', int(Rprice), 'рублей', int(Kprice), 'копеек')
+L=int(input('Пожалуйста, введите желаемое количество товара: '))
+#N1 - рассчитала копейки, чтобы сделать одно целое число
+N1=N/100
+price=M+N1 #сделала целое число
+total= price/S*L
+print('Общая цена товара за желаемое количество товаров составит: ',total, 'рублей')
+
 """ task 1"""
-print ('Hello, world!')
+print('Hello, world!')
 """ task 2"""
 name = input('What is your name?\n')
-print ('Hi, %s.' % name)
+print('Hi, %s.' % name)
 """ task 3"""
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
-    print ("iteration {iteration} is {name}".format(iteration=i, name=name))
+    print("iteration {iteration} is {name}".format(iteration=i, name=name))
 """task 4"""
 parents, babies = (1, 1)
 while babies < 100:
-    print ('This generation has {0} babies'.format(babies))
+    print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 """task 5"""
+
+
 def greet(name):
     print ('Hello', name)
 
@@ -168,130 +184,3 @@ with open('stocks.csv', 'r') as stocksFile:
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
         print ('%s is %s (%.2f)' % (name, status, float(pct)))
-"""task 17"""
-BOARD_SIZE = 8
-
-def under_attack(col, queens):
-    left = right = col
-
-    for r, c in reversed(queens):
-        left, right = left - 1, right + 1
-
-        if c in (left, col, right):
-            return True
-    return False
-
-def solve(n):
-    if n == 0:
-        return [[]]
-
-    smaller_solutions = solve(n - 1)
-
-    return [solution+[(n,i+1)]
-        for i in range(BOARD_SIZE)
-            for solution in smaller_solutions
-                if not under_attack(i+1, solution)]
-for answer in solve(BOARD_SIZE):
-    print (answer)
-"""task 18"""
-import itertools
-
-def iter_primes():
-     # an iterator of all numbers between 2 and +infinity
-     numbers = itertools.count(2)
-
-     # generate primes forever
-     while True:
-         # get the first number from the iterator (always a prime)
-         prime = next(numbers)
-         yield prime
-
-         # this code iteratively builds up a chain of
-         # filters...slightly tricky, but ponder it a bit
-         numbers = filter(prime.__rmod__, numbers)
-
-for p in iter_primes():
-    if p > 1000:
-        break
-    print (p)
-"""task 19"""
-dinner_recipe = '''<html><body><table>
-<tr><th>amt</th><th>unit</th><th>item</th></tr>
-<tr><td>24</td><td>slices</td><td>baguette</td></tr>
-<tr><td>2+</td><td>tbsp</td><td>olive oil</td></tr>
-<tr><td>1</td><td>cup</td><td>tomatoes</td></tr>
-<tr><td>1</td><td>jar</td><td>pesto</td></tr>
-</table></body></html>'''
-
-# From http://effbot.org/zone/element-index.htm
-import xml.etree.ElementTree as etree
-tree = etree.fromstring(dinner_recipe)
-
-# For invalid HTML use http://effbot.org/zone/element-soup.htm
-# import ElementSoup, StringIO
-# tree = ElementSoup.parse(StringIO.StringIO(dinner_recipe))
-
-pantry = set(['olive oil', 'pesto'])
-for ingredient in tree.getiterator('tr'):
-    amt, unit, item = ingredient
-    if item.tag == "td" and item.text not in pantry:
-        print ("%s: %s %s" % (item.text, amt.text, unit.text))
-"""task 20"""
-BOARD_SIZE = 8
-
-class BailOut(Exception):
-    pass
-
-def validate(queens):
-    left = right = col = queens[-1]
-    for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
-        if r in (left, col, right):
-            raise BailOut
-
-def add_queen(queens):
-    for i in range(BOARD_SIZE):
-        test_queens = queens + [i]
-        try:
-            validate(test_queens)
-            if len(test_queens) == BOARD_SIZE:
-                return test_queens
-            else:
-                return add_queen(test_queens)
-        except BailOut:
-            pass
-    raise BailOut
-
-queens = add_queen([])
-print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
-"""task 21"""
-import random
-
-guesses_made = 0
-
-name = input('Hello! What is your name?\n')
-
-number = random.randint(1, 20)
-print ('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
-
-while guesses_made < 6:
-
-    guess = int(input('Take a guess: '))
-
-    guesses_made += 1
-
-    if guess < number:
-        print ('Your guess is too low.')
-
-    if guess > number:
-        print ('Your guess is too high.')
-
-    if guess == number:
-        break
-
-if guess == number:
-    print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
-else:
-    print ('Nope. The number I was thinking of was {0}'.format(number))
-
