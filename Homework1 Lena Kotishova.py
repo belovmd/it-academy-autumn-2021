@@ -59,21 +59,22 @@ try:
 except ValueError:
     print('Please supply integer arguments')
 """task 9"""
+import glob
 # indent your Python code to put into an email
 # glob supports Unix style pathname extensions
-import glob
+
 python_files = glob.glob('*.py')
 for file_name in sorted(python_files):
-
     print('    ------' + file_name)
-
     with open(file_name) as f:
         for line in f:
             print('    ' + line.rstrip())
 
     print()
 """task 10"""
-
+from time import localtime
+time_now = localtime()
+hour = time_now.tm_hour
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
@@ -82,6 +83,3 @@ activities = {8: 'Sleeping',
               20: 'Eating',
               22: 'Resting'
               }
-from time import localtime
-time_now = localtime()
-hour = time_now.tm_hour
