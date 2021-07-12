@@ -61,9 +61,10 @@ except ValueError:
 """task 9"""
 # indent your Python code to put into an email
 # glob supports Unix style pathname extensions
-for file_name in sorted(python_files):
 import glob
 python_files = glob.glob('*.py')
+for file_name in sorted(python_files):
+
 
     print('    ------' + file_name)
 
