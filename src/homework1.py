@@ -1,3 +1,4 @@
+import csv
 import glob
 from itertools import groupby
 import re
@@ -193,9 +194,6 @@ for has_chars, frags in groupby(lines, bool):
 
 
 # 16 lines: csv module, tuple unpacking, cmp() built-in
-import csv
-
-
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
