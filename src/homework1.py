@@ -1,5 +1,6 @@
 import csv
 import glob
+import itertools
 from itertools import groupby
 import re
 import sys
@@ -216,3 +217,52 @@ with open('stocks.csv', 'r') as stocksFile:
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
         print('%s is %s (%.2f)' % (name, status, float(pct)))
+
+
+# 18 lines: 8-Queens Problem (recursion)
+BOARD_SIZE = 8
+
+
+def under_attack(col, queens):
+    left = right = col
+
+    for r, c in reversed(queens):
+        left, right = left - 1, right + 1
+
+        if c in (left, col, right):
+            return True
+    return False
+
+
+def solve(n):
+    if n == 0:
+        return [[]]
+
+    smaller_solutions = solve(n - 1)
+
+    return [solution+[(n, i+1)]
+            for i in range(BOARD_SIZE)
+            for solution in smaller_solutions
+            if not under_attack(i+1, solution)]
+
+
+# 20 lines: Prime numbers sieve w/fancy generators
+def iter_primes():
+    # an iterator of all numbers between 2 and +infinity
+    numbers = itertools.count(2)
+
+    # generate primes forever
+    while True:
+        # get the first number from the iterator (always a prime)
+        prime = next(numbers)
+        yield prime
+
+        # this code iteratively builds up a chain of
+        # filters...slightly tricky, but ponder it a bit
+        numbers = filter(prime.__rmod__, numbers)
+
+
+for p in iter_primes():
+    if p > 1000:
+        break
+    print(p)
