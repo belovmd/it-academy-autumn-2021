@@ -7,6 +7,7 @@ import re
 import sys
 from time import localtime
 import unittest
+import xml.etree.ElementTree as etree
 
 
 # 1 line: Output
@@ -270,9 +271,6 @@ for p in iter_primes():
 
 
 # 21 lines: XML/HTML parsing
-import xml.etree.ElementTree as etree
-
-
 dinner_recipe = '''<html><body><table>
 <tr><th>amt</th><th>unit</th><th>item</th></tr>
 <tr><td>24</td><td>slices</td><td>baguette</td></tr>
