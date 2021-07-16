@@ -1,3 +1,4 @@
+# 9 lines: Opening files
 import glob
 
 

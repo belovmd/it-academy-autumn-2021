@@ -1,3 +1,4 @@
+# 4 lines: Fibonacci, tuple assignment
 if __name__ == '__main__':
     parents, babies = (1, 1)
     while babies < 100:

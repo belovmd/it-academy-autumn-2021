@@ -1,3 +1,4 @@
+# 14 lines: Doctest-based testing
 def median(pool):
     """Statistical median to demonstrate doctest.
 

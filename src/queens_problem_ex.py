@@ -1,3 +1,4 @@
+# 28 lines: 8-Queens Problem (define your own exceptions)
 BOARD_SIZE = 8
 
 

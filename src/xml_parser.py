@@ -1,3 +1,4 @@
+# 21 lines: XML/HTML parsing
 import xml.etree.ElementTree as ElementTree
 
 

@@ -1,3 +1,4 @@
+# 7 lines: Dictionaries, generator expressions
 if __name__ == '__main__':
     prices = {'apple': 0.40, 'banana': 0.50}
     my_purchase = {

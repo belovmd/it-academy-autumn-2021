@@ -1,3 +1,4 @@
+# 10 lines: Time, conditionals, from..import, for..else
 from time import localtime
 
 

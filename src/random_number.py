@@ -1,4 +1,6 @@
+# 33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com
 import random
+
 
 if __name__ == '__main__':
     guesses_made = 0

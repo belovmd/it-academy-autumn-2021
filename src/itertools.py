@@ -1,3 +1,4 @@
+# 15 lines: itertools
 from itertools import groupby
 
 
