@@ -1,37 +1,36 @@
-rubles = int(input('Введите сумму, рублей \n'))
-coins = int(input('Введите сумму, копеек \n'))
-quantity = int(input('Введите количество товаров \n'))
+rubles = int(input('Введите сумму, рублей: \n'))
+coins = int(input('Введите сумму, копеек: \n'))
+quantity = int(input('Введите количество товаров: \n'))
 
-price = ((rubles * 100) + coins) * quantity
-o_r = price // 100
-o_c = price % 100
+price = ((rubles*100) + coins)*quantity
+rub = price // 100
+con = price % 100
 
-if o_r != 0:
-    if o_r % 10 == 1:
-        if o_c % 10 == 1:
-            print('Общая цена', o_r, 'рубль', o_c, 'копейка')
-        elif o_c % 10 == 0 or o_c % 10 == 5 or o_c % 10 == 6 or o_c % 10 == 7 or o_c % 10 == 8 or o_c % 10 == 9:
-            print('Общая цена', o_r, 'рубль', o_c, 'копеек')
-        elif o_c % 10 == 2 or o_c % 10 == 3 or o_c % 10 == 4:
-            print('Общая цена', o_r, 'рубль', o_c, 'копейки')
-    elif o_r % 10 == 2 or o_r % 10 == 3 or o_r % 10 == 4:
-        if o_c % 10 == 1:
-            print('Общая цена', o_r, 'рубля', o_c, 'копейка')
-        elif o_c % 10 == 0 or o_c % 10 == 5 or o_c % 10 == 6 or o_c % 10 == 7 or o_c % 10 == 8 or o_c % 10 == 9:
-            print('Общая цена', o_r, 'рубля', o_c, 'копеек')
-        elif o_c % 10 == 2 or o_c % 10 == 3 or o_c % 10 == 4:
-            print('Общая цена', o_r, 'рубля', o_c, 'копейки')
-    elif o_r % 10 == 0 or o_r % 10 == 5 or o_r % 10 == 6 or o_r % 10 == 7 or o_r % 10 == 8 or o_r % 10 == 9:
-        if o_c % 10 == 1:
-            print('Общая цена', o_r, 'рублей', o_c, 'копейка')
-        elif o_c % 10 == 0 or o_c % 10 == 5 or o_c % 10 == 6 or o_c % 10 == 7 or o_c % 10 == 8 or o_c % 10 == 9:
-            print('Общая цена', o_r, 'рублей', o_c, 'копеек')
-        elif o_c % 10 == 2 or o_c % 10 == 3 or o_c % 10 == 4:
-            print('Общая цена', o_r, 'рублей', o_c, 'копейки')
-else:
-    if o_c % 10 == 1:
-        print('Общая цена', o_c, 'копейка')
-    elif o_c % 10 == 0 or o_c % 10 == 5 or o_c % 10 == 6 or o_c % 10 == 7 or o_c % 10 == 8 or o_c % 10 == 9:
-        print('Общая цена', o_c, 'копеек')
-    elif o_c % 10 == 2 or o_c % 10 == 3 or o_c % 10 == 4:
-        print('Общая цена', o_c, 'копейки')
+if rub % 10 == 1:
+    if con % 10 == 1:
+        print('Общая цена', rub, 'рубль', con, 'копейка')
+    elif con % 10 or 5 <= con % 10 <= 9:
+        print('Общая цена', rub, 'рубль', con, 'копеек')
+    elif 2 <= con % 10 <= 4:
+        print('Общая цена', rub, 'рубль', con, 'копейки')
+elif 2 <= rub % 10 <= 4:
+    if con % 10 == 1:
+        print('Общая цена', rub, 'рубля', con, 'копейка')
+    elif con % 10 or 5 <= con % 10 <= 9:
+        print('Общая цена', rub, 'рубля', con, 'копеек')
+    elif 2 <= con % 10 <= 4:
+        print('Общая цена', rub, 'рубля', con, 'копейки')
+elif rub % 10 or 5 <= rub % 10 <= 9:
+    if con % 10 == 1:
+        print('Общая цена', rub, 'рублей', con, 'копейка')
+    elif con % 10 or 5 <= con % 10 <= 9:
+        print('Общая цена', rub, 'рублей', con, 'копеек')
+    elif 2 <= con % 10 <= 4:
+        print('Общая цена', rub, 'рублей', con, 'копейки')
+elif not rub:
+    if con % 10 == 1:
+        print('Общая цена', con, 'копейка')
+    elif con % 10 or 5 <= con % 10 <= 9:
+        print('Общая цена', con, 'копеек')
+    elif 2 <= con % 10 <= 4:
+        print('Общая цена', con, 'копейки')
