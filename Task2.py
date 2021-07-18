@@ -1,39 +1,30 @@
-def count():
-    a = "Введите количество товаров:"
-    b = "Введите рубли:"
-    c = "Введите копейки:"
-    proposals = [a, b, c]
-    data = {'quantity': 0,
-            'rubles': 0,
-            'centimes': 0}
 
-    i = 0
-    keylist = list(data)
-    for proposal in proposals:
-        while True:
-            number = input(proposal)
-            try:
-                number = int(number)
-                data[keylist[i]] = number
-                i = i + 1
-                break
-            except ValueError:
-                print("Введите целое число!")
-                continue
+"""Напишите программу, которая считает общую цену.
+   Вводится M рублей и N копеек цена, а также количество S товара Посчитайте
+   общую цену в рублях и копейках за L товаров.
+"""
 
-    print(data)
 
-    summa = data['quantity'] * data['rubles'] + \
-        (data['quantity'] * data['centimes']) // 100 + \
-        (data['quantity'] * data['centimes'] % 100) / 100
-    print("Цена партии товара %.f рублей" % summa)
+def total_sum(m, n, s):
+    """Подсчет общей суммы покупок.
+    :param m: рубли
+    :param n: копейки
+    :param s: количество товара
+    :return: строка. общая цена в рублях и копейках. формат:
+        'x rubles y kopecks'
+    """
+
+    # write your code here
+    m = int(input("Введите рубли:"))
+    n = int(input("Введите копейки:"))
+    s = int(input("Введите количество товара:"))
+
+    summa = s * m + (s * n) // 100 + (s * n % 100) / 100
+
+    return summa  # write return value here
 
 
 if __name__ == '__main__':
-    while True:
-        count()
-        answer = input("Новый расчет? Д/Н")
-        if answer.lower() == 'н':
-            break
-        else:
-            continue
+    # здесь можно сделать ввод из консоли и проверить работу функции
+    m, n, s = '', '', ''
+    print(total_sum(m, n, s))
