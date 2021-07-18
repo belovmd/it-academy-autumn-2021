@@ -1,34 +1,43 @@
-def palindrom():
+"""Определите, является ли число палиндромом (читается слева направо и справа
+    налево одинаково).  Число положительное целое, произвольной длины. Задача
+    требует работать только с числами (без конвертации числа в строку или
+    что-нибудь еще)
+"""
+
+
+def palindrom(n):
+    """Поиск числа фибоначчи.
+        :param n: Число.
+        :return: Bool. True или False. Является ли число палиндромом.
+        """
+
+    # Проверка на то, что пользователь ввел int, если нет, то будет предложен новый ввод.
     while True:
-        number = input("Введите число")
+        n = input("Введите число")
         try:
-            number = int(number)
+            n = int(n)
             break
         except ValueError:
-            print("Неверное число!")
+            print("Нужно ввести целое число!")
             continue
-    print(number)
 
-
-    n = 10
-    while (number // n) > 10:
-        n *= 10
+    k = 10
+    while (n // k) > 10:
+        k *= 10
 
     factor = 1
-    num = number
-    number_reverse = 0
-    while n >= 1:
-        cipher = (num // n)
-        number_reverse += cipher*factor
-        num = num - cipher * n
-        n = n / 10
+    num = n
+    n_reverse = 0
+    while k >= 1:
+        cipher = (num // k)
+        n_reverse += cipher*factor
+        num = num - cipher * k
+        k = k / 10
         factor *= 10
 
-    if number_reverse != number:
-        print("Не палиндром")
-    else:
-        print("Палиндром")
+    return n_reverse == n
 
 
 if __name__ == '__main__':
-    palindrom()
+    n = 0
+    print(palindrom(n))
