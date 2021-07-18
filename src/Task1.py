@@ -1,43 +1,32 @@
+"""Напишите программу, которая считает общую цену.
+   Вводится M рублей и N копеек цена, а также количество S товара Посчитайте
+   общую цену в рублях и копейках за L товаров.
+"""
 
-class Count:
-    def __init__(self):
 
-        p1 = "Введите количество товаров:"
+def total_sum(m, n, s):
+    """Подсчет общей суммы покупок.
+    :param m: рубли
+    :param n: копейки
+    :param s: количество товара
+    :return: строка. общая цена в рублях и копейках. формат:
+        'x rubles y kopecks'
+    """
 
-        p2 = "Введите количсетво рублей:"
+    # write your code here
+    m = int(input("Введите рубли:"))
+    n = int(input("Введите копейки:"))
+    s = int(input("Введите количество товара:"))
 
-        p3 = "Введите количсетво копеек:"
+    summa = s * m + (s * n) // 100 + (s * n % 100) / 100
 
-        self.proposals = [p1, p2, p3]
-
-        self.data = []
-
-        self.i = 0
-
-    def count(self):
-        for self.proposal in self.proposals:
-            self._verify()
-
-        s, m, n = (self.data[k] for k in range(len(self.data)))
-        price = s * m + (s * n)//100 + ((s * n) % 100)/100
-        print("Конечная цена: %.2f. рублей" % price)
-
-    def _verify(self):
-        while True:
-            number = input(self.proposal)
-            try:
-                number = int(number)
-                self.data.append(number)
-                self.i += 1
-                break
-            except ValueError:
-                print("Нужно ввести целое число!")
-                continue
+    return summa  # write return value here
 
 
 if __name__ == '__main__':
-    MyCount = Count()
-    MyCount.count()
+    # здесь можно сделать ввод из консоли и проверить работу функции
+    m, n, s = '', '', ''
+    print(total_sum(m, n, s))
 
 
 
