@@ -1,3 +1,4 @@
+# 20 lines: Prime numbers sieve w/fancy generators
 import itertools
 
 

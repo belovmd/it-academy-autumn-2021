@@ -1,3 +1,4 @@
+# 11 lines: Triple-quoted strings, while loop
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
