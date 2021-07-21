@@ -69,9 +69,9 @@ try:
     print('sum =', total)
 
 except ValueError:
-    print('Please supply integer arguments')  # last line of previous task
-# next task docstring
-pass  # my next task first line
+    print('Please supply integer arguments')
+
+# 18 lines: 8-Queens Problem (recursion)
 BOARD_SIZE = 8
 
 
