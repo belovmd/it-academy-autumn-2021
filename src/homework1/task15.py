@@ -1,4 +1,8 @@
+# 15 lines: itertools
+
+
 from itertools import groupby
+
 
 lines = '''
 This is the

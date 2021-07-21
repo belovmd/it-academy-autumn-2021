@@ -1,6 +1,11 @@
+# 33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com
+
+
 import random
 
+
 guesses_made = 0
+
 
 name = input('Hello! What is your name?\n')
 

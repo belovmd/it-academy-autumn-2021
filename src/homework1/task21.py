@@ -1,4 +1,8 @@
+# 21 lines: XML/HTML parsing
+
+
 import xml.etree.ElementTree as etree
+
 
 dinner_recipe = '''<html><body><table>
 <tr><th>amt</th><th>unit</th><th>item</th></tr>

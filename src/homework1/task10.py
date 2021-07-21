@@ -1,4 +1,8 @@
+# 10 lines: Time, conditionals, from..import, for..else
+
+
 from time import localtime
+
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
