@@ -1,4 +1,4 @@
-#5 lines: Functions
+# 5 lines: Functions
 
 
 def greet(name):
