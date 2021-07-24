@@ -4,9 +4,11 @@
 '''
 
 
-str_ = input()
+str_ = input('Введите строку: ')
 new_str = ''
+
 for i in str_:
     if i not in new_str and i != ' ':
         new_str += i
-print(new_str)
+
+print('Новая строка:', new_str)
