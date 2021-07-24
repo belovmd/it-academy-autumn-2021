@@ -7,8 +7,8 @@
 str_ = input('Введите строку: ')
 new_str = ''
 
-for i in str_:
-    if i not in new_str and i != ' ':
-        new_str += i
+for symbol in str_:
+    if symbol not in new_str and symbol != ' ':
+        new_str += symbol
 
 print('Новая строка:', new_str)
