@@ -1,4 +1,6 @@
-'''6. Определите, является ли число палиндромом (читается слева направо и справа налево одинаково).  Число положительное целое, произвольной длины. Задача требует работать только с числами (без конвертации числа в строку или что-нибудь еще)
+'''6. Определите, является ли число палиндромом (читается слева направо и справа налево одинаково).
+Число положительное целое, произвольной длины. Задача требует работать только с числами
+(без конвертации числа в строку или что-нибудь еще)
 '''
 digits = int(input("Please, input the number for checking: "))
 a = int(digits)
@@ -9,6 +11,6 @@ while digits != 0:
     digits = int(digits / 10)
 print(reverse)  # checking purposes again
 if a == reverse:
-     print ("Yes, that's a palindrome")
+    print("Yes, that's a palindrome")
 else:
-     print ("No, it's not a palindrome")
+    print("No, it's not a palindrome")
