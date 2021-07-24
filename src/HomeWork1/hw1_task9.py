@@ -1,5 +1,6 @@
-# indent your Python code to put into an email
+"""Indent your Python code to put into an email"""
 import glob
+
 
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
