@@ -19,3 +19,4 @@ for i in text_input:
         count_uppercase += 1
 print("The count of the letters in lowercase is {}, "
       "the count of the letters in uppercase is {}".format(count_lowercase, count_uppercase))
+
