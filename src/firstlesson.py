@@ -3,39 +3,48 @@ import re
 import sys
 from time import localtime
 
-#1
+
+# 1
 print('Hello, world!')
 
-#2
+
+# 2
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
-#3
+
+# 3
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
 
-#4
+
+# 4
 parents, babies = (1, 1)
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
-#5
+
+# 5
 def greet(name):
     print('Hello', name)
+
+
 greet('Jack')
 greet('Jill')
 greet('Bob')
 
-#6
+
+# 6
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
     else:
         print(test_string, 'rejected')
 
-#7
+
+# 7
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -44,7 +53,8 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 print('I owe the grocer $%.2f' % grocery_bill)
 
-#8
+
+# 8
 # This program adds up integers that have been passed as arguments in the command line
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
@@ -52,7 +62,8 @@ try:
 except ValueError:
     print('Please supply integer arguments')
 
-#9
+
+# 9
 # indent your Python code to put into an email
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
@@ -63,7 +74,8 @@ for file_name in sorted(python_files):
             print('    ' + line.rstrip())
     print()
 
-#10
+
+# 10
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
@@ -79,7 +91,8 @@ for activity_time in sorted(activities.keys()):
 else:
     print('Unknown, AFK or sleeping!')
 
-#11
+
+# 11
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
