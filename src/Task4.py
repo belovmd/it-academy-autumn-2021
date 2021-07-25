@@ -7,9 +7,13 @@ import re
 
 def count_letters(_str):
     """Подсчет символов.
+
         :param str_: входная строка
-        :return: кортеж. (low_number, up_number). low_number - количество строчных,
-                                                  up_number - количество пописных.
+
+        :return: кортеж. (low_number, up_number).
+
+        low_number - количество строчных,
+        up_number - количество пописных.
         """
 
     text = input("Введите выражение латиницей:")
@@ -34,5 +38,3 @@ def count_letters(_str):
 if __name__ == '__main__':
     str_ = ''
     print(count_letters(str_))
-
-

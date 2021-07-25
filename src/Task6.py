@@ -7,7 +7,9 @@
 
 def palindrom(n):
     """Поиск числа фибоначчи.
+
         :param n: Число.
+
         :return: Bool. True или False. Является ли число палиндромом.
         """
 
