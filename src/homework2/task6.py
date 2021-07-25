@@ -1,7 +1,7 @@
 num = int(input('Введите число число: '))
 rev = 0
 n = num
-while n:
+while n > 0:
     last_num = n % 10
     rev = rev * 10 + last_num
     n = (n // 10)
