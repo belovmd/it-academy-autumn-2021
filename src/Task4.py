@@ -15,12 +15,9 @@ def count_letters(_str):
     text = input("Введите выражение латиницей:")
     text = re.sub(r'[^a-zA-Z]', '', text)
     text = list(text)
-    print(text)
-    print(type(text))
 
     letters_uppercase = []
     letters_lowercase = []
-    my_str = ""
 
     for letter in text:
         if letter.isupper():

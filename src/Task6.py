@@ -12,22 +12,16 @@ def palindrom(n):
         """
 
     # Проверка на то, что пользователь ввел int, если нет, то будет предложен новый ввод.
-    while True:
-        n = input("Введите число")
-        try:
-            n = int(n)
-            break
-        except ValueError:
-            print("Нужно ввести целое число!")
-            continue
-
+    n = int(input("Введите число:"))
     k = 10
+
     while (n // k) > 10:
         k *= 10
 
     factor = 1
     num = n
     n_reverse = 0
+
     while k >= 1:
         cipher = (num // k)
         n_reverse += cipher*factor

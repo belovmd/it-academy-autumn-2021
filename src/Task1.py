@@ -14,9 +14,9 @@ def total_sum(m, n, s):
     """
 
     # write your code here
+    s = int(input("Введите количество товара:"))
     m = int(input("Введите рубли:"))
     n = int(input("Введите копейки:"))
-    s = int(input("Введите количество товара:"))
 
     summa = s * m + (s * n) // 100 + (s * n % 100) / 100
 
