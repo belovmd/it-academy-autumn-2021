@@ -33,13 +33,14 @@ If anything in the text isn't a letter, ignore it and don't return it.
 "a" = 1, "b" = 2, etc.
 Example
 alphabet_position("The sunset sets at twelve o' clock.")
-Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)"""
+Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+(as a string)"""
 
 
 def alphabet_position(text):
     text = input("Type a sentence:")
     text = text.lower()
-    text_new = re.sub(r'[^a-zA-Z]', '', text)
+    text = re.sub(r'[^a-zA-Z]', '', text)
     alpha = list(string.ascii_lowercase)
 
     position = []
@@ -79,21 +80,24 @@ u[13] = 8,  u[14] = 8,  u[15] = 10, u[16] = 9,  u[17] = 10, u[18] = 11,
 u[19] = 11, u[20] = 12, u[21] = 12, u[22] = 12, u[23] = 12 etc...
 
 How is u[8] calculated?
-We have u[7] = 5 and u[6] = 4. These numbers tell us that we have to go backwards from index 8 to index 8 - 5 = 3 and
-to index 8 - 4 = 4 so to index 3 and 4. u[3] = 2 and u[4] = 3 hence u[8] = u[3] + u[4] = 2 + 3 = 5.
+We have u[7] = 5 and u[6] = 4. These numbers tell us that we have to go backwards
+from index 8 to index 8 - 5 = 3 and to index 8 - 4 = 4 so to index 3 and 4.
+u[3] = 2 and u[4] = 3 hence u[8] = u[3] + u[4] = 2 + 3 = 5.
 
-Another example: let us calculate u[13]. At indexes 12 and 11 we have 8 and 6. Going backwards of 8 and 6 from 13 we
-get indexes 13 - 8 = 5 and 13 - 6 = 7. u[5] = 3 and u[7] = 5 so u[13] = u[5] + u[7] = 3 + 5 = 8 .
+Another example: let us calculate u[13]. At indexes 12 and 11 we have 8 and 6.
+Going backwards of 8 and 6 from 13 we get indexes 13 - 8 = 5 and 13 - 6 = 7.
+u[5] = 3 and u[7] = 5 so u[13] = u[5] + u[7] = 3 + 5 = 8 .
 
 Task
 1. Express u(n) as a function of n, u[n - 1], u[n - 2]. (not tested).
 
-2. Given two numbers n, k (integers > 2) write the function length_sup_u_k(n, k) or lengthSupUK or length-sup-u-k
-returning the number of terms u[i] >= k with 1 <= i <= n. If we look above we can see that between u[1] and u[23]
-we have four u[i] greater or equal to 12: length_sup_u_k(23, 12) => 4
+2. Given two numbers n, k (integers > 2) write the function length_sup_u_k(n, k)
+or lengthSupUK or length-sup-u-k returning the number of terms u[i] >= k with 1 <= i <= n.
+If we look above we can see that between u[1] and u[23] we have four u[i]
+greater or equal to 12: length_sup_u_k(23, 12) => 4
 
-3. Given n (integer > 2) write the function comp(n) returning the number of times where a term of u is less than its
-predecessor up to and including u[n].
+3. Given n (integer > 2) write the function comp(n) returning the number of
+times where a term of u is less than its predecessor up to and including u[n].
 
 Examples:
 u(900) => 455 (not tested)

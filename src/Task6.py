@@ -26,7 +26,7 @@ def palindrom(n):
 
     while k >= 1:
         cipher = (num // k)
-        n_reverse += cipher*factor
+        n_reverse += cipher * factor
         num = num - cipher * k
         k = k / 10
         factor *= 10
