@@ -8,10 +8,3 @@ while num > 0:
     num0 = num2
     num = num - 1
 print('Это число - ', num0)
-
-
-
-
-
-
-
