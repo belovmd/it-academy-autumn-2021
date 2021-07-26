@@ -6,7 +6,7 @@ my_string = my_string.replace(' ', '')
 new_string = my_string[0]
 for i in range(0, len(my_string)):
     if my_string[i] not in new_string:
-        new_string = new_string + my_string[i]
+        new_string += my_string[i]
     else:
         new_string = new_string
 print(new_string)
