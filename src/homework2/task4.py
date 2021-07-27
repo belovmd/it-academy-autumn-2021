@@ -5,7 +5,8 @@ coll = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
         'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
         'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 for str_ in coll:
-    print('Upper letters', sum(i.isupper() for i in str_), ' lower letters', sum(i.islower() for i in str_))
+    print('Upper letters', sum(i.isupper() for i in str_),
+          ' lower letters', sum(i.islower() for i in str_))
     break
 else:
     print('no')
