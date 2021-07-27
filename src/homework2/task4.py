@@ -1,12 +1,11 @@
-str_ = input('Any text in english: ')
-coll = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-        'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
-        'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-        'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-for str_ in coll:
-    print('Upper letters', sum(i.isupper() for i in str_),
-          ' lower letters', sum(i.islower() for i in str_))
-    break
-else:
-    print('no')
+s = input()
+let_s = 0
+let_b = 0
+for i in s:
+    if 'a' <= i <= 'z':
+        let_s += 1
+    else:
+        if 'A' <= i <= 'Z':
+            let_b += 1
+print(let_s)
+print(let_b)

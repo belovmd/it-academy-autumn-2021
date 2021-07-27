@@ -8,8 +8,7 @@ num = int(input('Введите число число: '))
 rev = 0
 n = num
 while n > 0:
-    last_num = n % 10
-    rev = rev * 10 + last_num
+    rev = (rev * 10) + (n % 10)
     n = (n // 10)
 if num == rev:
     print("Палиндром")
