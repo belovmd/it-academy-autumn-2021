@@ -23,6 +23,3 @@ for i in only_eng:
 
 print('больших букв -', len(up_eng))
 print('маленьких букв -', len(low_eng))
-
-
-
