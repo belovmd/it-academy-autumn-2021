@@ -3,7 +3,8 @@
 Подсказки:
 my_string.split([chars]) возвращает список строк.
 len(list) - количество элементов в списке
-my_string = 'Главный вопрос Жизни, Вселенной и вообще! The Ultimate Question of Life, the Universe, and Everything!'
+my_string = 'Главный вопрос Жизни, Вселенной и вообще!
+The Ultimate Question of Life, the Universe, and Everything!'
 """
 my_string = input('Input the string: ')
 template = "The longest word is : {longest_word}"
