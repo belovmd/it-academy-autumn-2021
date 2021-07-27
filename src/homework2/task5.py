@@ -1,3 +1,7 @@
+# Выведите n-ое число Фибоначчи, используя только временные переменные,
+# циклические операторы и условные операторы. n - вводится
+
+
 def calculate_fibonachi_value(number: int) -> int:
     first_element = 0
     second_element = 1

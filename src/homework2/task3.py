@@ -1,3 +1,7 @@
+# Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы.
+# Например, если было введено "abc cde def", то должно быть выведено "abcdef".
+
+
 def clean_string(string: str) -> str:
     string = string.replace(' ', '')
     letters = []
