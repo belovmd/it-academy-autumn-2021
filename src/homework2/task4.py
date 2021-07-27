@@ -4,7 +4,8 @@ my_string = 'Главный вопрос Жизни, Вселенной и во�
 The Ultimate Question of Life, the Universe, and Everything!..'
 """
 my_string = input('Input the string: ')
-template = "\nNumber of uppercase latin letters : {upper_case} \nNumber of lowercase latin letters : {lower_case}"
+template = "\nNumber of uppercase latin letters : {upper_case} " \
+           "\nNumber of lowercase latin letters : {lower_case}"
 upper_case = 0
 lower_case = 0
 latin_alph_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
