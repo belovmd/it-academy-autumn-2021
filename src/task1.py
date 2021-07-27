@@ -1,17 +1,26 @@
-#print ('Hello, world!')
+"""1 line: Output"""
+print ('Hello, world!')
 
-#name = input('What is your name?\n')
-#print ('Hi, %s.' % name)
 
+"""2 lines: Input, assignment"""
+name = input('What is your name?\n')
+print ('Hi, %s.' % name)
+
+
+"""3 lines: For loop, built-in enumerate function, new style formatting"""
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print ("iteration {iteration} is {name}".format(iteration=i, name=name))
 
+
+"""4 lines: Fibonacci, tuple assignment"""
 parents, babies = (1, 1)
 while babies < 100:
     print ('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
+
+"""5 lines: Functions"""
 def greet(name):
     print ('Hello', name)
 
@@ -19,6 +28,8 @@ greet('Jack')
 greet('Jill')
 greet('Bob')
 
+
+"""6 lines: Import, regular expressions"""
 import re
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
@@ -26,6 +37,8 @@ for test_string in ['555-1212', 'ILL-EGAL']:
     else:
         print (test_string, 'rejected')
 
+
+"""7 lines: Dictionaries, generator expressions"""
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -34,6 +47,8 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 print ('I owe the grocer $%.2f' % grocery_bill)
 
+
+"""8 lines: Command line arguments, exception handling"""
 # This program adds up integers that have been passed as arguments in the command line
 import sys
 try:
@@ -42,6 +57,8 @@ try:
 except ValueError:
     print ('Please supply integer arguments')
 
+
+"""9 lines: Opening files"""
 # indent your Python code to put into an email
 import glob
 # glob supports Unix style pathname extensions
@@ -55,6 +72,9 @@ for file_name in sorted(python_files):
 
     print()
 
+
+
+"""10 lines: Time, conditionals, from..import, for..else"""
 from time import localtime
 
 activities = {8: 'Sleeping',
@@ -74,6 +94,8 @@ for activity_time in sorted(activities.keys()):
 else:
     print ('Unknown, AFK or sleeping!')
 
+
+"""11 lines: Triple-quoted strings, while loop"""
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
@@ -86,6 +108,9 @@ while bottles_of_beer > 1:
         bottles_of_beer - 1))
     bottles_of_beer -= 1
 
+
+
+"""12 lines: Classes"""
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
@@ -99,6 +124,8 @@ my_account = BankAccount(15)
 my_account.withdraw(50)
 print (my_account.balance, my_account.overdrawn())
 
+
+"""13 lines: Unit testing with unittest"""
 import unittest
 def median(pool):
     copy = sorted(pool)
@@ -113,6 +140,8 @@ class TestMedian(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+
+"""14 lines: Doctest-based testing"""
 def median(pool):
     '''Statistical median to demonstrate doctest.
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
@@ -128,6 +157,8 @@ if __name__ == '__main__':
     import doctest
     doctest.testmod()
 
+
+"""15 lines: itertools"""
 from itertools import groupby
 lines = '''
 This is the
@@ -144,6 +175,9 @@ for has_chars, frags in groupby(lines, bool):
 # This is the first paragraph.
 # This is the second.
 
+
+
+"""16 lines: csv module, tuple unpacking, cmp() built-in"""
 import csv
 
 # need to define cmp function in Python 3
@@ -169,6 +203,7 @@ with open('stocks.csv', 'r') as stocksFile:
         print ('%s is %s (%.2f)' % (name, status, float(pct)))
 
 
+"""18 lines: 8-Queens Problem (recursion)"""
 BOARD_SIZE = 8
 
 def under_attack(col, queens):
@@ -194,6 +229,8 @@ def solve(n):
 for answer in solve(BOARD_SIZE):
     print (answer)
 
+
+"""20 lines: Prime numbers sieve w/fancy generators"""
 import itertools
 
 def iter_primes():
@@ -216,6 +253,7 @@ for p in iter_primes():
     print (p)
 
 
+"""21 lines: XML/HTML parsing"""
 dinner_recipe = '''<html><body><table>
 <tr><th>amt</th><th>unit</th><th>item</th></tr>
 <tr><td>24</td><td>slices</td><td>baguette</td></tr>
@@ -239,6 +277,7 @@ for ingredient in tree.getiterator('tr'):
         print ("%s: %s %s" % (item.text, amt.text, unit.text))
 
 
+"""28 lines: 8-Queens Problem (define your own exceptions)"""
 BOARD_SIZE = 8
 
 class BailOut(Exception):
@@ -268,6 +307,8 @@ queens = add_queen([])
 print (queens)
 print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
 
+
+"""33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com"""
 
 import random
 
