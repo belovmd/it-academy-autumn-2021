@@ -145,13 +145,13 @@ Precondition: all elements of the input list are hashable
 
 
 def all_the_same(elements: list):
-    answ = False
+    answer = False
     uniq_elements = set()
     for elem in elements:
         uniq_elements.add(elem)
     if len(uniq_elements) <= 1:
-        answ = True
-    return answ
+        answer = True
+    return answer
 
 
 """Проверка решения"""
@@ -192,9 +192,9 @@ def sun_angle(time: str):
     answer = "I don't see the sun!"
     tim = time.split(':')
     hour = float(tim[0])
-    min = float(tim[1])
-    if 6 <= hour < 18 or hour == 18 and min == 0:
-        answer = ((hour - 6) * 60 + min) * 0.25
+    minutes = float(tim[1])
+    if 6 <= hour < 18 or hour == 18 and minutes == 0:
+        answer = ((hour - 6) * 60 + minutes) * 0.25
 
     return answer
 
