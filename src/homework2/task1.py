@@ -1,10 +1,18 @@
+"""
+Напишите программу, которая считает общую цену. Вводится M рублей и N копеек цена, а также количество S товара
+Посчитайте общую цену в рублях и копейках за L товаров.
+Пример:
+Input: Цена одной вещи 3 рубля 20 копеек, посчитать 3 предмета.
+Output: Общая цена 9 рублей 60 копеек
+"""
+
 rub = int(input('Введите число рублей:'))
 coin = int(input('Введите число копеек:'))
 count = int(input('Введите кол-во товара:'))
-coinsum = coin * count
-if coinsum >= 100:
-    rub = rub * count + (coinsum // 100)
-    coinsum = coinsum % 100
+coin_sum = coin * count
+if coin_sum >= 100:
+    rub = rub * count + (coin_sum // 100)
+    coin_sum = coin_sum % 100
 else:
     rub = rub * count
-print("Сумма товаров ровна ", rub, 'рублей', coinsum, 'копеек')
+print("Сумма товаров ровна ", rub, 'рублей', coin_sum, 'копеек')
