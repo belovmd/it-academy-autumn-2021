@@ -7,25 +7,32 @@ Find the nearest value to the given one.
 You are given a list of values as set form and a value 
 for which you need to find the nearest one.
 For example, we have the following set of numbers: 4, 7, 10, 11, 12, 17,
-and we need to find the nearest value to the number 9. If we sort this set 
-in the ascending order, then to the left of number 9 will be number 7 and to the
-right - will be number 10. But 10 is closer than 7, which means that the correct answer is 10.
+and we need to find the nearest value to the number 9. If we sort this
+set in the ascending order, then to the left of number 9 will be number
+7 and to the right - will be number 10. But 10 is closer than 7, which
+means that the correct answer is 10.
 A few clarifications:
-If 2 numbers are at the same distance, you need to choose the smallest one;
+If 2 numbers are at the same distance,
+you need to choose the smallest one;
 The set of numbers is always non-empty, i.e. the size is >=1;
 The given value can be in this set, which means that it’s the answer;
-The set can contain both positive and negative numbers, but they are always integers;
+The set can contain both positive and negative numbers,
+but they are always integers;
 The set isn’t sorted and consists of unique numbers.
-Input: Two arguments. A list of values in the set form. The sought value is an int.
-Output: Int."""
+Input: Two arguments. A list of values in the set form.
+The sought value is an int.
+Output: Int.
+"""
 
 
 def nearest_value(values: set, one: int) -> int:
     list_sort = sorted(list(values))
     found = list_sort[0]
+
     for i in list_sort:
         if abs(i - one) < abs(found - one):
             found = i
+
     return found
 
 
@@ -57,22 +64,27 @@ For the input of your function, you will be given one sentence.
 You have to return a corrected version, that starts with a capital 
 letter and ends with a period (dot).
 Pay attention to the fact that not all of the fixes are necessary.
-If a sentence already ends with a period (dot), then adding another one will be a mistake.
+If a sentence already ends with a period (dot),
+then adding another one will be a mistake.
 Input: A string.
 Output: A string.
-Precondition: No leading and trailing spaces, text contains only spaces, a-z A-Z , and .
+Precondition: No leading and trailing spaces,
+text contains only spaces, a-z A-Z , and .
 """
 
 
 def correct_sentence(text: str):
     new_text = ''
+
     if text[0].islower():
         new_text += text[0].upper()
         new_text += text[1::]
     else:
         new_text = text
+
     if new_text[-1] != '.':
         new_text += '.'
+
     return new_text
 
 
@@ -91,6 +103,7 @@ def correct_sentence(text: str):
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
 
+
 """
 3.
 Задача взята с сайта https://py.checkio.org/
@@ -106,11 +119,13 @@ Output: An int.
 
 
 def sum_numbers(text: str):
-    list_ = text.split()
     sum_num = 0
+    list_ = text.split()
+
     for i in list_:
         if i.isdigit():
             sum_num += int(i)
+
     return sum_num
 
 
@@ -147,10 +162,13 @@ Precondition: all elements of the input list are hashable
 def all_the_same(elements: list):
     answer = False
     uniq_elements = set()
+
     for elem in elements:
         uniq_elements.add(elem)
+
     if len(uniq_elements) <= 1:
         answer = True
+
     return answer
 
 
@@ -169,21 +187,24 @@ if __name__ == '__main__':
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
 
+
 """
 5.
 Задача взята с сайта https://py.checkio.org/
 Сложность задачи - Simple
 
-Every true traveler must know how to do 3 things: fix the fire,
-find the water and extract useful information from the nature around him.
-Programming won't help you with the fire and water, but when it comes to the
-information extraction - it might be just the thing you need.
+Every true traveler must know how to do 3 things: fix the fire,find
+the water and extract useful information from the nature around him.
+Programming won't help you with the fire and water, but when it
+comes to the information extraction - it might be 
+just the thing you need.
 Your task is to find the angle of the sun above the horizon knowing the
 time of the day. Input data: the sun rises in the East at 6:00 AM, which
-corresponds to the angle of 0 degrees. At 12:00 PM the sun reaches its zenith,
-which means that the angle equals 90 degrees. 6:00 PM is the time of the sunset
-so the angle is 180 degrees. If the input will be the
-time of the night (before 6:00 AM or after 6:00 PM), your function
+corresponds to the angle of 0 degrees. At 12:00 PM the sun reaches its
+zenith, which means that the angle equals 90 degrees.
+6:00 PM is the time of the sunset so the angle is 180 degrees.
+If the input will be the time of the night
+(before 6:00 AM or after 6:00 PM), your function
 should return - "I don't see the sun!".
 """
 
@@ -193,6 +214,7 @@ def sun_angle(time: str):
     tim = time.split(':')
     hour = float(tim[0])
     minutes = float(tim[1])
+
     if 6 <= hour < 18 or hour == 18 and minutes == 0:
         answer = ((hour - 6) * 60 + minutes) * 0.25
 
