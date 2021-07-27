@@ -7,16 +7,16 @@
 
 my_string = input('Введите предложение: ')
 
-largword = ''
+larg_word = ''
 punctuation_marks = ',.!:-?№/'
 
 for mark in punctuation_marks:
-    my_string = my_string.replace(mark,'')
+    my_string = my_string.replace(mark, '')
 
 my_string = my_string.split(' ')
 
 for word in my_string:
-    if len(word) > len(largword):
-        largword = word
+    if len(word) > len(larg_word):
+        larg_word = word
 
-print(largword)
+print(larg_word)

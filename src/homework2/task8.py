@@ -19,6 +19,7 @@ The set isn’t sorted and consists of unique numbers.
 Input: Two arguments. A list of values in the set form. The sought value is an int.
 Output: Int."""
 
+
 def nearest_value(values: set, one: int) -> int:
     list_sort = sorted(list(values))
     found = list_sort[0]
@@ -26,6 +27,7 @@ def nearest_value(values: set, one: int) -> int:
         if abs(i - one) < abs(found - one):
             found = i
     return found
+
 
 """Проверка решения"""
 """
@@ -61,16 +63,18 @@ Output: A string.
 Precondition: No leading and trailing spaces, text contains only spaces, a-z A-Z , and .
 """
 
+
 def correct_sentence(text: str):
     new_text = ''
     if text[0].islower():
         new_text += text[0].upper()
-        new_text +=text[1::]
+        new_text += text[1::]
     else:
         new_text = text
     if new_text[-1] != '.':
-        new_text  += '.'
+        new_text += '.'
     return new_text
+
 
 """Проверка решения"""
 """if __name__ == '__main__':
@@ -87,7 +91,6 @@ def correct_sentence(text: str):
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
 
-
 """
 3.
 Задача взята с сайта https://py.checkio.org/
@@ -101,13 +104,15 @@ Input: A string.
 Output: An int.
 """
 
+
 def sum_numbers(text: str):
-    list= text.split()
-    sum=0
-    for i in list:
+    list_ = text.split()
+    sum_num = 0
+    for i in list_:
         if i.isdigit():
-            sum+=int(i)
-    return sum
+            sum_num += int(i)
+    return sum_num
+
 
 """Проверка решения"""
 """
@@ -127,7 +132,6 @@ if __name__ == '__main__':
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
 
-
 """
 4.
 Задача взята с сайта https://py.checkio.org/
@@ -139,9 +143,8 @@ Output: Bool.
 Precondition: all elements of the input list are hashable
 """
 
-from typing import List, Any
 
-def all_the_same(elements: List[Any]) -> bool:
+def all_the_same(elements: list):
     answ = False
     uniq_elements = set()
     for elem in elements:
@@ -149,6 +152,7 @@ def all_the_same(elements: List[Any]) -> bool:
     if len(uniq_elements) <= 1:
         answ = True
     return answ
+
 
 """Проверка решения"""
 """
@@ -164,7 +168,6 @@ if __name__ == '__main__':
     assert all_the_same([1]) == True
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
-
 
 """
 5.
@@ -184,18 +187,17 @@ time of the night (before 6:00 AM or after 6:00 PM), your function
 should return - "I don't see the sun!".
 """
 
-from typing import Union
 
-def sun_angle(time: str) -> Union[int, str]:
-    angl = "I don't see the sun!"
+def sun_angle(time: str):
+    answer = "I don't see the sun!"
     tim = time.split(':')
     hour = float(tim[0])
     min = float(tim[1])
     if 6 <= hour < 18 or hour == 18 and min == 0:
-        angl = ((hour - 6) * 60 + min) * 0.25
-    else:
-        angl = "I don't see the sun!"
-    return angl
+        answer = ((hour - 6) * 60 + min) * 0.25
+
+    return answer
+
 
 """Проверка решения"""
 """
@@ -208,4 +210,3 @@ if __name__ == '__main__':
     assert sun_angle("01:23") == "I don't see the sun!"
     print("Coding complete? Click 'Check' to earn cool rewards!")
 """
-

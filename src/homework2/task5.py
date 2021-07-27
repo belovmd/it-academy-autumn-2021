@@ -3,17 +3,17 @@
 циклические операторы и условные операторы. n - вводится
 """
 
-n = int(input('введите порядковый номер числа Фибоначчи  ' ))
+n = int(input('введите порядковый номер числа Фибоначчи  '))
 
 if n > 2:
-    num_f = num_s =sum = 1
-    i=2
+    num_f = num_s = sum_ = 1
+    i = 2
     while i < n:
-        sum = num_s + num_f
+        sum_ = num_s + num_f
         num_f = num_s
-        num_s = sum
+        num_s = sum_
         i += 1
     else:
-        print('Это число', sum)
+        print('Это число', sum_)
 else:
     print('Это число 1')
