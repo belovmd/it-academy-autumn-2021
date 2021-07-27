@@ -11,9 +11,9 @@ a = int(input('Введите сторону а '))
 b = int(input('Введите сторону b '))
 c = int(input('Введите сторону c '))
 
-if a+b > c and a+c > b and c+b > a:
-    half_per = (a+b+c)/2
-    s = sqrt(half_per*(half_per-a)*(half_per-b)*(half_per-c))
+if a + b > c and a + c > b and c + b > a:
+    half_per = (a + b + c) / 2
+    s = sqrt(half_per * (half_per - a) * (half_per - b) * (half_per - c))
     print('Площадь треугольника ', s)
 else:
     print('Это не стороны треугольника')

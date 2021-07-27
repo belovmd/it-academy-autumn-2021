@@ -4,7 +4,7 @@
 Сложность задачи - Elementary+
 
 Find the nearest value to the given one.
-You are given a list of values as set form and a value 
+You are given a list of values as set form and a value
 for which you need to find the nearest one.
 For example, we have the following set of numbers: 4, 7, 10, 11, 12, 17,
 and we need to find the nearest value to the number 9. If we sort this
@@ -60,8 +60,8 @@ if __name__ == '__main__':
 Задача взята с сайта https://py.checkio.org/
 Сложность задачи - Elementary
 
-For the input of your function, you will be given one sentence. 
-You have to return a corrected version, that starts with a capital 
+For the input of your function, you will be given one sentence.
+You have to return a corrected version, that starts with a capital
 letter and ends with a period (dot).
 Pay attention to the fact that not all of the fixes are necessary.
 If a sentence already ends with a period (dot),
@@ -109,9 +109,9 @@ def correct_sentence(text: str):
 Задача взята с сайта https://py.checkio.org/
 Сложность задачи - Elementary
 
-In a given text you need to sum the numbers while 
+In a given text you need to sum the numbers while
 excluding any digits that form part of a word.
-The text consists of numbers, spaces and letters 
+The text consists of numbers, spaces and letters
 from the English alphabet.
 Input: A string.
 Output: An int.
@@ -196,7 +196,7 @@ if __name__ == '__main__':
 Every true traveler must know how to do 3 things: fix the fire,find
 the water and extract useful information from the nature around him.
 Programming won't help you with the fire and water, but when it
-comes to the information extraction - it might be 
+comes to the information extraction - it might be
 just the thing you need.
 Your task is to find the angle of the sun above the horizon knowing the
 time of the day. Input data: the sun rises in the East at 6:00 AM, which
