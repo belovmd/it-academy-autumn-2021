@@ -6,6 +6,6 @@ print('Введите некоторую строку')
 str1 = input()
 str2 = ''
 for _ in str1:
-  if _ not in str2 and _ !=' ':
+    if _ not in str2 and _ != ' ':
     str2 += _
 print('Новая строка: ', str2)
