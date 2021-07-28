@@ -11,9 +11,9 @@
 #         return s[len(s)//2 - 1] + s[len(s)//2]
 
 
-""" If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
-    The sum of these multiples is 23.
-    Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+""" If we list all the natural numbers below 10 that are multiples of 3 or 5, 
+    we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution
+    so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
     https://www.codewars.com/kata/514b92a657cdc65150000006/train/python
 """
 
@@ -60,7 +60,9 @@
 
 # def valid_parentheses(str_):
 #     for element in str_:
-#         if element == '(' or element == ')' or element == '[' or element == ']' or element == '{' or element == '}':
+#         if element == '(' or element == ')' or \
+#                 element == '[' or element == ']' or \
+#                 element == '{' or element == '}':
 #             pass
 #         else:
 #             str_ = str_.replace(element, '')
