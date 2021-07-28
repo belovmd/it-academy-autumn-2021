@@ -11,7 +11,7 @@
 #         return s[len(s)//2 - 1] + s[len(s)//2]
 
 
-""" If we list all the natural numbers below 10 that are multiples of 3 or 5, 
+""" If we list all the natural numbers below 10 that are multiples of 3 or 5,
     we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution
     so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
     https://www.codewars.com/kata/514b92a657cdc65150000006/train/python
@@ -26,7 +26,7 @@
 #     return out_number
 
 
-""" In this little assignment you are given a string of space separated numbers, 
+""" In this little assignment you are given a string of space separated numbers,
     and have to return the highest and lowest number.
     https://www.codewars.com/kata/554b4ac871d6813a03000035/train/python
 """
@@ -39,7 +39,7 @@
 #     return numbers
 
 
-""" Write an algorithm that takes an array and moves all of the zeros to the end, 
+""" Write an algorithm that takes an array and moves all of the zeros to the end,
     preserving the order of the other elements.
     https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python
 """
@@ -52,8 +52,8 @@
 #     return array
 
 
-""" Write a function that takes a string of parentheses, and determines if the order 
-    of the parentheses is valid. The function should return true if the string is valid, 
+""" Write a function that takes a string of parentheses, and determines if the order
+    of the parentheses is valid. The function should return true if the string is valid,
     and false if it's invalid.
     https://www.codewars.com/kata/52774a314c2333f0a7000688/train/python
 """
