@@ -14,5 +14,5 @@ for _ in punkt_marks:
 my_string = my_string.split(' ')
 for list in my_string:
     if len(list) > len(long):
-    long = list
+        long = list
 print(long)
