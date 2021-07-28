@@ -7,8 +7,8 @@ b = int(input("Введите число"))
 c = int(input("Введите число"))
 
 if a + b > c and a + c > b and c + b > a:
-    p = (a+b+c)/2
-    area = (p * (p - a) * (p - b) * (p - c))**0.5
+    p = (a + b + c) / 2
+    area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
     print("Это треугольник,площадь равна", area)
 else:
     print("Это не треугольник")
