@@ -14,15 +14,16 @@ Print Weird if the number is weird. Otherwise, print Not Weird.
 print('Enter a positive integer')
 n = int(input())
 if (n % 2) or ((not n % 2) and (6 <= n <= 20)):
-  print('Weird')
+    print('Weird')
 elif ((not n % 2) and (2 <= n <= 5) or (20 < n <= 100)):
-  print('No weird')
+    print('No weird')
 
 
-'''The provided code stub reads and integer, n, from STDIN. For all non-negative integers i < n, print i^2.
-Example 
+'''The provided code stub reads and integer, n, from STDIN.
+For all non-negative integers i < n, print i^2.
+Example
 n = 3
-The list of non-negative integers that are less than n = 3 is [0, 1, 2]. 
+The list of non-negative integers that are less than n = 3 is [0, 1, 2].
 Print the square of each number on a separate line.
 0
 1
@@ -38,7 +39,7 @@ Print n lines, one corresponding to each i.
 print('Enter an integer')
 n = int(input())
 if (n >= 1) and (n <= 20):
-  for i in range (0, n):
+    for i in range(0, n):
     print(i ** 2)
 
 
@@ -56,13 +57,13 @@ x = int(input())
 print('Введите координату y')
 y = int(input())
 if (x > 0) and (y > 0):
-  print('Точка с такими координатами находится в I четверти')
+    print('Точка с такими координатами находится в I четверти')
 elif (x < 0) and (y > 0):
-  print('Точка с такими координатами находится в II четверти')
+    print('Точка с такими координатами находится в II четверти')
 elif (x < 0) and (y < 0):
-  print('Точка с такими координатами находится в III четверти')
+    print('Точка с такими координатами находится в III четверти')
 else:
-  print ('Точка с такими координатами находится в IV четверти')
+    print('Точка с такими координатами находится в IV четверти')
 
 
 '''Напишите программу, которая по введённому натуральному числу определит,
@@ -74,8 +75,6 @@ else:
 print('Введите год, о котором Вы хотите узнать високосный ли он')
 year = int(input())
 if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)):
-  print('Год високосный')
+    print('Год високосный')
 else:
-  print ('Год не високосный')
-
-
+    print ('Год не високосный')

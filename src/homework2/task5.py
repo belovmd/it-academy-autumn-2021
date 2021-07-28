@@ -9,7 +9,7 @@ b = 1
 if n == 1:
     print(n, 'число в последовательности', a)
 else:
-    for _ in range (1, n - 1):
+    for _ in range(1, n - 1):
         c = a + b
         a = b
         b = c
