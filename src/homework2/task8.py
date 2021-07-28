@@ -40,7 +40,7 @@ print('Enter an integer')
 n = int(input())
 if (n >= 1) and (n <= 20):
     for i in range(0, n):
-    print(i ** 2)
+        print(i ** 2)
 
 
 '''В системе координат на плоскости выделяют четверти:
@@ -77,4 +77,4 @@ year = int(input())
 if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)):
     print('Год високосный')
 else:
-    print ('Год не високосный')
+    print('Год не високосный')
