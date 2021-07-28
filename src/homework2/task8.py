@@ -1,4 +1,4 @@
-""" Задача уровня elementary c сайта https://py.checkio.org.
+""" Задача уровня  elementary c сайта https://py.checkio.org.
 You are given a string and you have to find its first word.
 """
 str_ = "Hello World"
