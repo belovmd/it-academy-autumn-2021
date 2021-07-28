@@ -14,5 +14,5 @@ while num > 0:
 
 if num == rev:
     print('Палиндром')
-else: 
+else:
     print('Не палиндром')
