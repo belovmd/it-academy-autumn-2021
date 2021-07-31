@@ -11,20 +11,19 @@ Constraints: 1 <= n <= 100
 Output Format: Print Weird if the number is weird. Otherwise, print Not Weird.
 """
 
-
 n = 0
 while n < 1 or n > 100:
     n = int(input("Введите число от 1 до 100: "))
-    if n > 0 and n < 101:
+    if 0 < n < 101:
         break
     else:
         print("Введённое число вне разрешённого диапазона! Введите число от 1 до 100")
 
 if n % 2:
     print("Weird")
-elif n > 1 and n < 6:
+elif 1 < n < 6:
     print("Not Weird")
-elif n > 5 and n < 21:
+elif 5 < n < 21:
     print("Weird")
 elif n > 20:
     print("Not Weird")
@@ -36,7 +35,7 @@ elif n > 20:
    The first line contains the sum of the two numbers.
    The second line contains the difference of the two numbers (first - second).
    The third line contains the product of the two numbers.
-   """
+"""
 
 a = int(input('Введите число а: '))
 b = int(input('Введите число b: '))
@@ -85,4 +84,22 @@ for i in range(1, int(input('N: ')) + 1):
     print((111111111 // (10 ** (9 - i))) ** 2)
 
 
+"""https://www.hackerrank.com/challenges/python-quest-1/problem
+You are given a positive integer N. Print a numerical triangle of height (N - 1) like the one below:
+1
+22
+333
+4444
+55555
+......
+Can you do it using only arithmetic operations, a single for loop and print statement?
+Use no more than two lines. The first line (the for statement) is already written for you.
+You have to complete the print statement.
 
+Input Format: A single line containing integer, N.
+Constraints: 1 <= N <= 9
+Output Format: Print N - 1 lines as explained above.
+"""
+
+for i in range(1, int(input('N: '))):
+    print((111111111//(10 ** (9-i))) * i)
