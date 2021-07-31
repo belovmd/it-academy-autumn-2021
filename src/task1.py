@@ -5,8 +5,8 @@ import itertools
 import random
 import re
 import sys
-import unittest
 from time import localtime
+import unittest
 import xml.etree.ElementTree as etree
 
 # next task docstring
@@ -332,7 +332,6 @@ for answer in solve(BOARD_SIZE):
 def iter_primes():
     # an iterator of all numbers between 2 and +infinity
     numbers = itertools.count(2)
-
 
     # generate primes forever
     while True:
