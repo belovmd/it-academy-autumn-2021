@@ -1,68 +1,104 @@
+# next task docstring
 """1 line: Output"""
+# my next task first line
 print ('Hello, world!')
+# last line of previous task
 
 
+# next task docstring
 """2 lines: Input, assignment"""
+# my next task first line
 name = input('What is your name?\n')
 print ('Hi, %s.' % name)
+# last line of previous task
 
 
+# next task docstring
 """3 lines: For loop, built-in enumerate function, new style formatting"""
+# my next task first line
 friends = ['john', 'pat', 'gary', 'michael']
+
 for i, name in enumerate(friends):
     print ("iteration {iteration} is {name}".format(iteration=i, name=name))
+# last line of previous task
 
 
+# next task docstring
 """4 lines: Fibonacci, tuple assignment"""
+# my next task first line
 parents, babies = (1, 1)
+
 while babies < 100:
     print ('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
+# last line of previous task
 
 
+# next task docstring
 """5 lines: Functions"""
+# my next task first line
 def greet(name):
     print ('Hello', name)
 
 greet('Jack')
 greet('Jill')
 greet('Bob')
+# last line of previous task
 
 
+# next task docstring
 """6 lines: Import, regular expressions"""
+# my next task first line
 import re
+
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print (test_string, 'is a valid US local phone number')
     else:
         print (test_string, 'rejected')
+# last line of previous task
 
 
+# next task docstring
 """7 lines: Dictionaries, generator expressions"""
+# my next task first line
 prices = {'apple': 0.40, 'banana': 0.50}
+
 my_purchase = {
     'apple': 1,
     'banana': 6}
+
 grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
+
 print ('I owe the grocer $%.2f' % grocery_bill)
+# last line of previous task
 
 
+# next task docstring
 """8 lines: Command line arguments, exception handling"""
+# my next task first line
 # This program adds up integers that have been passed as arguments in the command line
 import sys
+
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
     print ('sum =', total)
+
 except ValueError:
     print ('Please supply integer arguments')
+# last line of previous task
 
 
+# next task docstring
 """9 lines: Opening files"""
+# my next task first line
 # indent your Python code to put into an email
 import glob
+
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
+
 for file_name in sorted(python_files):
     print ('    ------' + file_name)
 
@@ -71,10 +107,12 @@ for file_name in sorted(python_files):
             print ('    ' + line.rstrip())
 
     print()
+# last line of previous task
 
 
-
+# next task docstring
 """10 lines: Time, conditionals, from..import, for..else"""
+# my next task first line
 from time import localtime
 
 activities = {8: 'Sleeping',
@@ -93,24 +131,31 @@ for activity_time in sorted(activities.keys()):
         break
 else:
     print ('Unknown, AFK or sleeping!')
+# last line of previous task
 
 
+# next task docstring
 """11 lines: Triple-quoted strings, while loop"""
+# my next task first line
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
 take one down, pass it around,
 %d bottles of beer on the wall!
 '''
+
 bottles_of_beer = 9
+
 while bottles_of_beer > 1:
     print (REFRAIN % (bottles_of_beer, bottles_of_beer,
         bottles_of_beer - 1))
     bottles_of_beer -= 1
+# last line of previous task
 
 
-
+# next task docstring
 """12 lines: Classes"""
+# my next task first line
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
@@ -120,13 +165,19 @@ class BankAccount(object):
         self.balance -= amount
     def overdrawn(self):
         return self.balance < 0
+
 my_account = BankAccount(15)
 my_account.withdraw(50)
+
 print (my_account.balance, my_account.overdrawn())
+# last line of previous task
 
 
+# next task docstring
 """13 lines: Unit testing with unittest"""
+# my next task first line
 import unittest
+
 def median(pool):
     copy = sorted(pool)
     size = len(copy)
@@ -134,14 +185,19 @@ def median(pool):
         return copy[int((size - 1) / 2)]
     else:
         return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+
 class TestMedian(unittest.TestCase):
     def testMedian(self):
         self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
+
 if __name__ == '__main__':
     unittest.main()
+# last line of previous task
 
 
+# next task docstring
 """14 lines: Doctest-based testing"""
+# my next task first line
 def median(pool):
     '''Statistical median to demonstrate doctest.
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
@@ -153,13 +209,18 @@ def median(pool):
         return copy[int((size - 1) / 2)]
     else:
         return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+# last line of previous task
 
 
+# next task docstring
 """15 lines: itertools"""
+# my next task first line
 from itertools import groupby
+
 lines = '''
 This is the
 first paragraph.
@@ -174,10 +235,12 @@ for has_chars, frags in groupby(lines, bool):
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
+# last line of previous task
 
 
-
+# next task docstring
 """16 lines: csv module, tuple unpacking, cmp() built-in"""
+# my next task first line
 import csv
 
 # need to define cmp function in Python 3
@@ -196,14 +259,17 @@ with open('stocks.csv', 'w', newline='') as stocksFileW:
 # read stocks data, print status messages
 with open('stocks.csv', 'r') as stocksFile:
     stocks = csv.reader(stocksFile)
-
     status_labels = {-1: 'down', 0: 'unchanged', 1: 'up'}
+
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
         print ('%s is %s (%.2f)' % (name, status, float(pct)))
+# last line of previous task
 
 
+# next task docstring
 """18 lines: 8-Queens Problem (recursion)"""
+# my next task first line
 BOARD_SIZE = 8
 
 def under_attack(col, queens):
@@ -226,11 +292,15 @@ def solve(n):
         for i in range(BOARD_SIZE)
             for solution in smaller_solutions
                 if not under_attack(i+1, solution)]
+
 for answer in solve(BOARD_SIZE):
     print (answer)
+# last line of previous task
 
 
+# next task docstring
 """20 lines: Prime numbers sieve w/fancy generators"""
+# my next task first line
 import itertools
 
 def iter_primes():
@@ -251,9 +321,12 @@ for p in iter_primes():
     if p > 1000:
         break
     print (p)
+# last line of previous task
 
 
+# next task docstring
 """21 lines: XML/HTML parsing"""
+# my next task first line
 dinner_recipe = '''<html><body><table>
 <tr><th>amt</th><th>unit</th><th>item</th></tr>
 <tr><td>24</td><td>slices</td><td>baguette</td></tr>
@@ -264,6 +337,7 @@ dinner_recipe = '''<html><body><table>
 
 # From http://effbot.org/zone/element-index.htm
 import xml.etree.ElementTree as etree
+
 tree = etree.fromstring(dinner_recipe)
 
 # For invalid HTML use http://effbot.org/zone/element-soup.htm
@@ -271,13 +345,17 @@ tree = etree.fromstring(dinner_recipe)
 # tree = ElementSoup.parse(StringIO.StringIO(dinner_recipe))
 
 pantry = set(['olive oil', 'pesto'])
+
 for ingredient in tree.getiterator('tr'):
     amt, unit, item = ingredient
     if item.tag == "td" and item.text not in pantry:
         print ("%s: %s %s" % (item.text, amt.text, unit.text))
+# last line of previous task
 
 
+# next task docstring
 """28 lines: 8-Queens Problem (define your own exceptions)"""
+# my next task first line
 BOARD_SIZE = 8
 
 class BailOut(Exception):
@@ -304,12 +382,15 @@ def add_queen(queens):
     raise BailOut
 
 queens = add_queen([])
+
 print (queens)
 print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+# last line of previous task
 
 
+# next task docstring
 """33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com"""
-
+# my next task first line
 import random
 
 guesses_made = 0
@@ -338,3 +419,4 @@ if guess == number:
     print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
     print ('Nope. The number I was thinking of was {0}'.format(number))
+# last line of previous task
