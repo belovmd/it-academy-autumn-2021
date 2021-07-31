@@ -1,4 +1,4 @@
-''' Task from the lesson '''
+# Task from the lesson
 print('Пожалуйста, введите цену одной вещи ниже:')
 M = int(input('рублей: '))
 N = int(input('копеек: '))
@@ -14,25 +14,28 @@ else:
 print('Цена составит {} рублей {} копеек'.format(total_rubles, total_kopeck))
 
 # 1 line: Output
+
 print('Hello, world!')
 
 # 2 lines: Input, assignment
+
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
 # 3 lines: For loop, built-in enumerate function, new style formatting
+
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
 
 # 4 lines: Fibonacci, tuple assignment
+
 parents, babies = (1, 1)
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
 # 5 lines: Functions
-
 
 def greet(name):
     print('Hello', name)
@@ -43,6 +46,7 @@ greet('Jill')
 greet('Bob')
 
 # 6 lines: Import, regular expressions
+
 for test_string in ['555-1212', 'ILL-EGAL']:
     import re
 
@@ -52,6 +56,7 @@ for test_string in ['555-1212', 'ILL-EGAL']:
         print(test_string, 'rejected')
 
 # 7 lines: Dictionaries, generator expressions
+
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -60,8 +65,8 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 print('I owe the grocer $%.2f' % grocery_bill)
 
-# 8 lines: Command line arguments, exception handling
-# This program adds up integers that have been passed as arguments in the command line
+# 8 lines: Command line arguments, exception handling. This program adds up integers that have been passed as arguments in the command line
+
 try:
     import sys
 
