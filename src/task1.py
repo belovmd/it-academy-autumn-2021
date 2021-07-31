@@ -1,7 +1,7 @@
 # next task docstring
 """1 line: Output"""
 # my next task first line
-print ('Hello, world!')
+print('Hello, world!')
 # last line of previous task
 
 
@@ -9,7 +9,7 @@ print ('Hello, world!')
 """2 lines: Input, assignment"""
 # my next task first line
 name = input('What is your name?\n')
-print ('Hi, %s.' % name)
+print('Hi, %s.' % name)
 # last line of previous task
 
 
@@ -19,7 +19,7 @@ print ('Hi, %s.' % name)
 friends = ['john', 'pat', 'gary', 'michael']
 
 for i, name in enumerate(friends):
-    print ("iteration {iteration} is {name}".format(iteration=i, name=name))
+    print("iteration {iteration} is {name}".format(iteration=i, name=name))
 # last line of previous task
 
 
@@ -29,16 +29,19 @@ for i, name in enumerate(friends):
 parents, babies = (1, 1)
 
 while babies < 100:
-    print ('This generation has {0} babies'.format(babies))
+    print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 # last line of previous task
 
 
 # next task docstring
 """5 lines: Functions"""
+
+
 # my next task first line
 def greet(name):
-    print ('Hello', name)
+    print('Hello', name)
+
 
 greet('Jack')
 greet('Jill')
@@ -53,9 +56,9 @@ import re
 
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
-        print (test_string, 'is a valid US local phone number')
+        print(test_string, 'is a valid US local phone number')
     else:
-        print (test_string, 'rejected')
+        print(test_string, 'rejected')
 # last line of previous task
 
 
@@ -71,7 +74,7 @@ my_purchase = {
 grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 
-print ('I owe the grocer $%.2f' % grocery_bill)
+print('I owe the grocer $%.2f' % grocery_bill)
 # last line of previous task
 
 
@@ -83,10 +86,10 @@ import sys
 
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
-    print ('sum =', total)
+    print('sum =', total)
 
 except ValueError:
-    print ('Please supply integer arguments')
+    print('Please supply integer arguments')
 # last line of previous task
 
 
@@ -100,11 +103,11 @@ import glob
 python_files = glob.glob('*.py')
 
 for file_name in sorted(python_files):
-    print ('    ------' + file_name)
+    print('    ------' + file_name)
 
     with open(file_name) as f:
         for line in f:
-            print ('    ' + line.rstrip())
+            print('    ' + line.rstrip())
 
     print()
 # last line of previous task
@@ -120,17 +123,17 @@ activities = {8: 'Sleeping',
               17: 'Working',
               18: 'Commuting',
               20: 'Eating',
-              22: 'Resting' }
+              22: 'Resting'}
 
 time_now = localtime()
 hour = time_now.tm_hour
 
 for activity_time in sorted(activities.keys()):
     if hour < activity_time:
-        print (activities[activity_time])
+        print(activities[activity_time])
         break
 else:
-    print ('Unknown, AFK or sleeping!')
+    print('Unknown, AFK or sleeping!')
 # last line of previous task
 
 
@@ -147,29 +150,35 @@ take one down, pass it around,
 bottles_of_beer = 9
 
 while bottles_of_beer > 1:
-    print (REFRAIN % (bottles_of_beer, bottles_of_beer,
-        bottles_of_beer - 1))
+    print(REFRAIN % (bottles_of_beer, bottles_of_beer,
+                     bottles_of_beer - 1))
     bottles_of_beer -= 1
 # last line of previous task
 
 
 # next task docstring
 """12 lines: Classes"""
+
+
 # my next task first line
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
+
     def deposit(self, amount):
         self.balance += amount
+
     def withdraw(self, amount):
         self.balance -= amount
+
     def overdrawn(self):
         return self.balance < 0
+
 
 my_account = BankAccount(15)
 my_account.withdraw(50)
 
-print (my_account.balance, my_account.overdrawn())
+print(my_account.balance, my_account.overdrawn())
 # last line of previous task
 
 
@@ -178,17 +187,20 @@ print (my_account.balance, my_account.overdrawn())
 # my next task first line
 import unittest
 
+
 def median(pool):
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
         return copy[int((size - 1) / 2)]
     else:
-        return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+        return (copy[int(size / 2 - 1)] + copy[int(size / 2)]) / 2
+
 
 class TestMedian(unittest.TestCase):
     def testMedian(self):
         self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
+
 
 if __name__ == '__main__':
     unittest.main()
@@ -197,6 +209,8 @@ if __name__ == '__main__':
 
 # next task docstring
 """14 lines: Doctest-based testing"""
+
+
 # my next task first line
 def median(pool):
     '''Statistical median to demonstrate doctest.
@@ -208,10 +222,12 @@ def median(pool):
     if size % 2 == 1:
         return copy[int((size - 1) / 2)]
     else:
-        return (copy[int(size/2 - 1)] + copy[int(size/2)]) / 2
+        return (copy[int(size / 2 - 1)] + copy[int(size / 2)]) / 2
+
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()
 # last line of previous task
 
@@ -231,7 +247,7 @@ This is the second.
 # consecutive lines that either have content or don't.
 for has_chars, frags in groupby(lines, bool):
     if has_chars:
-        print (' '.join(frags))
+        print(' '.join(frags))
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
@@ -243,9 +259,11 @@ for has_chars, frags in groupby(lines, bool):
 # my next task first line
 import csv
 
+
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
+
 
 # write stocks data as comma-separated values
 with open('stocks.csv', 'w', newline='') as stocksFileW:
@@ -263,7 +281,7 @@ with open('stocks.csv', 'r') as stocksFile:
 
     for ticker, name, price, change, pct in stocks:
         status = status_labels[cmp(float(change), 0.0)]
-        print ('%s is %s (%.2f)' % (name, status, float(pct)))
+        print('%s is %s (%.2f)' % (name, status, float(pct)))
 # last line of previous task
 
 
@@ -271,6 +289,7 @@ with open('stocks.csv', 'r') as stocksFile:
 """18 lines: 8-Queens Problem (recursion)"""
 # my next task first line
 BOARD_SIZE = 8
+
 
 def under_attack(col, queens):
     left = right = col
@@ -282,19 +301,21 @@ def under_attack(col, queens):
             return True
     return False
 
+
 def solve(n):
     if n == 0:
         return [[]]
 
     smaller_solutions = solve(n - 1)
 
-    return [solution+[(n,i+1)]
-        for i in range(BOARD_SIZE)
+    return [solution + [(n, i + 1)]
+            for i in range(BOARD_SIZE)
             for solution in smaller_solutions
-                if not under_attack(i+1, solution)]
+            if not under_attack(i + 1, solution)]
+
 
 for answer in solve(BOARD_SIZE):
-    print (answer)
+    print(answer)
 # last line of previous task
 
 
@@ -303,24 +324,26 @@ for answer in solve(BOARD_SIZE):
 # my next task first line
 import itertools
 
+
 def iter_primes():
-     # an iterator of all numbers between 2 and +infinity
-     numbers = itertools.count(2)
+    # an iterator of all numbers between 2 and +infinity
+    numbers = itertools.count(2)
 
-     # generate primes forever
-     while True:
-         # get the first number from the iterator (always a prime)
-         prime = next(numbers)
-         yield prime
+    # generate primes forever
+    while True:
+        # get the first number from the iterator (always a prime)
+        prime = next(numbers)
+        yield prime
 
-         # this code iteratively builds up a chain of
-         # filters...slightly tricky, but ponder it a bit
-         numbers = filter(prime.__rmod__, numbers)
+        # this code iteratively builds up a chain of
+        # filters...slightly tricky, but ponder it a bit
+        numbers = filter(prime.__rmod__, numbers)
+
 
 for p in iter_primes():
     if p > 1000:
         break
-    print (p)
+    print(p)
 # last line of previous task
 
 
@@ -349,7 +372,7 @@ pantry = set(['olive oil', 'pesto'])
 for ingredient in tree.getiterator('tr'):
     amt, unit, item = ingredient
     if item.tag == "td" and item.text not in pantry:
-        print ("%s: %s %s" % (item.text, amt.text, unit.text))
+        print("%s: %s %s" % (item.text, amt.text, unit.text))
 # last line of previous task
 
 
@@ -358,15 +381,18 @@ for ingredient in tree.getiterator('tr'):
 # my next task first line
 BOARD_SIZE = 8
 
+
 class BailOut(Exception):
     pass
+
 
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
+        left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
+
 
 def add_queen(queens):
     for i in range(BOARD_SIZE):
@@ -381,10 +407,11 @@ def add_queen(queens):
             pass
     raise BailOut
 
+
 queens = add_queen([])
 
-print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))
+print(queens)
+print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 # last line of previous task
 
 
@@ -398,7 +425,7 @@ guesses_made = 0
 name = input('Hello! What is your name?\n')
 
 number = random.randint(1, 20)
-print ('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
+print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
 while guesses_made < 6:
 
@@ -407,16 +434,16 @@ while guesses_made < 6:
     guesses_made += 1
 
     if guess < number:
-        print ('Your guess is too low.')
+        print('Your guess is too low.')
 
     if guess > number:
-        print ('Your guess is too high.')
+        print('Your guess is too high.')
 
     if guess == number:
         break
 
 if guess == number:
-    print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+    print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
-    print ('Nope. The number I was thinking of was {0}'.format(number))
+    print('Nope. The number I was thinking of was {0}'.format(number))
 # last line of previous task
