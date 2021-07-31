@@ -1,3 +1,14 @@
+import re
+import sys
+import glob
+from time import localtime
+import unittest
+import csv
+import doctest
+from itertools import groupby
+import random
+import xml.etree.ElementTree as etree
+import itertools
 # next task docstring
 """1 line: Output"""
 # my next task first line
@@ -52,8 +63,6 @@ greet('Bob')
 # next task docstring
 """6 lines: Import, regular expressions"""
 # my next task first line
-import re
-
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
@@ -82,8 +91,6 @@ print('I owe the grocer $%.2f' % grocery_bill)
 """8 lines: Command line arguments, exception handling"""
 # my next task first line
 # This program adds up integers that have been passed as arguments in the command line
-import sys
-
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
     print('sum =', total)
@@ -97,8 +104,6 @@ except ValueError:
 """9 lines: Opening files"""
 # my next task first line
 # indent your Python code to put into an email
-import glob
-
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
 
@@ -116,8 +121,6 @@ for file_name in sorted(python_files):
 # next task docstring
 """10 lines: Time, conditionals, from..import, for..else"""
 # my next task first line
-from time import localtime
-
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
@@ -185,7 +188,6 @@ print(my_account.balance, my_account.overdrawn())
 # next task docstring
 """13 lines: Unit testing with unittest"""
 # my next task first line
-import unittest
 
 
 def median(pool):
@@ -213,12 +215,15 @@ if __name__ == '__main__':
 
 # my next task first line
 def median(pool):
-    '''Statistical median to demonstrate doctest.
+    """Statistical median to demonstrate doctest.
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
     6 #change to 7 in order to pass the test
-    '''
+    """
+
     copy = sorted(pool)
+
     size = len(copy)
+
     if size % 2 == 1:
         return copy[int((size - 1) / 2)]
     else:
@@ -226,8 +231,6 @@ def median(pool):
 
 
 if __name__ == '__main__':
-    import doctest
-
     doctest.testmod()
 # last line of previous task
 
@@ -235,7 +238,6 @@ if __name__ == '__main__':
 # next task docstring
 """15 lines: itertools"""
 # my next task first line
-from itertools import groupby
 
 lines = '''
 This is the
@@ -257,9 +259,6 @@ for has_chars, frags in groupby(lines, bool):
 # next task docstring
 """16 lines: csv module, tuple unpacking, cmp() built-in"""
 # my next task first line
-import csv
-
-
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
@@ -322,9 +321,6 @@ for answer in solve(BOARD_SIZE):
 # next task docstring
 """20 lines: Prime numbers sieve w/fancy generators"""
 # my next task first line
-import itertools
-
-
 def iter_primes():
     # an iterator of all numbers between 2 and +infinity
     numbers = itertools.count(2)
@@ -359,7 +355,6 @@ dinner_recipe = '''<html><body><table>
 </table></body></html>'''
 
 # From http://effbot.org/zone/element-index.htm
-import xml.etree.ElementTree as etree
 
 tree = etree.fromstring(dinner_recipe)
 
@@ -418,8 +413,6 @@ print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 # next task docstring
 """33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com"""
 # my next task first line
-import random
-
 guesses_made = 0
 
 name = input('Hello! What is your name?\n')
