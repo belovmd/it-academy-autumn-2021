@@ -102,4 +102,4 @@ Output Format: Print N - 1 lines as explained above.
 """
 
 for i in range(1, int(input('N: '))):
-    print((111111111//(10 ** (9-i))) * i)
+    print((111111111 // (10 ** (9 - i))) * i)
