@@ -1,14 +1,7 @@
-import re
-import sys
-import glob
+import re, sys, glob, unittest, csv, doctest, random, itertools
 from time import localtime
-import unittest
-import csv
-import doctest
-from itertools import groupby
-import random
 import xml.etree.ElementTree as etree
-import itertools
+
 # next task docstring
 """1 line: Output"""
 # my next task first line
@@ -190,7 +183,7 @@ print(my_account.balance, my_account.overdrawn())
 # my next task first line
 
 
-def median(pool):
+def mediane(pool):
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
@@ -201,7 +194,7 @@ def median(pool):
 
 class TestMedian(unittest.TestCase):
     def testMedian(self):
-        self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
+        self.assertEqual(mediane([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
 
 
 if __name__ == '__main__':
@@ -215,9 +208,13 @@ if __name__ == '__main__':
 
 # my next task first line
 def median(pool):
+
     """Statistical median to demonstrate doctest.
+
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
+
     6 #change to 7 in order to pass the test
+
     """
 
     copy = sorted(pool)
@@ -260,6 +257,8 @@ for has_chars, frags in groupby(lines, bool):
 """16 lines: csv module, tuple unpacking, cmp() built-in"""
 # my next task first line
 # need to define cmp function in Python 3
+
+
 def cmp(a, b):
     return (a > b) - (a < b)
 
