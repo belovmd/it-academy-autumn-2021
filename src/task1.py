@@ -1,4 +1,11 @@
-import re, sys, glob, unittest, csv, doctest, random, itertools
+import csv
+import doctest
+import glob
+import itertools
+import random
+import re
+import sys
+import unittest
 from time import localtime
 import xml.etree.ElementTree as etree
 
@@ -244,7 +251,7 @@ This is the second.
 '''.splitlines()
 # Use itertools.groupby and bool to return groups of
 # consecutive lines that either have content or don't.
-for has_chars, frags in groupby(lines, bool):
+for has_chars, frags in itertools.groupby(lines, bool):
     if has_chars:
         print(' '.join(frags))
 # PRINTS:
@@ -320,9 +327,12 @@ for answer in solve(BOARD_SIZE):
 # next task docstring
 """20 lines: Prime numbers sieve w/fancy generators"""
 # my next task first line
+
+
 def iter_primes():
     # an iterator of all numbers between 2 and +infinity
     numbers = itertools.count(2)
+
 
     # generate primes forever
     while True:
