@@ -103,7 +103,7 @@ else:
 
 a = int(input())
 if a**0.5 == int(a**0.5):
-    b = (a**0.5+1)**2
+    b = (a**0.5 + 1)**2
     print(int(b))
 else:
     print('-1')
