@@ -7,6 +7,6 @@ n = int(input('Введите номер числа Фибоначчи: '))
 a, b = 0, 1
 print(a, b, end=' ')
 for i in range(2, n):
-    a, b = b, a+b
+    a, b = b, a + b
     print(b, end=' ')
 print('\nЧисло Фибоначи №', n, ':', b)
