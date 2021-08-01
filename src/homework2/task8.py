@@ -1,4 +1,4 @@
- ''' 1.
+''' 1.
     https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/python
 
     Your task is to make a function that can take any non-negative integer
@@ -15,7 +15,7 @@ chislo = int(input('Введите число:'))
 list_ = [int(x) for x in str(chislo)]
 # сортируем по убыванию
 list_.sort(reverse=True)
-new_s=''.join(str(a) for a in list_)
+new_s = ''.join(str(a) for a in list_)
 print(new_s)
 
 
@@ -26,7 +26,7 @@ print(new_s)
     where each character in the new string is "("
     if that character appears only once in the original string,
     or ")" if that character appears more than once in the original string.
-    Ignore capitalization when determining if a character is a duplicate. 
+    Ignore capitalization when determining if a character is a duplicate.
     Examples:
     "din"      =>  "((("
     "recede"   =>  "()()()"
@@ -34,17 +34,17 @@ print(new_s)
     "(( @"     =>  "))(("
 '''
 
-str_=input('Введите строку: ')
-result=[]
+str_ = input('Введите строку: ')
+result = []
 for i in str_.lower():
-    if str_.count(i)>1:
+    if str_.count(i) > 1:
         result.append(')')
     else:
         result.append('(')
 print(''.join(str(_) for _ in result))
 
 
-''' 3. 
+''' 3.
     "Учебное пособие для 9 класса", В.М. Котов, пример 8.4.
     
     Написать программу, которая выводит на экран последний символ введенного слова
