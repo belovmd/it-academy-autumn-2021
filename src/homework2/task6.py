@@ -10,7 +10,7 @@ b = 0
 while(n > 0):
     last = n % 10
     b = b * 10 + last
-    n = n//10
+    n = n //10
 if a == b:
     print("number palindrome")
 else:
