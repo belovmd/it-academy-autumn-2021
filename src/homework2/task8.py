@@ -40,6 +40,7 @@ The input string consists of only English letters and spaces.
 There aren’t any spaces at the beginning and the end of the string.
 Input: A string.
 Output: A string.
+https://py.checkio.org/en/mission/first-word-simplified/
 '''
 
 
@@ -64,6 +65,7 @@ The verification condition is:
 the length should be bigger than 6.
 Input: A string.
 Output: A bool.
+https://py.checkio.org/en/mission/acceptable-password-i/
 '''
 
 
@@ -76,3 +78,45 @@ if __name__ == '__main__':
     print("Example:")
     print(is_acceptable_password('short'))
     print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+'''
+Требуется вычислить факториал целого числа N. Факториал обозначают как N! и вычисляют по формуле:
+N! = 1 * 2 * 3 * … * (N-1) * N, причем 0! = 1.
+Так же допустимо рекуррентное соотношение: N! = (N-1)! * N
+https://acmp.ru/index.asp?main=task&id_task=18
+'''
+
+
+n = int(input())
+ 
+factorial = 1
+ 
+for i in range(2, n+1):
+    factorial *= i
+ 
+print(factorial)
+
+
+'''
+В нашем зоопарке появился заяц. Его поместили в клетку, и чтобы ему не было скучно,
+директор зоопарка распорядился поставить в его клетке лесенку. Теперь наш зайчик может
+прыгать по лесенке вверх, перепрыгивая через ступеньки. Лестница имеет определенное количество
+ступенек N. Заяц может одним прыжком преодолеть не более К ступенек. Для разнообразия
+зайчик пытается каждый раз найти новый путь к вершине лестницы. Директору любопытно,
+сколько различных способов есть у зайца добраться до вершины лестницы при заданных значениях K и N.
+Помогите директору написать программу, которая поможет вычислить это количество. Например, если K=3 и N=4,
+то существуют следующие маршруты: 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2, 1+3, 3+1. Т.е. при данных значениях
+у зайца всего 7 различных маршрутов добраться до вершины лестницы.
+https://acmp.ru/index.asp?main=task&id_task=11
+'''
+
+
+k, n = map(int, input().split())
+d = [1] + [0] * n * k
+
+for i in range(n):
+    for j in range(1, k + 1):
+        d[i + j] += d[i]
+
+print(max(d))
