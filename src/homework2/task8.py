@@ -67,3 +67,4 @@ for  i in range(len(a)):
                 n += 1
         print(n)
 print('Различных чисел:', cnt)
+
