@@ -4,5 +4,5 @@
 n = int(input("введите ряд"))
 f1 = f2 = 1
 for i in range(2, n):
-    f1,f2 = f2,f1+f2
+    f1, f2 = f2, f1 +f 2
 print(f"Число Фибоначчи для ряда {n} равно {f2}")

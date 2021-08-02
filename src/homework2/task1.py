@@ -9,7 +9,7 @@ Output: Общая цена 9 рублей 60 копеек
 a = int(input())
 b = int(input())
 c = int(input())
-check = (a*100 + b) * int(c)
+check = (a * 100 + b) * int(c)
 kr = check // 100
 checkkop = (check % 100)
-print("общая цена" , kr, checkkop)
+print("общая цена", kr, "рублей", checkkop, "копеек")

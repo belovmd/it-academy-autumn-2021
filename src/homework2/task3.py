@@ -3,6 +3,6 @@
 str = (input(""))
 str1 = ""
 for x in str:
-  if x not in str1 and x !=" ":
-    str1 +=x
-print (str1)
+    if x not in str1 and x != " ":
+      str1 += x
+print( str1 )
