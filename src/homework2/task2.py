@@ -3,6 +3,7 @@
 my_string.split([chars]) возвращает список строк.
 len(list) - количество элементов в списке
 '''
+
 my_string = input('Kindly input some text: ')
 a = my_string.replace('.', '')
 not_useful1 = a.replace('-', '')

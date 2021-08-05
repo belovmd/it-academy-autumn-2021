@@ -2,6 +2,7 @@
 и прописных (больших)
  букв в введенной строке. Учитывать только английские буквы.
 '''
+
 text_input = input('Kindly input some English text: ')
 count_lowercase = 0
 count_uppercase = 0

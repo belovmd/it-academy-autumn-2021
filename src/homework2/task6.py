@@ -4,6 +4,7 @@
 Задача требует работать только с числами
 (без конвертации числа в строку или что-нибудь еще)
 '''
+
 digits = int(input("Please, input the number for checking: "))
 a = int(digits)
 reverse = 0
