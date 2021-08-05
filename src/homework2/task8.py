@@ -11,7 +11,8 @@ print(string_lst[0])
 
 # https://www.hackerrank.com/challenges/python-loops/problem
 # Task
-# The provided code stub reads and integer, n , from STDIN. For all non-negative integers i < n , print i  ** 2 .
+# The provided code stub reads and integer, n, from STDIN.
+# For all non-negative integers i < n, print i ** 2 .
 
 n = int(input())
 for i in range(0, n):
