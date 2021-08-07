@@ -33,19 +33,47 @@ return the middle 2 characters.
 You will be given an array of numbers. You have to sort the odd numbers in ascending order
 while leaving the even numbers at their original positions.
 """
-list_ = [5, 4, 3, 8]
-list_odd = []
-list_even = []
-list_new = []
-for i in list_:
-    if i % 2:
-        list_odd.append(i)
-        list_odd.sort()
-    else:
-        list_even.append(i)
-for a in range(max(len(list_odd), len(list_even))):
-    if a < len(list_odd):
-        list_new.append(list_odd[a])
-    if a < len(list_even):
-        list_new.append(list_even[a])
-print(list_, list_new)
+
+# str_ = input('Input array: ')
+# str_ = str_.strip()
+# str_ = str_.split(' ')
+# list_ = []
+#
+# for char in str_:
+#     list_.append(int(char))
+#
+# list_odd = []
+# list_even = []
+# list_new = []
+# for i in list_:
+#     if i % 2:
+#         list_odd.append(i)
+#     else:
+#         list_even.append(i)
+# list_odd.sort()
+# for a in range(max(len(list_odd), len(list_even))):
+#     if a < len(list_odd):
+#         list_new.append(list_odd[a])
+#     if a < len(list_even):
+#         list_new.append(list_even[a])
+# print(list_, list_new)
+
+
+"""
+Create a function that returns the sum of the two lowest
+positive numbers given an array of minimum 4 positive
+integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+"""
+
+str_ = input('Input your number array: ')
+str_ = str_.split()
+array_ = []
+for char in str_:
+    array_.append(int(char))
+array_.sort()
+sum_ = array_[0] + array_[1]
+print(sum_)
