@@ -5,7 +5,7 @@ FizzBuzz
 пишет Buzz, а вместо чисел одновременно кратных и 3 и 5 - FizzBuzz
 """
 
-for num in range(1,101):
+for num in range(1, 101):
     if not num % 3 and not num % 5:
         print('FizzBuzz')
     elif not num % 5:
@@ -14,4 +14,3 @@ for num in range(1,101):
         print('Fizz')
     else:
         print(num)
-

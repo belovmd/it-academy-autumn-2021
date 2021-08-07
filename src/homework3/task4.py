@@ -19,4 +19,4 @@ for num in arr:
         pair = (numbers_lst.count(num) * (numbers_lst.count(num) - 1)) / 2
         pairs += pair
 
-print ('Количество пар =', int(pairs))
+print('Количество пар =', int(pairs))

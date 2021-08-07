@@ -20,7 +20,7 @@ print(lst[::2])
 3. Используйте генератор списков чтобы
  получить следующий ['1a', '2a', '3a', '4a']
 """
-lst_num = [str(ind_1) + 'a' for ind_1 in range(1,5)]
+lst_num = [str(ind_1) + 'a' for ind_1 in range(1, 5)]
 print(lst_num)
 
 
@@ -39,4 +39,3 @@ lst_last = lst_num.copy()
 
 lst_last.insert(1, '2a')
 print(lst_last, lst_num)
-
