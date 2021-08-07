@@ -5,7 +5,7 @@ n = int(input('Ведите число:'))
 a = 1
 b = 1
 i = 0
-while i < n-2:
+while i < n - 2:
     c = a + b
     a = b
     b = c
