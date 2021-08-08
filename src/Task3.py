@@ -5,19 +5,15 @@
 Выходные данные - количество пар.
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар"""
 
-string_ = "1 2 4 5 7 7 4 5 3 2 1 2 2 1 1"
+string_ = "1 2 4 5 7 7 4 5 3 2 1 2 2 1 1 10 10 10 11 36 36 37"
 string_ = string_.split()
-print(string_)
 list_ = [int(x) for x in string_]
-print(list_)
 dict_ = dict.fromkeys(list_, 0)
-print(dict_)
-k = 0
+l_ = len(list_)
 i = 1
-for k in range(len(list_)):
-    for i in range(len(list_)):
-        if list_[k] == list_[i]:
+for k in list_:
+    for j in list_[i:l_]:
+        if k == j:
             dict_[k] += 1
     i += 1
-k += 1
-print(dict_)
+print("\n".join("Для числа {} найдено => {} пар".format(k, v) for k, v in dict_.items()))
