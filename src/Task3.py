@@ -6,13 +6,18 @@
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар"""
 
 string_ = "1 2 4 5 7 7 4 5 3 2 1 2 2 1 1"
-list_ = string_.split()
-list_ = [int(x) for x in list_]
+string_ = string_.split()
+print(string_)
+list_ = [int(x) for x in string_]
+print(list_)
 dict_ = dict.fromkeys(list_, 0)
+print(dict_)
 k = 0
-
-for k in list_:
-    for j in list_:
-        if list_[k] == list_[j]:
+i = 1
+for k in range(len(list_)):
+    for i in range(len(list_)):
+        if list_[k] == list_[i]:
             dict_[k] += 1
+    i += 1
+k += 1
 print(dict_)
