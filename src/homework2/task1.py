@@ -6,7 +6,9 @@
    Output: Общая цена 9 рублей 60 копеек
 '''
 
-cena = float(input('Введите стоимость: '))
-tovar = int(input('Введите количество товара: '))
-stoim = cena * tovar
-print("Общая цена: ", int(stoim // 1), 'руб.', int(round(stoim % 1, 2) * 100), 'коп.')
+
+M = int(input('Введите стоимость, руб.: '))
+N = int(input('Введите стоимость, коп.: '))
+S = int(input('Введите количество товара: '))
+stoim = S*(M+N/100)
+print("Общая цена: ",  int(stoim//1), 'руб.', int(stoim%1*100), 'коп.')
