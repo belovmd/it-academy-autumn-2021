@@ -7,12 +7,12 @@
 
 digits = int(input("Please, input the number for checking: "))
 a = int(digits)
-reverse = 0
+reverse_order = 0
 while digits != 0:
     last_digit = digits % 10
-    reverse = reverse * 10 + last_digit  # mirroring the input number
+    reverse_order = reverse_order * 10 + last_digit  # mirroring the input number
     digits = int(digits / 10)
-if a == reverse:
+if a == reverse_order:
     print("Yes, that's a palindrome")
 else:
     print("No, it's not a palindrome")
