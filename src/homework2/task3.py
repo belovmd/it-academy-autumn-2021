@@ -3,7 +3,6 @@
 '''
 
 text = input('Please, input the text: ')
-print(text.replace(' ', ''))  # this one is for me only in order not to forget this command
 text_list = ''
 for i in text:
     if i not in text_list and i != ' ':
