@@ -45,10 +45,10 @@ print(string[::-1])
 beginning_zeros = str(input('Number: '))
 zero = []
 for x in beginning_zeros:
-    if x == '0':
-        zero.append(x)
-    else:
+    if x != '0':
         break
+    else:
+        zero.append(x)
 print('The input number  begins with {} zeros.'.format(len(zero)))
 
 # TASK 5
