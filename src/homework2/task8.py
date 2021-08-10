@@ -47,7 +47,8 @@ zero = []
 for x in beginning_zeros:
     if x == '0':
         zero.append(x)
-    else: break
+    else: 
+        break
 print('The input number  begins with {} zeros.'.format(len(zero)))
 
 # TASK 4
