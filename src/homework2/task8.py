@@ -47,11 +47,11 @@ zero = []
 for x in beginning_zeros:
     if x == '0':
         zero.append(x)
-    else: 
+    else:
         break
 print('The input number  begins with {} zeros.'.format(len(zero)))
 
-# TASK 4
+# TASK 5
 # Find the nearest value to the given one.
 # You are given a list of values as set form
 # and a value for which you need to find the nearest one.
