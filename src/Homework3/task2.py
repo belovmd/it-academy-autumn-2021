@@ -4,7 +4,8 @@
 import copy
 
 
-"""1. Используйте генератор списков чтобы получить следующий: ['ab', 'ac', 'ad', 'bb', 'bc', 'bd']."""
+"""1. Используйте генератор списков чтобы получить следующий:
+['ab', 'ac', 'ad', 'bb', 'bc', 'bd']."""
 lst = [(letter1 + letter2) for letter1 in 'ab' for letter2 in 'bcd']
 print('1: ', lst)
 
