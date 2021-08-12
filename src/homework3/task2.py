@@ -3,8 +3,8 @@
 alphabet = ['a', 'b', 'c', 'd']
 i = [alphabet]
 lst1 = [element1+element2 for element1 in alphabet for element2
-        in alphabet if 'a' <= element1 <= 'b'
-        and 'a' < element2 <= 'd']
+        in alphabet if 'a' <= element1 <= 'b' and 
+        'a' < element2 <= 'd']
 print(lst1)
 
 # Используйте на предыдущий список slice чтобы получить следующий:
