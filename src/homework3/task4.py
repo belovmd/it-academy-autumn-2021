@@ -8,8 +8,8 @@
 
 lst = [int(element) for element in input('The list of diigits: ').split()]
 pair_count = 0
-for item in range(len(lst)): 
-    for element in range(item + 1, len(lst)): 
+for item in range(len(lst)):
+    for element in range(item + 1, len(lst)):
         if lst[item] == lst[element]:
             pair_count += 1
 print('The count of pair elements is', pair_count)
