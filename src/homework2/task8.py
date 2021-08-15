@@ -42,7 +42,7 @@ for age, handicap in b:
         candidates.append('Open') 
     else: 
         candidates.append('Senior') 
-print(candidates)
+print('Result: ', candidates)
 
 # TASK 4
 # You have a string that consist only of digits.
