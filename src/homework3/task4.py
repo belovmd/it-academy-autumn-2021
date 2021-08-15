@@ -6,4 +6,10 @@
 # Выходные данные - количество пар.
 # Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
 
-lst = [2, 1, 8, 2, 3, 9, 2, 2]
+lst = [int(element) for element in input('The list of diigits: ').split()]
+pair_count = 0
+for item in range(len(lst)): 
+    for element in range(item + 1, len(lst)): 
+        if lst[item] == lst[element]:
+            pair_count += 1
+print('The count of pair elements is', pair_count)
