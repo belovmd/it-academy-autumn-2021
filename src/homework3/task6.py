@@ -9,6 +9,3 @@ for i in range(len(lst)):
     if lst[i] == 0:
         lst.append(lst.pop(i))
 print(*lst)
-
-
-
