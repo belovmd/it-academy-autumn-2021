@@ -10,7 +10,6 @@ turn_over = 0
 while n > 0:
     turn_over = turn_over * 10 + n % 10
     n //= 10
-# print(turn_over)
 if number == turn_over:
     print('Число', number, '- палиндром')
 else:

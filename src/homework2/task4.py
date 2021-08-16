@@ -6,10 +6,10 @@ print('Введите строку')
 str_ = input()
 lowercase = 0  # строчная (маленькая) буква
 uppercase = 0  # прописная (большая) буква
-for _ in str_:
-    if 'a' <= _ <= 'z':
+for element in str_:
+    if 'a' <= element <= 'z':
         lowercase += 1
-    elif 'A' <= _ <= 'Z':
+    elif 'A' <= element <= 'Z':
         uppercase += 1
 print('В данной строке', lowercase, 'строчных букв')
 print('В данной строке', uppercase, 'прописных букв')

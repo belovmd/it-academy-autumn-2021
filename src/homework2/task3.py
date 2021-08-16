@@ -5,7 +5,7 @@
 print('Введите некоторую строку')
 str1 = input()
 str2 = ''
-for _ in str1:
-    if _ not in str2 and _ != ' ':
-        str2 += _
+for element in str1:
+    if element not in str2 and element != ' ':
+        str2 += element
 print('Новая строка: ', str2)

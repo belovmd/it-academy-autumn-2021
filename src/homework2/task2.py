@@ -8,7 +8,7 @@ len(list) - количество элементов в списке
 print('Введите предложение')
 my_string = input()
 long = ''
-punkt_marks = '.,!?;:-'
+punkt_marks = '.,!)("\'?;:-'
 for _ in punkt_marks:
     my_string = my_string.replace(_, '')
 my_string = my_string.split(' ')
