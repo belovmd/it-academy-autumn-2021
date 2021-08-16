@@ -6,7 +6,8 @@
 """
 
 
-input_list = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4]
+input_list = input('Введите числа: ')
+input_list = input_list.split(' ')
 
 dct = {}
 for element in input_list:
@@ -17,4 +18,4 @@ for number in dct.values():
     couple = sum(reversed(range(number)))
     output_list.append(couple)
 
-print(output_list)
+print(*output_list)
