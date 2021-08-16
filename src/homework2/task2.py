@@ -5,7 +5,10 @@
 
 sentence = input('Введите предложение. \n')
 
-punctuation = [',', '.', ':', ';', '- ', '!', '?']
+punctuation = [
+    ',', '.', ':', ';', '- ', '!', '?', '(', ')', '[', ']', '{',
+    '}',"'", '"', '$', '%', '^', '*', '&', '#', '№', '`', '~'
+]
 
 for element in punctuation:
     sentence = sentence.replace(element, '')

@@ -4,13 +4,12 @@
 
 number = int(input('Введите номер числа '))
 
-element_1, element_2, element_3 = 1, 1, 0
+elem_1, elem_2, elem_3 = 1, 1, 0
 
-if number == 1 or number == 2:
+if number in (1, 2):
     print('Значение этого числа равно 1')
 else:
     for _ in range(2, number):
-        element_3 = element_1 + element_2
-        element_1 = element_2
-        element_2 = element_3
-    print("Значение этого числа равно", element_3)
+        elem_3, elem_1, elem_2 = elem_1 + elem_2, elem_2, elem_3
+
+    print("Значение этого числа равно", elem_3)
