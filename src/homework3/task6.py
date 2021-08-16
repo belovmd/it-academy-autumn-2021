@@ -8,7 +8,7 @@
 # lst = [int(s) for s in input().split()]
 lst = [1, 0, 5, 2, 56, 0, 3, 1, 3, 1, 0, 7, 1]
 for element in lst:
-     if element == 0:
-         lst.remove(0)
-         lst.append(0)
+    if element == 0:
+        lst.remove(0)
+        lst.append(0)
 print(lst)

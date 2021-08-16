@@ -9,7 +9,6 @@ for i in range(1, 32):
     elif not i % 3:
         print('Fizz')
     elif not i % 5:
-        print ('Buzz')
+        print('Buzz')
     else:
         print(i)
-        

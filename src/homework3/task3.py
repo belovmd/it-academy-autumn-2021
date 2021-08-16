@@ -6,18 +6,22 @@
 последовательно выводились значения 1, 2, 3. Убедитесь что len() исходного кортежа возвращает 1.
 '''
 
-lst1 = ['a', 'b', 'c'] #1
+# 1
+lst1 = ['a', 'b', 'c']
 tpl1 = tuple(lst1)
 print(tpl1)
 
-tpl2 = ('a', 'b', 'c') #2
+# 2
+tpl2 = ('a', 'b', 'c')
 lst2 = list(tpl2)
 print(lst2)
 
-lst2[0:3] = ['a', 2, 'python'] #3
+# 3
+lst2[0:3] = ['a', 2, 'python']
 print(lst2)
 
-tpl4 = ((1, 2, 3), ) #4
+# 4
+tpl4 = ((1, 2, 3), )
 for elem in tpl4[0]:
-    print(elem, end = ', ')
+    print(elem, end=', ')
 print('len(tpl) = ', len(tpl4))
