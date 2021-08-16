@@ -27,5 +27,5 @@ print(lst4.pop(1))
 
 # 5
 lst7 = copy.copy(lst4)
-lst7.insert(1, '2a') 
+lst7.insert(1, '2a')
 print(lst7)
