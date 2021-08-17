@@ -14,4 +14,3 @@ for word in words:
         longest_word = word
 
 print(longest_word)
-

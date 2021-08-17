@@ -93,7 +93,8 @@ sought_arrow2 = '<--<<'
 arrows_num = 0
 
 for z in range(len(str_)):
-    if str_[z:][:len(sought_arrow1)] == sought_arrow1 or str_[z:][:len(sought_arrow2)] == sought_arrow2:
+    if str_[z:][:len(sought_arrow1)] == sought_arrow1 \
+            or str_[z:][:len(sought_arrow2)] == sought_arrow2:
         arrows_num += 1
 
 print(arrows_num)
