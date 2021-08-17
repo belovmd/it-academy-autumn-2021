@@ -10,7 +10,7 @@ side_2 = int(input('Вторая сторону: '))
 side_3 = int(input('Третьяя сторона: '))
 p = side_1 + side_2 + side_3
 
-if side_1 + side_2 <= side_3:
+if side_1 + side_2 > side_3 and side_1 + side_3 > side_2 and side_2 + side_3 > side_1:
     print('Фигура не является треугольником.')
 else:
-    print('S = ', (p * (p - side_1) + (p - side_2) + (p - side_3)) ** 0.5)
+    print('S = ', (p * (p - side_1) * (p - side_2) * (p - side_3)) ** 0.5)

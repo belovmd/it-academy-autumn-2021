@@ -8,7 +8,7 @@ len(list) - количество элементов в списке.
 
 
 sent = input('Введите предложение: ')
-punctuation_marks = '.,-;:?!'
+punctuation_marks = '.,-;:?!"@№#$%^&*'
 
 for mark in punctuation_marks:
     sent = sent.replace(mark, '')

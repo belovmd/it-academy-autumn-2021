@@ -10,9 +10,8 @@ big = 0
 for symbol in str_:
     if 'a' <= symbol <= 'z':
         small += 1
-    else:
-        if 'A' <= symbol <= 'Z':
-            big += 1
+    elif 'A' <= symbol <= 'Z':
+        big += 1
 
 print('Количество строчных букв:', small)
 print('Количество прописных букв:', big)
