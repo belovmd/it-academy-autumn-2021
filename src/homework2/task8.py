@@ -5,19 +5,11 @@
 В единственной строке входного файла INPUT.TXT записано одно целое число N (0 ≤ N < 10 ** 6).
 В выходной файл OUTPUT.TXT нужно вывести «YES», если билет с номером N счастливый и
 «NO» в противном случае.     https://acmp.ru/index.asp?main=task&id_task=52"""
-A = int(input('Введите шестизначное число: '))
-left = 0
-right = 0
+lucky_num = [int(x) for x in input('Введите номер билета (шестизначное число): ')]
 
-for i in range(6):
-    if i < 3:
-        left += A // 10**i % 10
-    else:
-        right += A // 10**i % 10
-
-if A > (10 ** 6) or A < (10 ** 5):
-    print('Ошибка ввода')
-elif left == right:
+if len(lucky_num) != 6:
+    print('Ошибка ввода!')
+elif sum(lucky_num[:3]) == sum(lucky_num[3:]):
     print('YES')
 else:
     print('NO')
@@ -41,12 +33,12 @@ for x in range(1, N + 1):
 print(summ)
 
 
-# Требуется посчитать сумму целых чисел, расположенных между числами 1 и N включительно.
-# В единственной строке входного файла INPUT.TXT записано единственное целое число N, не превышающее
-# по абсолютной величине 10 в 4 степени.
-# В единственную строку выходного файла OUTPUT.TXT нужно вывести одно целое число — сумму
-# чисел, расположенных между 1 и N включительно.
-# https://acmp.ru/index.asp?main=task&id_task=2
+"""Требуется посчитать сумму целых чисел, расположенных между числами 1 и N включительно.
+В единственной строке входного файла INPUT.TXT записано единственное целое число N, не превышающее
+по абсолютной величине 10 в 4 степени.
+В единственную строку выходного файла OUTPUT.TXT нужно вывести одно целое число — сумму
+чисел, расположенных между 1 и N включительно.
+https://acmp.ru/index.asp?main=task&id_task=2"""
 G = int(input('Введите целое число: '))
 s = 0
 
@@ -96,12 +88,12 @@ print(t)
 В единственную строку выходного файла OUTPUT.TXT нужно вывести искомое количество стрелок.
 https://acmp.ru/index.asp?main=task&id_task=44"""
 str_ = '<<<<>>--><--<<--<<>>>--><<<<<'
-strela = 0
+sought_arrow1 = '>>-->'
+sought_arrow2 = '<--<<'
+arrows_num = 0
 
-for z in range(0, len(str_)):
-    if str_[z:][:5] == '>>-->':
-        strela += 1
-    elif str_[z:][:5] == '<--<<':
-        strela += 1
+for z in range(len(str_)):
+    if str_[z:][:len(sought_arrow1)] == sought_arrow1 or str_[z:][:len(sought_arrow2)] == sought_arrow2:
+        arrows_num += 1
 
-print(s)
+print(arrows_num)
