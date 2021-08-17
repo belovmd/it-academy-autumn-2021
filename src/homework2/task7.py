@@ -6,9 +6,8 @@ b = int(input('сторона b:'))
 c = int(input('сторона c:'))
 
 if a + b > c and a + c > b and b + c > a:
-    semi_perimeter = (a + b + c) / 2
-    Square = ((semi_perimeter * (semi_perimeter - a) * (semi_perimeter - b)
-               * (semi_perimeter - c)) ** 0.5)
+    semi_per = (a + b + c) / 2
+    Square = (semi_per * (semi_per - a) * (semi_per - b) * (semi_per - c)) ** 0.5
     print('Это треугольник, с площадью ', Square)
 else:
     print('Это не треугольник')
