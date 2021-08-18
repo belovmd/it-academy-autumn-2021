@@ -6,14 +6,12 @@
 n = int(input('введите порядковый номер числа Фибоначчи  '))
 
 if n > 2:
-    num_f = num_s = sum_ = 1
+    num_f = num_s = 1
     i = 2
     while i < n:
-        sum_ = num_s + num_f
-        num_f = num_s
-        num_s = sum_
+        num_s, num_f = num_s + num_f, num_s
         i += 1
     else:
-        print('Это число', sum_)
+        print('Это число', num_s)
 else:
     print('Это число 1')

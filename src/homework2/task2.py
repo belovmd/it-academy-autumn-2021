@@ -9,7 +9,7 @@
 my_string = input('Введите предложение: ')
 
 larg_word = ''
-punctuation_marks = ',.!:-?№/'
+punctuation_marks = ',.!:-?№/[]();'
 
 for mark in punctuation_marks:
     my_string = my_string.replace(mark, '')
