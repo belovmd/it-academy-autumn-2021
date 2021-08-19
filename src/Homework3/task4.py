@@ -5,7 +5,7 @@
 Выходные данные - количество пар.
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар"""
 str_ = input('Введите числа, разделенные пробелами: ')
-lst = list(str_.split())
+lst = str_.split()
 print(lst)
 pairs = 0
 for x in range(len(lst)):
