@@ -73,5 +73,3 @@ for char in str_:
     array_.append(int(char))
 array_.sort()
 print(array_[0] + array_[1])
-
-
