@@ -5,11 +5,20 @@
 Если нет, вывести сообщение о неверных данных.
 """
 
-side1 = int(input('Введите первую сторону: '))
-side2 = int(input('Введите вторую сторону: '))
-side3 = int(input('Введите третью сторону: '))
-p = side1 + side2 + side3
-if side1 + side2 <= side3:
-    print('Это не треугольник')
+sides = []
+p = 0
+sideAmount = 3
+for i in range(sideAmount):
+    sides.append(int(input("Введите сторону: ")))
+    p += sides[i]
+isTriangle = True
+
+for i in range(sideAmount):
+    if p - sides[i] <= sides[i]:
+        isTriangle = False
+        break
+if isTriangle:
+    p = p / 2
+    print((p * (p - sides[0]) * (p - sides[1]) * (p - sides[2])) ** 0.5)
 else:
-    print('Площадь треугольника = ', (p * (p - side1) + (p - side2) + (p - side3)) ** 0.5)
+    print("Это не треугольник")

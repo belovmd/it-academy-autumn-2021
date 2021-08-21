@@ -7,8 +7,6 @@ num = int(input('Введите порядковый номер числа ря�
 num0 = 0
 num1 = 1
 while num > 0:
-    num2 = num1
-    num1 = num0 + num1
-    num0 = num2
+    num0, num1 = num0 + num1, num0
     num = num - 1
 print('Это число - ', num0)

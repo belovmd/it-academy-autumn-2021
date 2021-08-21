@@ -4,9 +4,9 @@ cannot contain anything but exactly 4 digits or exactly 6 digits.
 
 If the function is passed a valid PIN string, return true, else return false.
 """
-password = 1257
-attempt = int(input('Enter your password: '))
-if password == attempt:
+
+attempt = (input('Enter your password: '))
+if len(attempt) == 4 or len(attempt) == 6:
     print('true')
 else:
     print('false')
@@ -18,13 +18,13 @@ return the middle 2 characters.
 """
 
 word = input('Enter your word: ')
-letters = len(word)
+wordLen = len(word)
 if len(word) % 2:
-    middle = (letters // 2)
+    middle = (wordLen // 2)
     print(word[middle])
 else:
-    middle1 = ((letters // 2) - 1)
-    middle2 = (letters // 2)
+    middle1 = ((wordLen // 2) - 1)
+    middle2 = (wordLen // 2)
     print(word[middle1] + word[middle2])
 
 """
@@ -74,8 +74,4 @@ for char in str_:
 array_.sort()
 print(array_[0] + array_[1])
 
-"""
-Given an array of integers, find the one that appears an odd number of times.
 
-There will always be only one integer that appears an odd number of times
-"""
