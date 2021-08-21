@@ -11,7 +11,6 @@ if password == attempt:
 else:
     print('false')
 
-
 """
 You are going to be given a word. Your job is to return the middle character of the word.
 If the word's length is odd, return the middle character. If the word's length is even,
@@ -21,13 +20,12 @@ return the middle 2 characters.
 word = input('Enter your word: ')
 letters = len(word)
 if len(word) % 2:
-   middle = (letters // 2)
-   print(word[middle])
+    middle = (letters // 2)
+    print(word[middle])
 else:
-   middle1 = ((letters // 2) - 1)
-   middle2 = (letters // 2)
-   print(word[middle1] + word[middle2])
-
+    middle1 = ((letters // 2) - 1)
+    middle2 = (letters // 2)
+    print(word[middle1] + word[middle2])
 
 """
 You will be given an array of numbers. You have to sort the odd numbers in ascending order
@@ -58,7 +56,6 @@ for a in range(max(len(list_odd), len(list_even))):
         list_new.append(list_even[a])
 print(list_, list_new)
 
-
 """
 Create a function that returns the sum of the two lowest
 positive numbers given an array of minimum 4 positive
@@ -82,4 +79,3 @@ Given an array of integers, find the one that appears an odd number of times.
 
 There will always be only one integer that appears an odd number of times
 """
-
