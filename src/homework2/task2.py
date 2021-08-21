@@ -4,7 +4,7 @@
 """
 
 str_ = input('Print your sentence: ')
-punctuation_marks = r'!"#$%&\'()*+, -./:;<=>?@[\]^_`{|}~'
+punctuation_marks = r'\w'
 for mark in punctuation_marks:
     str_ = str_.replace(mark, '')
 words = str_.split(' ')
