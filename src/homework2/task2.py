@@ -3,9 +3,8 @@
 '''
 
 predl = input('Введите предложение: ')
-i = predl.split(' ')
-predl = []
-for element in i:
-    element = element.strip('.,:;!?)')
-    predl.append(element)
-print('Самое длинное слово: ', max(predl, key=len))
+predl_new = []
+for element in predl.split(' '):
+    element = element.strip('.,:;!?-{}()[]\"\'')
+    predl_new.append(element)
+print('Самое длинное слово: ', max(predl_new, key=len))
