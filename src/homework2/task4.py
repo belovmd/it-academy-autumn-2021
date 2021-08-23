@@ -6,4 +6,4 @@
 str_ = input('Введите стоку: ')
 low_letters = [i for i in str_ if 'a' <= i <= 'z']
 upper_letters = [i for i in str_ if 'A' <= i <= 'Z']
-print('Количество английских строчных букв:', len(low_letters), '\nпрописных букв:', len(upper_letters))
+print('Количество строчных букв:', len(low_letters), '\nпрописных букв:', len(upper_letters))
