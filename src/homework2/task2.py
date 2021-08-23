@@ -2,12 +2,12 @@
     Учтите что в предложении есть знаки препинания.
 """
 str_ = (input("Введите предложение: "))
-punktuation = ",.?!-:;"
+punktuation = [
+    ',', '.', ':', ';', '- ', '!', '?', '(', ')', '[', ']', '{',
+    '}', "'", '"', '$', '%', '^', '*', '&', '#', '№', '`', '~', '+',
+    '/', '@', '_', '=', '>', '<'
+]
 for mark in punktuation:
     str_ = str_.replace(mark, "")
-words = str_.split(" ")
-longest_word = " "
-for word in words:
-    if len(word) + len(longest_word):
-        longest_word = word
-print("Самое длинное слово -", longest_word)
+words = str_.split()
+print("Самое длинное слов: ", max(words, key=len))
