@@ -4,14 +4,6 @@
 '''
 
 str_ = input('Введите стоку: ')
-count_mal = 0
-count_bol = 0
-for element in range(len(str_)):
-    # проверяем на вхождение в диапазон прописных латинских букв A-Z
-    if 65 < ord(str_[element]) < 90:
-        count_bol += 1
-    else:
-        # a-z
-        if 97 < ord(str_[element]) < 122:
-            count_mal += 1
-print('Строчных букв:', count_bol, 'прописных:', count_mal)
+low_letters = [i for i in str_ if 'a' <= i <= 'z']
+upper_letters = [i for i in str_ if 'A' <= i <= 'Z']
+print('Количество английских строчных букв:', len(low_letters), '\nпрописных букв:', len(upper_letters))
