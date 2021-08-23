@@ -11,9 +11,7 @@
 '''
 
 chislo = int(input('Введите число:'))
-# делаем список
 list_ = [int(x) for x in str(chislo)]
-# сортируем по убыванию
 list_.sort(reverse=True)
 new_s = ''.join(str(a) for a in list_)
 print(new_s)
@@ -74,13 +72,7 @@ if b == len(a):
 '''
 
 str_ = input('Введите строку: ')
-meet = 0
-for element in str_:
-    if element == '(':
-        meet += 1
-    elif element == ')':
-        meet -= 1
-if meet != 0:
+if str_.count(')') == str_.count('('):
     print(False)
 else:
     print(True)
