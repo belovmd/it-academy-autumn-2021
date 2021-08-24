@@ -71,11 +71,16 @@ if b == len(a):
     "(())((()())())"  =>  true
 '''
 
-str_ = input('Введите строку: ')
-if str_.count(')') == str_.count('('):
-    print(False)
-else:
-    print(True)
+def parentheses():
+    str_ = input('Введите строку: ')
+    result = (str_.count('(') == str_.count(')') and
+              str_.count('[') == str_.count(']') and
+              str_.count('{') == str_.count('}') and
+              str_.count('<') == str_.count('>'))
+    return result
+
+
+print(parentheses())
 
 
 ''' 5.
