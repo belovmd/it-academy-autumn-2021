@@ -74,9 +74,9 @@ if b == len(a):
 
 def parentheses(str_):
     result = str_.count('(') == str_.count(')') \
-              and str_.count('[') == str_.count(']') \
-              and str_.count('{') == str_.count('}') \
-              and str_.count('<') == str_.count('>')
+        and str_.count('[') == str_.count(']') \
+        and str_.count('{') == str_.count('}') \
+        and str_.count('<') == str_.count('>')
     return result
 
 
