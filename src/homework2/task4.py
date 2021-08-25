@@ -6,22 +6,20 @@ print('Посчитаем количество строчных (маленьк�
 print('Введите строку для анализа: ')
 s = str(input())
 
-k_propisn = 0
-k_strochn = 0
-Propis = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-Stroch = 'abcdefghijklmnopqrstuvwxyz'
-
-print('Подсчёт количества букв в строке - ', s)
+sum_big = 0
+sum_small = 0
+Big_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+Small_letters = 'abcdefghijklmnopqrstuvwxyz'
 
 for i in range(0, len(s)):
     for j in range(0, 26):
-        if s[i] == Propis[j]:
-            k_propisn = k_propisn + 1
+        if s[i] == Big_letters[j]:
+            sum_big = sum_big + 1
             break
-        elif s[i] == Stroch[j]:
-            k_strochn = k_strochn + 1
+        elif s[i] == Small_letters[j]:
+            sum_small = sum_small + 1
             break
 print()
 print('Во введённой строке найдено букв:')
-print('Прописных:', k_propisn)
-print('Строчных:', k_strochn)
+print('Прописных:', sum_big)
+print('Строчных:', sum_small)

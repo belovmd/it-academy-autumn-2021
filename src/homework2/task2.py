@@ -7,16 +7,19 @@
 
 
 s = str(input('Введите предложение: '))
-# s = 'Ехали бояре, кошку потеряли. Кошка сдохла, хвост облез: кто промолвит, тот и съест!'
 
-mark_list = '.,!?:;()'
+mark_list = '.,!?:;()-+"%$@[]{}=&*#'
+for mark in mark_list:
+    s = s.replace(mark, '')
+
+mark_list = "'"
 for mark in mark_list:
     s = s.replace(mark, '')
 
 list_words = s.split()
 
-max_len = 0  # max длина слова
-max_word = ''  # слово максимальной длины
+max_len = 0
+max_word = ''
 
 for word in list_words:
     len_word = len(word)
@@ -25,4 +28,3 @@ for word in list_words:
         max_word = word
 
 print('Самое длинное слово: \"', max_word, '\"')
-# print('Его длина равна', max_len)
