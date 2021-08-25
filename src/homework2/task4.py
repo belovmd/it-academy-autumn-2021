@@ -11,13 +11,13 @@ sum_small = 0
 Big_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 Small_letters = 'abcdefghijklmnopqrstuvwxyz'
 
-for i in range(0, len(s)):
-    for j in range(0, 26):
-        if s[i] == Big_letters[j]:
-            sum_big = sum_big + 1
+for s_index in range(0, len(s)):
+    for letter_index in range(0, 26):
+        if s[s_index] == Big_letters[letter_index]:
+            sum_big += 1
             break
-        elif s[i] == Small_letters[j]:
-            sum_small = sum_small + 1
+        elif s[s_index] == Small_letters[letter_index]:
+            sum_small += 1
             break
 print()
 print('Во введённой строке найдено букв:')
