@@ -8,11 +8,12 @@
 
 count = 0
 lst_ = []
-str_ = int(input('Input your sting of numbers: '))
-str_ = str_.replace(' ', '')
+str_ = (input('Input your sting of numbers: '))
+str_ = str_.strip()
+str_ = str_.split(' ')
 for i in str_:
-    lst_.append(i)
+    lst_.append(int(i))
 for el in lst_:
-    if el == el:
+    if lst_[el] == lst_[el + 1]:
         count += 1
 print(count)
