@@ -2,7 +2,7 @@ import re
 
 """Задача на скобки"""
 
-str_ = "[(word[world]()dinosaurs){some_text}]{}9(просто текст[{чат}][()])"
+str_ = "[(word[world](){dinos}au{rs}){some_text}]{}9(просто текст[{чат}][()])"
 str_new = re.sub(r'[^()\[\]{}]', '', str_)
 print(str_new)
 s_b_right = str_new.count('[')
@@ -23,6 +23,7 @@ else:
 D = {}
 for k, v in zip(range(len(str_new)), str_new):
     D[k] = v
+print(D)
 
 D_s_b_right = [k for k, v in D.items() if v == '[']
 D_s_b_left = [k for k, v in D.items() if v == ']']
@@ -35,29 +36,45 @@ list_ = [D_s_b_right, D_s_b_left, D_b_right, D_b_left, D_p_right, D_p_left]
 for el in list_:
     print(el)
 
-s_b_diff = {}
+s_b_diff_list = []
 for b in D_s_b_left:
     for a in D_s_b_right:
-        s_b_diff[(a, b)] = abs(a - b)
-        print(s_b_diff)
-    D_s_b_new = {k: v for k, v in s_b_diff.items() if v == min(s_b_diff.values())}
-    print(D_s_b_new)
-    s_b_diff = {}
+        s_b_diff_list.append(abs(a - b))
+        s_b_diff_list.sort()
+        s_b_diff_list = s_b_diff_list[:len(D_s_b_left)]
+print(s_b_diff_list)
 
-i = 0
-for i in range(len(D_s_b_right)):
-    if (D_s_b_left[i] - D_s_b_right[i] - 1) % 2:
+for el in s_b_diff_list:
+    if el != 1 and not el % 2:
         print("Квадратные скобки расставлены неверно!")
+    else:
+        print("Квадратные скобки расставлены верно!")
 
-k = 0
-for k in range(len(D_b_right)):
-    if (D_b_left[k] - D_b_right[k] - 1) % 2:
+b_diff_list = []
+for c in D_b_left:
+    for d in D_b_right:
+        b_diff_list.append(abs(d - c))
+        b_diff_list.sort()
+        b_diff_list = b_diff_list[:len(D_b_left)]
+print(b_diff_list)
+
+for el in b_diff_list:
+    if el != 1 and not el % 2:
         print("Фигурные скобки расставлены неверно!")
+    else:
+        print("Фигурные скобки расставлены верно!")
 
-j = 0
-for j in range(len(D_p_right)):
-    if (D_p_left[j] - D_p_right[j] - 1) % 2:
-        print("Обычные скобки расставлены неверно!")
 
-print(0%2)
+p_diff_list = []
+for f in D_p_left:
+    for e in D_p_right:
+        p_diff_list.append(abs(e - f))
+        p_diff_list.sort()
+        p_diff_list = p_diff_list[:len(D_p_left)]
+print(p_diff_list)
 
+for el in p_diff_list:
+    if el != 1 and not el % 2:
+        print("Обычне скобки расставлены неверно!")
+    else:
+        print("Обычные скобки расставлены верно!")
