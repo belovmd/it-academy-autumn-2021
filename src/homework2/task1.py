@@ -15,6 +15,4 @@ total_kopeck = N * S
 while total_kopeck >= 100:
     total_kopeck = total_kopeck - 100
     total_rubles = total_rubles + 1
-else:
-    pass
 print('Цена составит {} рублей {} копеек'.format(total_rubles, total_kopeck))
