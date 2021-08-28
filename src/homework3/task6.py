@@ -5,9 +5,9 @@
 Распечатайте полученный список.
 """
 
-lst_ = [1, 2, 4, 0, 5, 0, 6, 4, 7]
-for null, el in enumerate(lst_):
-    if not el:
-        lst_.pop(null)
-        lst_.append(el)
+lst_ = [1, 2, 4, 0, 5, 0, 6, 4, 0, 7]
+for null in lst_:
+    if not null:
+        lst_.remove(null)
+        lst_.append(null)
 print(lst_)

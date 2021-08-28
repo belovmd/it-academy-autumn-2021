@@ -7,14 +7,10 @@
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
 """
 
-count = 0
-lst_ = []
-str_ = (input('Input your sting of numbers: '))
-str_ = str_.strip()
-str_ = str_.split(' ')
-for i in str_:
-    lst_.append(int(i))
-for el in lst_:
-    if lst_[el] == lst_[el + 1]:
-        count += 1
-print(count)
+pair = 0
+lst_ = [1, 2, 1, 2, 2, 3, 5, 5]
+for i in range(len(lst_)):
+    for el in range(i + 1, len(lst_)):
+        if lst_[i] == lst_[el]:
+            pair += 1
+print(pair)
