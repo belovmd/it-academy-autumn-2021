@@ -27,5 +27,14 @@ Ukraine
 Russia
 Russia
 """
+import re
+# str_ = 'a       b b c'
+# lst_ = []
+# str_ = str_.replace(' ', '')
+# for i in str_:
+#     lst_.append(i)
+# print(lst_)
 
-dct = {}
+str_ = 'aaa5 55      b b c \n'
+lst_ = re.findall(r'\S+', str_)
+print(lst_, len(lst_))
