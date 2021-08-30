@@ -17,7 +17,7 @@ print(type(tpl1), tpl1)
 a, b, c = 'a', 2, 'python'
 print(a, b, c)
 
-tpl2 = ('1, 2, 3', )
+tpl2 = ([1, 2, 3], )
 print(len(tpl2))
-for i in tpl2:
+for i in tpl2[0]:
     print(i)

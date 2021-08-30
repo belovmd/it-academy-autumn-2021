@@ -18,6 +18,6 @@ print(lst1)
 
 print(lst1.pop(1))
 
-lst1.copy()
-lst1.insert(1, '2a')
-print(lst1)
+lst2 = lst1.copy()
+lst2.insert(1, '2a')
+print(lst1, lst2)
