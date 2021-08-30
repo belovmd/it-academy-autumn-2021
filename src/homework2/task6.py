@@ -9,8 +9,8 @@ a = int(digits)
 reverse_order = 0
 while digits != 0:
     last_digit = digits % 10
-    reverse_order = reverse_order * 10 + last_digit  # mirroring the input number
-    digits = int(digits / 10)
+    reverse_order = reverse_order * 10 + last_digit  
+    digits = int(digits // 10)
 if a == reverse_order:
     print("Yes, that's a palindrome")
 else:
