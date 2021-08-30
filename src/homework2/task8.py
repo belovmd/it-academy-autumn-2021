@@ -37,8 +37,6 @@ print(a[0])
 # Information consists of an integer for the person's age and
 # an integer for the person's handicap.
 
-candidates_list = [{int(age): int(handicap) for age in input('Age: ').split()
-                    for handicap in input('Handicap: ').split()}]
 candidates = []
 for candidate in candidates_list:
     b = candidate.items()
