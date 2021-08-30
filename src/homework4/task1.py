@@ -4,5 +4,5 @@
 а значениями кубы этих чисел.
 """
 
-dct_ = {el: el**2 for el in range(21)}
+dct_ = {el: el**3 for el in range(21)}
 print(dct_)
