@@ -9,7 +9,7 @@ b = int(input('Second one: '))
 c = int(input('Third one: '))
 triangle1 = a + c
 triangle2 = a + b
-P = int((a + b + c) / 2)  # полупериметр
+half_perimiter = int((a + b + c) / 2)  
 S = int(P * (P - a) * (P - b) * (P - c))
 square = S ** 0.5
 if (a + b > c) and (a + c > b) and (b + c > a):
