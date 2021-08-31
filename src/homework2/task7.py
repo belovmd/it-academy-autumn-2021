@@ -9,8 +9,8 @@ side2 = int(input('Second one: '))
 side3 = int(input('Third one: '))
 if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
     half_perimiter = float((side1 + side2 + side3) / 2)
-    triange_square = float(((half_perimiter * (half_perimiter - side1) * 
-                             (half_perimiter - side2) * (half_perimiter - side3))) ** 0.5)
+    triange_square = float(((half_perimiter * (half_perimiter - side1)
+                             * (half_perimiter - side2) * (half_perimiter - side3))) ** 0.5)
     print('Square is ', triange_square, 'square cm')
 else:
     print('The triangle is not possible')
