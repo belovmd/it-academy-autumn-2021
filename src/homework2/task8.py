@@ -38,8 +38,6 @@ print(a[0])
 # an integer for the person's handicap.
 
 def candidates(candidates_list):
-    
-    
     candidates = []
     for i in candidates_list:
         if i[0] < 55 or i[1] < 7:
