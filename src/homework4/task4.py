@@ -11,11 +11,3 @@ a = set(list1)
 b = set(list2)
 c = a - b
 print(len(c))
-
-
-
-
-
-
-
-
