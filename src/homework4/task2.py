@@ -1,4 +1,4 @@
-""" 
+"""
 2 Города
 Дан список стран и городов каждой страны. Затем даны названия городов.
 Для каждого города укажите, в какой стране он находится.
@@ -20,7 +20,7 @@
 Russia Moscow Petersburg Novgorod Kaluga
 France Brest Paris
 Ukraine Kiev Donetsk Odessa
-Belarus Minsk Brest	
+Belarus Minsk Brest
 
 
 3
@@ -53,7 +53,8 @@ for i in range(M):
     print(i + 1, ':', end=' ')
     towns.append(input())
 
-towns_in_country = {inp_data[i][0]: [inp_data[i][j] for j in range(1, len(inp_data[i]))] for i in range(N)}
+towns_in_country = \
+    {inp_data[i][0]: [inp_data[i][j] for j in range(1, len(inp_data[i]))] for i in range(N)}
 
 print()
 num_countries = 0

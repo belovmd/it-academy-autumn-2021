@@ -7,7 +7,7 @@
 Задачу поместите в файл task6.py в папке src/homework4.
 """
 
-str1 = 'Скажика дядя, ведь недаром, \n дядя дядя Москва спалённая пожаром, !была французам   отдана?'
+str1 = 'Скажика дядя, ведь недаром, \n дядя, Москва спалённая пожаром, !была французам   отдана?'
 
 mas_from_ends = str1.split('\n')
 
@@ -17,8 +17,8 @@ for el in mas_from_ends:
     mas_from_spaces += el.split(' ')
 
 i = 0
-while i < len(mas_from_spaces): 
-    if mas_from_spaces[i] == '': 
+while i < len(mas_from_spaces):
+    if mas_from_spaces[i] == '':
         del mas_from_spaces[i]
     else:
         i += 1
