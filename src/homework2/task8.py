@@ -37,15 +37,14 @@ print(a[0])
 # Information consists of an integer for the person's age and
 # an integer for the person's handicap.
 
-candidates = []
-for candidate in candidates_list:
-    b = candidate.items()
-for age, handicap in b:
-    if age < 55 or handicap < 7:
-        candidates.append('Open')
-    else:
-        candidates.append('Senior')
-print('Result: ', candidates)
+def candidates (candidates_list):
+    candidates = []
+    for i in candidates_list:
+        if i[0] < 55 or i[1] < 7:
+            candidates.append('Open')
+        else:
+            candidates.append('Senior')
+    print(candidates)
 
 # TASK 4
 # You have a string that consist only of digits.
