@@ -37,6 +37,7 @@ print(a[0])
 # Information consists of an integer for the person's age and
 # an integer for the person's handicap.
 
+
 def candidates(candidates_list):
     candidates = []
     for i in candidates_list:
