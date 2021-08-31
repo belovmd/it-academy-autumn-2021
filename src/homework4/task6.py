@@ -5,17 +5,11 @@
 сколько различных слов содержится в этом тексте.
 """
 
-str_ = 'Здравствуй, милая, безнадежная,\n мои слонце, и любовь, и грусть.'
+str_ = 'Здравствуй,  моя милая, моя безнадежная,\n моя  сотканная из роз'
 
 for element in '\n.,:;!?/@№#$%^&*()_-=+`~':
     if element in str_:
         str_ = str_.replace(element, ' ')
+
 list_of_words = str_.split()
-
-import collections
-
-dct_of_words = collections.Counter()
-for word in list_of_words:
-    dct_of_words[word] += 1
-
-print(len(list(dct_of_words)))
+print(len(set(list_of_words)))
