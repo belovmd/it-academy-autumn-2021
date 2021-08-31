@@ -10,11 +10,11 @@
 
 
 Пример входных данных:
-3          # N количество школьников
-2          # M1 количество языков первого школьника
+3
+2
 Russian
 English
-3          # M2 количество языков второго школьника
+3
 Russian
 Belarusian
 English
@@ -30,9 +30,21 @@ French
 """
 
 q_of_pupils = int(input('Введите количество школьников: '))
-dct_of_lang = {}
+lst_of_lang = []
 for _ in range(q_of_pupils):
-    q_of_lang = input('Введите количество языков: ')
-    language = tuple(input('Введите языки: ').split())
-    dct_of_lang[language] = q_of_lang
-print(dct_of_lang)
+    q_of_lang = int(input('Введите количество языков: '))
+    lst_of_lang1 = set()
+    for _ in range(q_of_lang):
+        language = input('Введите язык: ')
+        lst_of_lang1.add(language)
+    lst_of_lang.append(lst_of_lang1)
+
+from functools import reduce
+
+answer1 = reduce((lambda a, b: a & b), lst_of_lang)
+print(len(answer1))
+print(list(answer1))
+
+answer2 = reduce((lambda a, b: a ^ b), lst_of_lang)
+print(len(answer2))
+print(list(answer2))
