@@ -10,4 +10,3 @@ text = input('Введите текст ')
 lst = set(text.split())
 
 print('Различных слов -', len(lst))
-

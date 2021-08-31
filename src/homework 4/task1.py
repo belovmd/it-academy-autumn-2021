@@ -3,6 +3,6 @@
 его ключами были числа от 1 до 20, а значениями кубы этих чисел.
 """
 
-my_dct = {elem:elem**3 for elem in range(1,21)}
+my_dct = {elem: elem**3 for elem in range(1, 21)}
 
 print(my_dct)

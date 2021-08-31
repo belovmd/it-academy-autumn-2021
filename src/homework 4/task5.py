@@ -12,23 +12,23 @@ n = int(input('Введите количество школьников '))
 
 dct = {}
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
     lengs = int(input('сколько языков знает ученик '))
     lst_ = []
-    for b in range(1,lengs+1):
+    for b in range(1, lengs + 1):
         lst_.append(input())
         dct[i] = lst_
 
 uniq = set(dct[1])
 all_know = set(dct[1])
 
-for i in range(1, len(dct)+1):
+for i in range(1, len(dct) + 1):
     all_know = all_know & set(dct[i])
     uniq = uniq | set(dct[i])
 
 uniq = uniq - all_know
 
-print('Все знают',len(all_know))
+print('Все знают', len(all_know))
 for leng in all_know:
     print(leng)
 

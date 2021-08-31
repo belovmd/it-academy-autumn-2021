@@ -14,4 +14,3 @@ while a and b:
         b = b % a
 
 print('НОД =', a + b)
-
