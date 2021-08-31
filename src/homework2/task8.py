@@ -37,7 +37,9 @@ print(a[0])
 # Information consists of an integer for the person's age and
 # an integer for the person's handicap.
 
-def candidates (candidates_list):
+def candidates(candidates_list):
+    
+    
     candidates = []
     for i in candidates_list:
         if i[0] < 55 or i[1] < 7:
@@ -53,6 +55,7 @@ def candidates (candidates_list):
 # Input: A string, that consist of digits.
 # beginning_zeros('001001') == 2
 # beginning_zeros('0000') == 4
+
 
 beginning_zeros = str(input('Number: '))
 zero = []
