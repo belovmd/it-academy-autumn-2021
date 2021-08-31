@@ -14,4 +14,3 @@ if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side
     print('Square is ', triange_square, 'square cm')
 else:
     print('The triangle is not possible')
-    
