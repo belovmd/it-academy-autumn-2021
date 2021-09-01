@@ -5,7 +5,7 @@
 Определите, сколько различных слов содержится в этом тексте.
 """
 
-text = input('Введите текст ')
+text = "just just  text \n for test test hey hi   pls work"
 
 lst = set(text.split())
 

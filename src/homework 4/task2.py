@@ -19,8 +19,6 @@ for i in range(1, n + 1):
     lst = (input('Страна и города ')).split()
     dct[lst[0]] = lst[1:]
 
-print(dct)
-
 ask = int(input('Введите кол-во запросов '))
 
 answ = ''
