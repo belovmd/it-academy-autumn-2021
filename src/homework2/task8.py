@@ -15,17 +15,17 @@ else:
 
 # TASK 2
 # https://www.codewars.com/kata/54da5a58ea159efa38000836
-# Given an array of integers, 
-# find the one that appears an odd number of times. 
+# Given an array of integers,
+# find the one that appears an odd number of times.
 # Examples
 # [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 # [1,2,2,3,3,3,4,3,3,3,2,2,1] shold return 4, because it appears 1 time (which is odd).
 
-array = [1,1,1,1,1,1,10,1,1,1,1]
-for i in range(0, len(array)): 
-    count = 0 
+array = [1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]
+for i in range(0, len(array)):
+    count = 0
     for b in range(0, len(array)):
-        if array[i] == array[b]: 
+        if array[i] == array[b]:
             count += 1
     if count % 2 or count == 1:
         print(array[i])
@@ -59,7 +59,6 @@ def candidates(candidates_list):
 # Input: A string, that consist of digits.
 # beginning_zeros('001001') == 2
 # beginning_zeros('0000') == 4
-
 
 beginning_zeros = str(input('Number: '))
 zero = []
