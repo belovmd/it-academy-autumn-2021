@@ -14,16 +14,15 @@
 n = int(input('Введите количество стран '))
 
 dct = {}
+answ = ''
 
-for i in range(1, n + 1):
+for _ in range(n):
     lst = (input('Страна и города ')).split()
     dct[lst[0]] = lst[1:]
 
 ask = int(input('Введите кол-во запросов '))
 
-answ = ''
-
-for i in range(1, ask + 1):
+for _ in range(ask):
     city = input('Введите город ',)
     for country, cities in dct.items():
         if city in cities:
