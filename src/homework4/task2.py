@@ -13,6 +13,5 @@ for i in range(int(input('Введите колличество стран: ')))
     country, *cities = input('Введите страну и города: ').split()
     for city in cities:
         motherland[city] = country
-
-for i in range(int(input('Введите число запосов '))):
+for i in range(int(input('Введите число запросов '))):
     print(motherland[input('Введите город ')])
