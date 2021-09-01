@@ -60,6 +60,7 @@ def candidates(candidates_list):
 # beginning_zeros('001001') == 2
 # beginning_zeros('0000') == 4
 
+
 beginning_zeros = str(input('Number: '))
 zero = []
 for x in beginning_zeros:
