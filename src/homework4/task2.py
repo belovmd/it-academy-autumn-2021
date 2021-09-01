@@ -26,8 +26,8 @@ Russia
 France Belarus
 '''
 
-n = int(input())  
-dct = {}                         
+n = int(input())
+dct = {}
 for _ in range(n):
     country, *cities = input().split()
     for city in cities:

@@ -43,5 +43,5 @@ for element in range(n):
         intersection |= a
     else:
         intersection &= a
-print(len(intersection),'\n', ' '.join(intersection))
+print(len(intersection), '\n', ' '.join(intersection))
 print(len(all_), '\n', ' '.join(all_))
