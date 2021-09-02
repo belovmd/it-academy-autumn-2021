@@ -6,7 +6,7 @@
 dct = {}
 for elem in range(int(input('кол-во школьников: '))):
     dct[elem] = {input('языки: ') for _ in range(int(input('кол-во языков: ')))}
-    
+
 lang1 = set.intersection(*dct.values())
 lang2 = set.union(*dct.values())
 
