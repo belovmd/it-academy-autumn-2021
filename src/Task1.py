@@ -19,7 +19,7 @@ def total_sum(m, n, s):
     m = int(input("Введите рубли:"))
     n = int(input("Введите копейки:"))
 
-    summa = s * m + (s * n) // 100 + (s * n % 100) / 100
+    summa = f"Общая сумма: {s * m + (s * n) // 100} рублей {s * n % 100} копеек"
 
     return summa  # write return value here
 

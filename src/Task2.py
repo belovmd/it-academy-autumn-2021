@@ -6,7 +6,7 @@ import re
 """
 
 
-def longest_word(str_):
+def longest_word():
     """Поиск самого длинного слова в предложении.
 
     :param str_: входная строка
@@ -15,25 +15,26 @@ def longest_word(str_):
         несколько, самое левое в строке).
     """
 
-    # Регуляркой заменяем все символы кроме кирилицы, латиницы и знаков табуляции на пустой символ
-    # С помощью сплита создаем лист, содержащий все слова.
     str_ = input("Введите предложение: ")
     str_new = re.sub(r'[^а-яА-Я\w\s]', '', str_)
     str_new = str_new.split()
 
-    # Итерация по листу со словами, если каждое следующее слово длиннее предыдущего,
-    # то ему присваивается максимальная длина
+    max_length = max(len(word) for word in str_new)
+    list_words = []
+    for word in str_new:
+        if len(word) == max_length:
+            list_words.append(word)
+
+    """list_words = []
     max_length = len(str_new[0])
     for word in str_new:
         if len(word) >= max_length:
             max_length = len(word)
 
-    # Проверка на то, что если вдруг есть еще слова с максимальной длиной,
-    # то они включатся в список самых длинных слов в предложении.
-    list_words = []
+    
     for word in str_new:
         if len(word) == max_length:
-            list_words.append(word)
+            list_words.append(word)"""
 
     print("Саммые длинные слова:")
 
@@ -43,5 +44,4 @@ def longest_word(str_):
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    str_ = ''
-    longest_word(str_)
+    longest_word()

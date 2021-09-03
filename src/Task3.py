@@ -8,7 +8,7 @@ import re
 """
 
 
-def sub_string(str_):
+def sub_string():
     """Конструирование подстроки.
 
     :param str_: входная строка
@@ -37,5 +37,4 @@ def sub_string(str_):
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    str_ = ''
     print(sub_string(str_))
