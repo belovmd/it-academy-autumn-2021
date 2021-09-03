@@ -15,7 +15,8 @@ def find_single():
             if k == j:
                 dict_[k] += 1
         i += 1
-    print("Уникальные элементы в строке:\n" + " ".join("{}".format(k) for k, v in dict_.items() if not v))
+    print("Уникальные элементы в строке:\n" +
+          " ".join("{}".format(k) for k, v in dict_.items() if not v))
 
 
 if __name__ == '__main__':

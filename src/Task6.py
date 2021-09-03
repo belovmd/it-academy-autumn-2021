@@ -7,7 +7,8 @@
 
 
 def sort_list():
-    string_ = "0 1 2 4 5 7 7 4 0 0 5 3 2 1 2 0 0 0 2 1 1 10 10 10 11 36 36 37 0 0 0 0 0 0 0 45 45 32 34 90"
+    string_ = "0 1 2 4 5 7 7 4 0 0 5 3 2 1 2 0 0 0 2 1 1 10 10" \
+              "10 11 36 36 37 0 0 0 0 0 0 0 45 45 32 34 90"
     string_ = string_.split()
     list_ = [int(x) for x in string_]
     for x in list_:
