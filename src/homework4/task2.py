@@ -19,7 +19,6 @@ Russia Moscow Petersburg Novgorod Kaluga
 France Brest Paris
 Ukraine Kiev Donetsk Odessa
 Belarus Minsk Brest
-
 3
 Odessa
 Moscow
@@ -42,4 +41,3 @@ for element in cities:
     for key, value in dct_of_countries.items():
         if element in value:
             print(key)
-

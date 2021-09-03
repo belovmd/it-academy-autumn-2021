@@ -8,7 +8,6 @@
 Далее идет N чисел Mi, после каждого из чисел идет Mi строк,
 содержащих названия языков, которые знает i-й школьник.
 
-
 Пример входных данных:
 3
 2
@@ -24,22 +23,23 @@ Italian
 French
 
 Выходные данные
-В первой строке выведите количество языков, которые знают все школьники.
-Начиная со второй строки - список таких языков. Затем - количество языков,
-которые знает хотя бы один школьник, на следующих строках - список таких языков.
+В первой строке выведите количество языков, которые знают
+все школьники. Начиная со второй строки - список таких языков.
+Затем - количество языков,которые знает хотя бы один школьник,
+на следующих строках - список таких языков.
 """
+
+from functools import reduce
 
 q_of_pupils = int(input('Введите количество школьников: '))
 lst_of_lang = []
 for _ in range(q_of_pupils):
     q_of_lang = int(input('Введите количество языков: '))
-    lst_of_lang1 = set()
+    set_of_lang = set()
     for _ in range(q_of_lang):
         language = input('Введите язык: ')
-        lst_of_lang1.add(language)
-    lst_of_lang.append(lst_of_lang1)
-
-from functools import reduce
+        set_of_lang.add(language)
+    lst_of_lang.append(set_of_lang)
 
 answer1 = reduce((lambda a, b: a & b), lst_of_lang)
 print(len(answer1))
