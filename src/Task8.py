@@ -7,7 +7,6 @@ import string
 
 def solution(str_):
     str_ = input("Type a word:")
-    str_len = len(str_)
     str_inv = str_[::-1]
     return f"'{str_}' => '{str_inv}'"
 
