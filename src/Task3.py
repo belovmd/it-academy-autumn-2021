@@ -16,20 +16,15 @@ def sub_string():
     :return: строка. Получившееся выражение
     """
 
-    # Регуляркой заменяем все символы кроме кирилицы, латиницы и цифр на пустой символ
     str_ = input("Введите выражение:")
     text = re.sub(r'[^а-яА-Я\w]', '', str_)
-    # Создаем list из символов
     text = list(text)
 
-    # Создаем лист, в который добавляем символ, если его там нет,
-    # повторяющийся символ не добавляется
     new_list = []
     for char in text:
         if char not in new_list:
             new_list.append(char)
 
-    # Создаем строку, в которую добавляем символы из листа
     str_output = ""
     str_output = str_output.join(new_list)
     return str_output
@@ -37,4 +32,4 @@ def sub_string():
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    print(sub_string(str_))
+    print(sub_string())

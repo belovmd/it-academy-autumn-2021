@@ -24,18 +24,6 @@ def longest_word():
     for word in str_new:
         if len(word) == max_length:
             list_words.append(word)
-
-    """list_words = []
-    max_length = len(str_new[0])
-    for word in str_new:
-        if len(word) >= max_length:
-            max_length = len(word)
-
-    
-    for word in str_new:
-        if len(word) == max_length:
-            list_words.append(word)"""
-
     print("Саммые длинные слова:")
 
     for word in list_words:
