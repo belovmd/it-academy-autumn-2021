@@ -5,7 +5,7 @@
 
 
 def find_single():
-    string_ = "1 2 4 5 7 7 4 5 3 2 1 2 2 1 1 10 10 10 11 36 36 37 a a g g g n f j k l"
+    string_ = "1 2 4 5 7 7 4 5 3 2 1 2 2 1 1 10 10 10 11 36 36 37 a a g g g n f j k l f"
     list_ = string_.split()
     dict_ = dict.fromkeys(list_, 0)
     l_ = len(list_)

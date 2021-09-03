@@ -12,7 +12,8 @@ def tuples():
     print(tuple_)
 
     # Создайте кортеж ('a', 'b', 'c'), И сделайте из него список
-    list_2 = list(tuple_)
+    tuple_2 = ('a', 'b', 'c')
+    list_2 = list(tuple_2)
     print(list_2)
 
     # Сделайте следующие присвоения одной строкой a = 'a', b=2, c=’python’.
@@ -25,8 +26,9 @@ def tuples():
     i = 1
     while i < 4:
         print(t_[0])
-        print(id(t_))
+        # print(id(t_))
         t_ = (t_[0] + 1,)
+        # print(t_)
         i += 1
     print(len(t_))
 
