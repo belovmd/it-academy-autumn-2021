@@ -14,7 +14,7 @@ English
 Russian
 Belarusian
 English
-3
+3          # M3 количество языков третьего школьника
 Russian
 Italian
 French
