@@ -12,5 +12,3 @@ str_ = "A bad workman always blames his tools. Actions speak louder than words."
 str_new = re.sub(r'[^\w\s]', ' ', str_)
 lst = str_new.split()
 print(len(lst))
-
-

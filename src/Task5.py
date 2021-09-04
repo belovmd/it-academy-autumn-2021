@@ -25,13 +25,14 @@ French
 
 from functools import reduce
 
+
 def languages():
     n = int(input("Введите количество школьников: "))
     d_global = {}
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         s_local = set()
         m = int(input("Введите количество языков школьника: "))
-        for k in range(1, m+1):
+        for k in range(1, m + 1):
             language = input("Введите язык которым владеет школьник: ")
             s_local.add(language)
         d_global[i] = s_local
@@ -56,4 +57,3 @@ def languages():
 
 if __name__ == '__main__':
     languages()
-
