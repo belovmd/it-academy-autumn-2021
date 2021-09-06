@@ -5,5 +5,5 @@
 
 lst1 = [1, 2, 3, 6]
 lst2 = [3, 6, 8, 9]
-set_ = set(lst1) - set(lst2)
+set_ = set(lst2) - set(lst1)
 print(len(set_), set_)
