@@ -10,8 +10,8 @@ you need to create a password verification function.
 The verification condition is:
 the length should be bigger than 6
 """
-parol = input(" Введите пароль: ")
-if len(parol) > 6:
+pasword = input(" Введите пароль: ")
+if len(pasword) > 6:
     print("Подходящий пороль")
 else:
     print("Введите больше символов")
