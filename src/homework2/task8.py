@@ -17,7 +17,8 @@ else:
     print("Введите больше символов")
 
 """ Задача уровня  elementary c сайта https://py.checkio.org.
-You have a positive integer. Try to find out how many digits it has?
+You have a positive integer. 
+Try to find out how many digits it has?
 """
 chislo = int(input())
 chislo1 = str(chislo)
