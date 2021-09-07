@@ -5,5 +5,6 @@
 '''
 
 
-str_ = "Python is an experiment in how much freedom programmers need. Too much freedom and nobody can read another's code; too little and expressiveness is endangered."
+str_ = """Python is an experiment in how much freedom programmers need. Too much freedom and nobody can read another's code;
+too little and expressiveness is endangered."""
 print(len(set(str_.split())))
