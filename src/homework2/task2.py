@@ -8,7 +8,7 @@ The Ultimate Question of Life, the Universe, and Everything!'
 """
 my_string = input('Input the string: ')
 template = "The longest word is : {longest_word}"
-punctuation_marks = '.,/?!-:;'
+punctuation_marks = '"#!$%&()*+,-./:;<=>?@[\]^_{|}~'
 for mark in punctuation_marks:
     my_string = my_string.replace(mark, '')
 clear_string = my_string.split(' ')
