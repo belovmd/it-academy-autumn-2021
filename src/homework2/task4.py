@@ -1,7 +1,5 @@
 """Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке.
-Учитывать только английские буквы.
-my_string = 'Главный вопрос Жизни, Вселенной и вообще!..The Ultimate Question of Life, the Universe, and Everything!..'
-"""
+Учитывать только английские буквы."""
 my_string = input('Input the string: ')
 template = "\nNumber of uppercase latin letters : {upper_case} " \
            "\nNumber of lowercase latin letters : {lower_case}"
