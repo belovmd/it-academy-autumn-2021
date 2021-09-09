@@ -7,7 +7,7 @@ import math
 a = float(input('Введите 1-ю сторону треугольника: '))
 b = float(input('Введите 1-ю сторону треугольника: '))
 c = float(input('Введите 1-ю сторону треугольника: '))
-if (a + b) >= c and (b + c) >= a and (a + c) >= b:
+if a + b >= c and b + c >= a and a + c >= b:
     p = (a + b + c) / 2
     square = math.sqrt(p * (p - a) * (p - b) * (p - c))
     print('Площадь треугольника', square)
