@@ -130,8 +130,8 @@ for number in range(1, n + 1):
 
 # после долгих изучений свойств функции print, найдено решение из 2-х строк (по условию задачи)
 # тест на сайте не прошел, хотя условия соблюдены и код работает
-#for num in range(1, int(input()) + 1):
-#    print(*[dig for dig in range(1, num + 1)], *[dig for dig in range(num - 1, 0, -1)], sep='')
+"""for num in range(1, int(input()) + 1):
+    print(*[dig for dig in range(1, num + 1)], *[dig for dig in range(num - 1, 0, -1)], sep='')"""
 
 
 """
