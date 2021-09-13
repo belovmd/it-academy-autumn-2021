@@ -6,5 +6,5 @@
 list_ = [1, 2, 0, 2, 0, 4, -1, 3]
 for num in range(len(list_)):
     if not list_[num]:
-       list_.append(list_.pop(num))
+        list_.append(list_.pop(num))
 print(list_)
