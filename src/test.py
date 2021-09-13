@@ -56,6 +56,11 @@ def myzip(*seqs):
 print(dir(Task6))
 
 
+lst_ = ['a', 'b', 'c', 'd']
+dct_ = {x:y for (x, y) in enumerate(lst_)}
+print(dct_)
+
+
 
 if __name__ == '__main__':
     print(myzip([1, 2, 3], ['a', 'b', 'c']))
