@@ -16,35 +16,21 @@ Output Format:
 Print the capitalized string, S.
 """
 my_str_ = input('Input the string: ')
-
-# проверяем длину введенной строки:
 while len(my_str_) > 1000 or not len(my_str_):
     print('Incorrect value')
     my_str_ = input('Please, input the string: ')
-
-# проверяем, начинаются ли слова в строке с заглавной буквы
 if my_str_.istitle():
     print('The capitalized string is :', my_str_)
-
-# преобразуем строку в список слов и создаем пустую строку
 else:
     clear_str_ = my_str_.split(' ')
     template = "The capitalized string is : \n{new_line}"
     new_line = ''
-
-#  меняем первую букву каждого слова на заглавную и перезаписываем в новую строку,
-#  проверяя при этом на наличие цифр
     for word in clear_str_:
         if word[0].isdigit():
             new_line += word + ' '
         else:
             new_line += word[0].upper() + word[1:len(word)] + ' '
     print(template.format(new_line=new_line))
-
-# когда решила задачу, нашла существующий метод строк. Решение практически в одну команду :(
-# print(my_str_.title())
-# на сайте проверку не прошла. Хотя код работает.
-
 
 """
 Task_8_2 https://www.hackerrank.com/challenges/python-print/problem
@@ -64,23 +50,13 @@ Output Format:
 Print the list of integers from 1 through n as a string, without spaces.
 """
 n = int(input('Input n from 1 to 150: '))
-
-# проверка на выполнение условия диапазона ввода числа
 if n < 1 or n > 150:
     print('Incorrect value')
     n = int(input('Input n from 1 to 150: '))
-
-# создание строки из чисел
 output_list = ''
 for num in range(1, n + 1):
     output_list = output_list + str(num)
 print(output_list)
-
-# на сайте код прошел все тесты (без проверки диапазона введенных чисел)
-# еще короче и проще решение:
-# for num in range(1,n+1):
-#     print(num, end='')
-
 
 """
 Task_8_3 https://www.hackerrank.com/contests/it-academy-02/challenges/challenge-1975/submissions
@@ -141,10 +117,7 @@ Sample Output
 1234321
 123454321
 """
-# простое решение из нескольких циклов и принтов:
 n = int(input('Input the number from 1 to 9: '))
-
-# проверка на правильность ввода
 while n < 1 or n > 9:
     print('Incorrect value')
     n = int(input('Input the number from 1 to 9: '))
@@ -157,8 +130,8 @@ for number in range(1, n + 1):
 
 # после долгих изучений свойств функции print, найдено решение из 2-х строк (по условию задачи)
 # тест на сайте не прошел, хотя условия соблюдены и код работает
-for num in range(1, int(input()) + 1):
-    print(*[dig for dig in range(1, num + 1)], *[dig for dig in range(num - 1, 0, -1)], sep='')
+#for num in range(1, int(input()) + 1):
+#    print(*[dig for dig in range(1, num + 1)], *[dig for dig in range(num - 1, 0, -1)], sep='')
 
 
 """
