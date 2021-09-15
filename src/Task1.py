@@ -1,8 +1,10 @@
-import src
-
-print(dir(src))
-
-path1 = "/Users/Roman/Desktop/IT-academy-2021/it-academy-autumn-2021/.git/refs/heads/Homework1"
-
 import os
-print(os.path.abspath("Homework1"))
+from Homework2 import Task5
+
+
+entries2 = [f for f in os.listdir('Homework2') if not f.startswith('__')]
+entries3 = [f for f in os.listdir('Homework3') if not f.startswith('__')]
+entries4 = [f for f in os.listdir('Homework4') if not f.startswith('__')]
+
+print(entries2)
+

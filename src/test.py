@@ -60,7 +60,9 @@ lst_ = ['a', 'b', 'c', 'd']
 dct_ = {x:y for (x, y) in enumerate(lst_)}
 print(dct_)
 
-
+a = ".,af.,.gf."
+print(a.strip(",."))
+print(a.split(".,"))
 
 if __name__ == '__main__':
     print(myzip([1, 2, 3], ['a', 'b', 'c']))
