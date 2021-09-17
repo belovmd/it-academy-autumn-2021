@@ -2,10 +2,9 @@
 1. Используйте генератор списков чтобы получить
  следующий: ['ab', 'ac', 'ad', 'bb', 'bc', 'bd'].
 """
-st = 'abcd'
 
 
-lst = [st[ind1] + st[ind2] for ind1 in range(2) for ind2 in range(1, 4)]
+lst = [elem + elem2 for elem in 'ab' for elem2 in 'bcd']
 print(lst)
 
 
@@ -20,7 +19,7 @@ print(lst[::2])
 3. Используйте генератор списков чтобы
  получить следующий ['1a', '2a', '3a', '4a']
 """
-lst_num = [str(ind_1) + 'a' for ind_1 in range(1, 5)]
+lst_num = [elem + 'a' for elem in '1234']
 print(lst_num)
 
 

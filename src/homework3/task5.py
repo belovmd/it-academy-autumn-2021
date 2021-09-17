@@ -6,6 +6,6 @@
 lst = [1, 31, 8, 2, 3, 32, 3, 5, 2, 22, 1, 8, 111]
 
 
-for i in range(0, len(lst)):
-    if lst.count(lst[i]) == 1:
-        print(lst[i])
+for elem in lst:
+    if lst.count(elem) == 1:
+        print(elem)
