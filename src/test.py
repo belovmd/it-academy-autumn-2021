@@ -43,17 +43,9 @@ print(permutel(s))"""
     return res
 
 print(mymap(abs, [-2, -1, 0, 1, 2]))
-print(mymap(pow, [1, 2, 3], [2, 3, 4, 5]))"""
+print(mymap(pow, [1, 2, 3], [2, 3, 4, 5]))
 
-def myzip(*seqs):
-    seqs = [list(S) for S in seqs]
-    print(seqs)
-    res = []
-    while all(seqs):
-        res.append(tuple(S.pop(0) for S in seqs))
-    return res
 
-print(dir(Task6))
 
 
 lst_ = ['a', 'b', 'c', 'd']
@@ -64,6 +56,14 @@ a = ".,af.,.gf."
 print(a.strip(",."))
 print(a.split(".,"))
 
-if __name__ == '__main__':
-    print(myzip([1, 2, 3], ['a', 'b', 'c']))
+p = [{'a': 123, 'b': 'c'}]
+print(type(p))"""
+
+
+c = 1,000,000
+print(c)
+
+print('1' == 1)
+__str__ = 1
+print(__str__)
 
