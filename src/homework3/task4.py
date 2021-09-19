@@ -13,6 +13,7 @@ import math
 def f(n):
     return int(math.factorial(n) / (math.factorial(n - 2) * 2))
 
+
 input_str = '1 23 34 7 2 47 5 0 0 1 0 2 7 7 3 7'
 input_list = input_str.split()
 
