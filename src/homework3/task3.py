@@ -27,7 +27,7 @@ print(a, b, c)
     Убедитесь что len() исходного кортежа возвращает 1.
 '''
 
-tpl4 = 'x',
+tpl4 = ((1, 2, 3), )
 print(len(tpl4))
-tpl_new = ''.join('1 2 3' for i in tpl4)
-print(tpl_new)
+for elem in tpl4[0]:
+    print(elem, end = ' ')
