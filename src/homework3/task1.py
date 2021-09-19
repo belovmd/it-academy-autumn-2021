@@ -5,7 +5,7 @@
 """
 
 for i in range(1, 101):
-    if not (i % 3 or i % 5):
+    if not (i % 15):
         print('FizzBuzz')
     elif not i % 3:
         print('Fizz')

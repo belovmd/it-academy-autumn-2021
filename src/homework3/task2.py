@@ -10,17 +10,16 @@ import copy
 
 
 # 1 Используйте генератор списков чтобы получить следующий: ['ab', 'ac', 'ad', 'bb', 'bc', 'bd'].
-spis = 'abcd'
-spis1 = [spis[0] + spis[i] for i in range(1, len(spis))]
-spis1 += [spis[1] + spis[i] for i in range(1, len(spis))]
-print('spis1=', spis1)
+spis = ['a' + el for el in 'abcd' if not el == 'a']
+spis += ['b' + el for el in 'abcd' if not el == 'a']
+print('spis=', spis)
 
 # 2 Используйте на предыдущий список slice чтобы получить следующий: ['ab', 'ad', 'bc'].
-spis2 = spis1[0::2]
+spis2 = spis[::2]
 print('spis2=', spis2)
 
 # 3 Используйте генератор списков чтобы получить следующий ['1a', '2a', '3a', '4a'].
-spis3 = [str(i) + 'a' for i in range(1, 5)]
+spis3 = [el + 'a' for el in '1234']
 print('spis3=', spis3)
 
 # 4 Одной строкой удалите элемент  '2a' из прошлого списка и напечатайте его.

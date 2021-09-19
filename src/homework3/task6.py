@@ -10,14 +10,9 @@
 a = [0, 2, 0, 3, 7, 2, 0, 4, 0, 12, 34, 87, 17, 0, 100, -3, -8, 0, 22]
 print(a)
 
-b = 0
-for i in range(len(a) - 1):
+for i in range(len(a)):
     if not a[i]:
-        for j in range(i + 1, len(a)):
-            if a[j]:
-                b = a[i]
-                a[i] = a[j]
-                a[j] = b
-                break
+        a.pop(i)
+        a.append(0)
 
 print(a)
