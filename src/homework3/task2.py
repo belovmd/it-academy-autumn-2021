@@ -2,7 +2,7 @@
     1. Используйте генератор списков чтобы получить следующий: ['ab', 'ac', 'ad', 'bb', 'bc', 'bd'].
 '''
 
-lst1 = [''.join([i, k]) for i in 'ab' for k in 'bcd']
+lst1 = [i + k for i in 'ab' for k in 'bcd']
 print('1: ', lst1)
 
 
