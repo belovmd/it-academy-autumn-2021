@@ -6,9 +6,9 @@
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
 """
 lst1 = [int(s) for s in input('Введите список чисел через пробел:').split()]
-counter = 0    # вводим счетчик
-for element in range(len(lst1)):   # итерируемся по первому элементу пары
-    for element2 in range(element + 1, len(lst1)):  # итерируемся по второму элементу пары
+counter = 0
+for element in range(len(lst1)):
+    for element2 in range(element + 1, len(lst1)):
         if lst1[element] == lst1[element2]:
             counter += 1
 print(counter)

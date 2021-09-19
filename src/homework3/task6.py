@@ -6,6 +6,6 @@
 """
 lst = [int(i) for i in input('Введите список чисел: ').split()]
 for i in range(len(lst)):
-    if lst[i] == 0:
+    if not lst[i]:
         lst.append(lst.pop(i))
 print(*lst)
