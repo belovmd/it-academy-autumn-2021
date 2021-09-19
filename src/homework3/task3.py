@@ -30,4 +30,5 @@ print(a, b, c)
 tpl4 = ((1, 2, 3), )
 print(len(tpl4))
 for elem in tpl4[0]:
-    print(elem, end = ' ')
+    print(elem, end=' ')
+    
