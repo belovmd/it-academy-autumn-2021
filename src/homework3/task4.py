@@ -9,5 +9,5 @@
 
 lst = '1 1 1 1'.split()
 dct_ = {num: lst.count(num) for num in lst}
-couples = [sum(range(value)) for value in dct_.values()] 
+couples = [sum(range(value)) for value in dct_.values()]
 print(sum(couples))
