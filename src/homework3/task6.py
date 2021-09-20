@@ -7,8 +7,8 @@
     Распечатайте полученный список.
 '''
 
-str = input('Введите список целых чисел: ')
-lst = [int(_) for _ in str.split()]
+str_ = input('Введите список целых чисел: ')
+lst = [int(_) for _ in str_.split()]
 new, new1 = [], []
 for elem in lst:
     if elem:
