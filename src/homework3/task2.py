@@ -9,7 +9,7 @@ print(lst1[::2])
 
 # Используйте генератор списков чтобы получить следующий
 # ['1a', '2a', '3a', '4a'].
-new_list = [element1 + element2 for element1 in '1234' for element2 in 'a']
+new_list = [element1 + 'a' for element1 in '1234']
 print(new_list)
 
 # Одной строкой удалите элемент  '2a' из прошлого списка и напечатайте его.
