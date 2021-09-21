@@ -3,11 +3,16 @@
 # дополнительный список использовать нельзя, задачу нужно выполнить за один проход по списку.
 # Распечатайте полученный список.
 
-lst = [int(x) for x in input('Initial list: ').split()]
-for item in lst:
-    if item == 0:
-        lst.remove(item)
-        lst.append(item)
-    else:
-        pass
-print('Ultimate outcome: ', lst)
+def zeros_to_right(lst):
+    print('Initial list: ', lst)
+    for item in lst:
+        if item == 0:
+            lst.remove(item)
+            lst.append(item)
+        else:
+            pass
+    print('Ultimate outcome: ', lst)
+
+    
+lst = [25, 0, 24, 65, 84, 2, 654, 0, 14]
+zeros_to_right(lst)
