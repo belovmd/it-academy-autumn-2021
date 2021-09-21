@@ -8,6 +8,6 @@ def pairs(lst):
         if lst.count(el) == 1:
             print(el)
 
-            
+
 lst = [21, 25, 84, 65, 23, 24, 12, 21, 84]
 pairs(lst)
