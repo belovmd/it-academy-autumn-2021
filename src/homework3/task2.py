@@ -5,7 +5,7 @@ list_ = [symbol_1 + symbol_2 for symbol_1 in 'ab' for symbol_2 in 'bcd']
 print(list_)
 
 # Используйте на предыдущий список slice чтобы получить следующий: ['ab', 'ad', 'bc'].
-list_2 = list_[0::2]
+list_2 = list_[::2]
 print(list_2)
 
 # Используйте генератор списков чтобы получить следующий ['1a', '2a', '3a', '4a'].
