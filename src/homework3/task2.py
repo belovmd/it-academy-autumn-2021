@@ -9,7 +9,7 @@ list_2 = list_[::2]
 print(list_2)
 
 # Используйте генератор списков чтобы получить следующий ['1a', '2a', '3a', '4a'].
-alpha_num_list_ = [str(num) + 'a' for num in range(1, 5)]
+alpha_num_list_ = [str(num) + 'a' for num in '1234']
 print(alpha_num_list_)
 
 # Одной строкой удалите элемент  '2a' из прошлого списка и напечатайте его.
