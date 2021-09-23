@@ -12,5 +12,5 @@ pair_ = 0
 numbers_ = {num: list_.count(num) for num in list_}
 for element in numbers_:
     count_ = (numbers_[element] * (numbers_[element] - 1)) / 2
-    pair_ = pair_ + count_
+    pair_ += count_
 print(int(pair_))
