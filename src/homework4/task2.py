@@ -6,13 +6,13 @@
 # В следующей строке записано число M,
 # далее идут M запросов — названия каких-то M городов, перечисленных выше.
 
-n = int(input())
+n = int(input('How many countries would you like to input?\n'))
 dct = {}
 for number in range(n):
     cities = [str(x) for x in input().split()]
     for element in cities:
         dct.setdefault(cities[0], []).append(element)
-n_choice = int(input())
+n_choice = int(input('How many cities would you like to check?\n'))
 for times in range(n_choice):
     choice = str(input())
     for city in dct.values():

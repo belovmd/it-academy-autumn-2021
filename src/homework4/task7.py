@@ -1,8 +1,8 @@
 # Даны два натуральных числа. Вычислите их наибольший общий делитель
 # при помощи алгоритма Евклида (мы не знаем функции и рекурсию).
 
-m = int(input())
-n = int(input())
+m = int(input('Первое число: '))
+n = int(input('Второе число: '))
 if m == n:
     print("These are equal")
 else:
@@ -12,4 +12,4 @@ else:
         elif n > m:
             n = n - m
     else:
-        print('The biggest common divisor: ', m)
+        print('Наибольший обший делитель: ', m)
