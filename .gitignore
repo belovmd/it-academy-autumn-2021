@@ -108,3 +108,4 @@ venv.bak/
 .tox/
 .gitignore/
 *.DS_Store
+!/src/ratings.list
