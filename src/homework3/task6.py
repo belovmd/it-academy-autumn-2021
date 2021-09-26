@@ -12,7 +12,7 @@ def zeros_to_right(lst):
         else:
             pass
     print('Ultimate outcome: ', lst)
-    
+
 
 lst = [25, 0, 24, 65, 84, 2, 654, 0, 14]
 zeros_to_right(lst)
