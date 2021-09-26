@@ -106,3 +106,4 @@ venv.bak/
 #additional
 .idea/
 .tox/
+.gitignore/
