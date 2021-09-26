@@ -8,15 +8,15 @@
 
 def get_ranges(lst):
     i, k = 1, 0
-    l = len(lst)
+    length = len(lst)
     lst_global = []
-    while i < l:
-        if lst[i] - lst[i-1] != 1:
+    while i < length:
+        if lst[i] - lst[i - 1] != 1:
             lst_new = lst[k:i]
             lst_global.append([str(el) for el in lst_new])
             k = i
         i += 1
-        if i == l:
+        if i == length:
             lst_new = lst[k:]
             lst_global.append([str(el) for el in lst_new])
     # print(lst_global)

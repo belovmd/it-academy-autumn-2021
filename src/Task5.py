@@ -5,7 +5,7 @@ def two_power(x):
         x = x >> 1
         i += 1
 
-    if (2**(i+1) - b) > (b - 2**i):
+    if (2**(i + 1) - b) > (b - 2**i):
         return f"{2**i} => {i}"
     else:
         return f"{2**(i+1)} => {i+1}"

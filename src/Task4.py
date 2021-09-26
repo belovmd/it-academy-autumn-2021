@@ -1,4 +1,5 @@
-"""В файле хранятся данные с сайта IMDB. Скопированные данные хранятся в файле ./data_hw5/ ratings.list.
+"""В файле хранятся данные с сайта IMDB. Скопированные данные хранятся в файле
+./data_hw5/ ratings.list.
 Откройте и прочитайте файл(если его нет необходимо вывести ошибку).
 Найдите ТОП250 фильмов и извлеките заголовки.
 Программа создает 3 файла  top250_movies.txt – названия файлов, ratings.txt – гистограмма рейтингов,
@@ -41,8 +42,8 @@ with open("top250_movies.txt", 'w') as f1:
 with open("ratings.txt", 'w') as f2:
     f2.write("Comment: Five asterix for 8.0 points, for every 0.1 point one asterix is added.\n\n")
     for el in lst_new3:
-        rating = int(float(el[-2])*10 - 75)*"*" + "\n"
-        length = (80-len(el[-1])) * '-'
+        rating = int(float(el[-2]) * 10 - 75) * "*" + "\n"
+        length = (80 - len(el[-1])) * '-'
         f2.write(f"{el[-1].strip()} {length} {el[-2]} => {rating}")
 
 with open("years.txt", 'w') as f3:
@@ -54,5 +55,3 @@ with open("years.txt", 'w') as f3:
     for k, v in sorted(dct.items()):
         year_rating = "%s:%s\n" % (k, int(v)*"+")
         f3.write(year_rating)
-
-
