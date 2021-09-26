@@ -1,31 +1,40 @@
-import os
-import pkgutil
-import Homework2
-from Homework3 import Task1
+"""Оформите решение задач из прошлых домашних работ в функции. Напишите функцию runner.
+(все станет проще когда мы изучим модули, getattr и setattr)
+runner() – все фукнции вызываются по очереди
+runner(‘func_name’) – вызывается только функцию func_name.
+runner(‘func’, ‘func1’...) - вызывает все переданные функции
+Задачу поместите в файл task1.py в папке src/homework5.
+"""
 
-lst_ = [f for f in os.listdir("/Users/Roman/Desktop/IT-academy-2021/it-academy-autumn-2021/src")
-        if f.startswith('Home')]
+# from inspect import getmembers, isfunction
 
-dct_ = {el: [f for f in os.listdir(el) if not f.startswith('__')] for el in lst_}
-print(dct_)
+# from Homework3 import Task1, Task2, Task3, Task4, Task5, Task6
 
-#info = list(pkgutil.iter_modules("src"))
-#print(info)
-for v in dct_.values():
-    for val in v:
-        print(dir(val))
 
-"""for v in dct_.values():
-    for val in v:
-        __import__(val[:-3])"""
+from Homework3.Task1 import *
+# from Homework3.Task2 import *
+# from Homework3.Task3 import *
+from Homework3.Task4 import *
+# from Homework3.Task5 import *
+from Homework3.Task6 import *
 
-all = list(module for _, module, _ in pkgutil.iter_modules([os.path.dirname("src")]))
-print(all)
+"""list_tasks = [Task1, Task2, Task3, Task4, Task5, Task6]
+functions_list = [getmembers(t, isfunction) for t in list_tasks]
+print(functions_list)"""
 
-# print(lst_)
-# print(lst_1)
-print(type(Homework2))
-a = [el for el in dir(Task1) if not el.startswith("__")]
-print(a)
 
-from Task1 import function((a[0]))
+def runner(*args):
+    result = ""
+    for el in args:
+        result += str(el()) + "\n" + "-"*50 + "\n"
+    return "Function result:\n" + result
+
+
+func1 = runner(crazy_function)
+func2 = runner(sort_list, crazy_function)
+func3 = runner(sort_list, crazy_function, find_pairs)
+
+if __name__ == '__main__':
+    print(func1)
+    print(func2)
+    print(func3)

@@ -19,13 +19,25 @@ def get_ranges(lst):
         if i == l:
             lst_new = lst[k:]
             lst_global.append([str(el) for el in lst_new])
-    print(lst_global)
-    str_1 = ", ".join(el[0] + "-" + el[-1] for el in lst_global if len(el) > 1)
-    str_2 = ", " + ", ".join(el[0] for el in lst_global if len(el) == 1)
-    str_global = str_1 + str_2
-    print(str_global)
+    # print(lst_global)
+    str_ = ""
+    for el in lst_global:
+        if len(el) > 1:
+            str_ += (el[0] + "-" + el[-1]) + ", "
+        else:
+            str_ += el[0] + ", "
+
+    # Previous code not to take into account
+    """str_1 = ", ".join(el[0] + "-" + el[-1] for el in lst_global if len(el) > 1)
+       str_2 = ", " + ", ".join(el[0] for el in lst_global if len(el) == 1)
+       str_global = str_1 + str_2
+       print(str_global)"""
+
+    return str_[:-2]
 
 
 if __name__ == '__main__':
     a = [1, 2, 3, 5, 6, 7, 8, 9, 12, 13, 14, 18, 19, 24, 25, 26, 28, 30]
-    get_ranges(a)
+    print(get_ranges(a))
+    b = [1, 5, 6, 7, 98, 99, 100, 102]
+    print(get_ranges(b))

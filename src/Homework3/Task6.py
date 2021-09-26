@@ -14,8 +14,8 @@ def sort_list():
     for x in list_:
         if not x:
             list_.append(list_.pop(list_.index(x)))
-    print(list_)
+    return list_
 
 
 if __name__ == '__main__':
-    sort_list()
+    print(sort_list())

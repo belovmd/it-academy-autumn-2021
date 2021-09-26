@@ -19,8 +19,9 @@ def find_pairs():
             if k == j:
                 dict_[k] += 1
         i += 1
-    print("\n".join("Для числа {} найдено => {} пар".format(k, v) for k, v in dict_.items()))
+    str_ = ("\n".join("Для числа {} найдено => {} пар".format(k, v) for k, v in dict_.items()))
+    return str_
 
 
 if __name__ == '__main__':
-    find_pairs()
+    print(find_pairs())

@@ -1,5 +1,5 @@
-def max_divisor():
-    x = b = 88
+def max_divisor(x):
+    b = x
     i = 0
     if x % 2:
         return None
@@ -10,4 +10,4 @@ def max_divisor():
 
 
 if __name__ == '__main__':
-    print(max_divisor())
+    print(max_divisor(88))

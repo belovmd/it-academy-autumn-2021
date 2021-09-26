@@ -1,5 +1,5 @@
-def two_power():
-    b = x = 128
+def two_power(x):
+    b = x
     i = 0
     while x != 1:
         x = x >> 1
@@ -12,4 +12,4 @@ def two_power():
 
 
 if __name__ == '__main__':
-    print(two_power())
+    print(two_power(259))
