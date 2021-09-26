@@ -19,13 +19,13 @@ with open(path, 'r', encoding="Windows-1252") as f:
     for el in lst_:
         index += 1
         if find in el:
-            print(el, "=>", index)
+            # print(el, "=>", index)
             n = index
             flag = True
         if flag and index < n + 252:
             lst_new.append(lst_[index].lstrip())
-    for l in lst_new:
-        print(l, end="")
+    """for l in lst_new:
+        print(l, end="")"""
 
     # print("-"*30)
     lst_new2 = lst_new[lst_new.index("New  Distribution  Votes  Rank  Title\n") + 1:]
