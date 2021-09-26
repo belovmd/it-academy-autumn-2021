@@ -53,5 +53,5 @@ with open("years.txt", 'w') as f3:
         year = el[-1][-8:-2].replace("(", "").lstrip()
         dct[year] = dct.get(year, 0) + 1
     for k, v in sorted(dct.items()):
-        year_rating = "%s:%s\n" % (k, int(v)*"+")
+        year_rating = "%s:%s\n" % (k, int(v) * "+")
         f3.write(year_rating)

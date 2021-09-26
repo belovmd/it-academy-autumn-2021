@@ -1,5 +1,4 @@
 def max_divisor(x):
-    b = x
     i = 0
     if x % 2:
         return None
