@@ -109,3 +109,4 @@ venv.bak/
 .gitignore/
 *.DS_Store
 !/src/ratings.list
+ratings.list
