@@ -9,10 +9,8 @@ for _ in range(n):
     for _ in range(m):
         lang_lst.add(input("Введите языки которые знает школьник"))
     language.append(lang_lst)
-
 all_knows = set.intersection(*language)
 all_langs = set.union(*language)
-
 
 print("Хотя бы один из школьников знает", all_langs,)
 print("Все школьники знают", all_knows)
