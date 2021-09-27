@@ -3,7 +3,7 @@
 # вместо чисел кратный 5 пишет Buzz, а вместо чисел одновременно кратных и 3 и 5 - FizzBuzz
 
 for i in range(0, 101):
-    if not i % 3 and not i % 5:
+    if not i % 15:
         print("FizzBuzz")
     elif not i % 3:
         print("Fizz")
