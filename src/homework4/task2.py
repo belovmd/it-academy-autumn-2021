@@ -14,6 +14,9 @@ motherland = {}
 for i in range(int(input('Введите колличество стран: '))):
     country, *cities = input('Введите страну и города: ').split()
     for city in cities:
-        motherland[city] = country
+        if city in motherland:
+            motherland[city] = motherland[city] + ' ' + country
+        else:
+            motherland[city] = country
 for i in range(int(input('Введите число запросов '))):
     print(motherland[input('Введите город ')])
