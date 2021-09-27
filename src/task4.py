@@ -6,5 +6,5 @@
 # Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
 
 lst_ = [int(s) for s in input("Введите числа через пробел").split()]
-numb_pairs = sum(lst_.count(i) -1 for i in lst_)/2
+numb_pairs = sum(lst_.count(i) - 1 for i in lst_)/2
 print(numb_pairs, "пар")
