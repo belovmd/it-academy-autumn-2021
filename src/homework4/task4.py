@@ -2,4 +2,4 @@
 
 numb_lst1 = [1, 13, 78, 52, 77, 82, 233, 112]
 numb_lst2 = [33, 42, 52, 63, 82, 211, 113, 91]
-print(len(set(numb_lst1) - set(numb_lst1)))
+print(len(set(numb_lst1) - set(numb_lst1)) + len(set(numb_lst2) - set(numb_lst1)))
