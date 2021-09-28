@@ -4,12 +4,7 @@
 Входные данные - строка из чисел, разделенная пробелами.
 Выходные данные - количество пар.
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар"""
-str_ = input('Введите числа, разделенные пробелами: ')
-lst = str_.split()
-print(lst)
-pairs = 0
-for x in range(len(lst)):
-    for y in range(x + 1, len(lst)):
-        if lst[x] == lst[y]:
-            pairs += 1
-print(pairs)
+input_lst = input('Введите числа, разделенные пробелами: ').split()
+count_elements = {element: input_lst.count(element) for element in input_lst}
+one_pair_sum = [value * (value - 1) // 2 for value in count_elements.values()]
+print(one_pair_sum)

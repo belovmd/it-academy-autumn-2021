@@ -15,7 +15,7 @@ print('2: ', lst[::2])
 
 
 """3. Используйте генератор списков чтобы получить следующий: ['1a', '2a', '3a', '4a']."""
-lst2 = [str(element1) + 'a' for element1 in range(1, 5)]
+lst2 = [str(element1) + 'a' for element1 in '1234']
 print('3: ', lst2)
 
 
