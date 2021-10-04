@@ -5,12 +5,14 @@
 '''
 
 
+lst = []
 for num in range(100):
-    if not num % 3 and not num % 5:
-        print('FizzBuzz')
+    if not num % 15:
+        lst.append('FizzBuzz')
     elif not num % 3:
-        print('Fizz')
+        lst.append('Fizz')
     elif not num % 5:
-        print('Buzz')
+        lst.append('Buzz')
     else:
-        print(num)
+        lst.append(num)
+print(lst)

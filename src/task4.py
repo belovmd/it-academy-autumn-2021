@@ -9,9 +9,6 @@
 '''
 
 lst = [int(s) for s in input('Введите числа через пробел: ').split()]
-pairs = 0
-for x in range(len(lst)):
-    for y in range(x + 1, len(lst)):
-        if lst[x] == lst[y]:
-            pairs += 1
-print('В списке:', lst, 'количество пар:', pairs)
+dct = {num: lst.count(num) for num in lst}
+couples = [sum(range(value)) for value in dct.values()]
+print(sum(couples))
