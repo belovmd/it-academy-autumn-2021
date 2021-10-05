@@ -4,13 +4,13 @@
 (мы не знаем функции и рекурсию)
 """
 
-a = 75
-b = 39
+a = 32
+b = 24
 
-while a and b:
+while a != b:
     if a > b:
-        a = a % b
+        a = a - b
     else:
-        b = b % a
+        b = b - a
 
-print('НОД =', a + b)
+print('НОД =', a)
