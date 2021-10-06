@@ -9,5 +9,5 @@ list2 = [1, 2, 3, 4, 5, 22, 12, 34, 106]
 
 a = set(list1)
 b = set(list2)
-c = a - b
+c = a ^ b
 print(len(c))

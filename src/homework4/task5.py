@@ -29,34 +29,28 @@ French
 Задачу поместите в файл task5.py в папке src/homework4.
 """
 
-N = int(input('N: '))
+pupils_num = int(input('N: '))
 
 languages = []
-for i in range(N):
-    m = int(input('M: '))
+for i in range(pupils_num):
+    lang_num = int(input('M: '))
     lst = []
-    for j in range(m):
+    for j in range(lang_num):
         lst.append(input())
     languages.append(set(lst))
 
-#  В первой строке выведите количество языков, которые знают все школьники.
-#  Начиная со второй строки - список таких языков.
-
 every_know = languages[0]
-for i in range(1, N):
+for i in range(1, pupils_num):
     every_know &= languages[i]
 
 print()
-print('Количество зыков, которые знают все школьники:', len(every_know))
+print('Количество языков, которые знают все школьники:', len(every_know))
 for el in every_know:
     print(el, end=' ')
 print()
 
-#  Затем - количество языков, которые знает хотя бы один школьник,
-#  на следующих строках - список таких языков.
-
 somebody_know = languages[0]
-for i in range(1, N):
+for i in range(1, pupils_num):
     somebody_know |= languages[i]
 
 print()

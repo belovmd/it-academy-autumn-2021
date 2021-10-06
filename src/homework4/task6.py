@@ -6,22 +6,18 @@
 Определите, сколько различных слов содержится в этом тексте.
 Задачу поместите в файл task6.py в папке src/homework4.
 """
+import re
 
 str1 = 'Скажика дядя, ведь недаром, \n дядя, Москва спалённая пожаром, !была французам   отдана?'
 
-mas_from_ends = str1.split('\n')
-
-mas_from_spaces = []
-
-for el in mas_from_ends:
-    mas_from_spaces += el.split(' ')
+mas_words = re.split(" |\n", str1)
 
 i = 0
-while i < len(mas_from_spaces):
-    if mas_from_spaces[i] == '':
-        del mas_from_spaces[i]
+while i < len(mas_words):
+    if mas_words[i] == '':
+        del mas_words[i]
     else:
         i += 1
 
-var_words = set(mas_from_spaces)
+var_words = set(mas_words)
 print(len(var_words))

@@ -53,8 +53,8 @@ for i in range(M):
     print(i + 1, ':', end=' ')
     towns.append(input())
 
-towns_in_country = \
-    {inp_data[i][0]: [inp_data[i][j] for j in range(1, len(inp_data[i]))] for i in range(N)}
+towns_in_country = {
+    inp_data[i][0]: [inp_data[i][j] for j in range(1, len(inp_data[i]))] for i in range(N)}
 
 print()
 num_countries = 0
@@ -63,8 +63,8 @@ for town in towns:
     for key, value in towns_in_country.items():
         if town in value:
             num_countries += 1
-            print(key, end=' ')  # страны с одинаковым городом выводим в одной строчке
+            print(key, end=' ')
     if not num_countries:
-        print('--')  # если в словаре нет страны для этого города (с переходом на след строку)
+        print('--')
     else:
-        print('')  # если нашли хотя бы одну страну, то перейдём на след строку (завершим текущую)
+        print('')
