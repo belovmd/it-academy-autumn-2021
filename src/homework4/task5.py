@@ -33,8 +33,7 @@ for _ in range(1, n + 1):
     print()
 
 all_ = set(students_languages_list[0])
-one_ = set(students_languages_list[0])  # "языки, которые знает хотя бы один школьник" -
-# т.е. все языки, т.к. кто-то на нем да говорит?
+one_ = set(students_languages_list[0])
 
 for language in students_languages_list:
     all_ = all_ & language
@@ -48,8 +47,6 @@ print("Количество языков, которые знает хотя б�
 for language in one_:
     print(language)
 
-# "языки, которые знает хотя бы один школьник" -
-# т.е. уникальные языки, которые знает только 1 школьник?
 just_one = one_
 for i in range(0, n - 1):
     if i == n:
