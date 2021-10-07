@@ -4,11 +4,11 @@
     (мы не знаем функции и рекурсию).
 '''
 
-a = int(input('Введите число: '))
-b = int(input('Введите число: '))
-while a != 0 and b != 0:
+a = int(input('Введите число A: '))
+b = int(input('Введите число B: '))
+while a != b:
     if a > b:
-        a = a % b
+        a = a - b
     else:
-        b = b % a
-print('НОД: ', a + b)
+        b = b - a
+print('НОД: ', b)
