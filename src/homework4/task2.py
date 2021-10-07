@@ -30,12 +30,8 @@
 n = int(input('Введите количество стран: '))
 country_city_dict = {}
 for _ in range(n):
-    city_dict = {}
-    inputs = input('Введите название страны и ее города: ')
-    inputs = inputs.split()
-    for word in inputs[1::]:
-        city_dict.setdefault(inputs[0], []).append(word)
-    country_city_dict.update(city_dict)
+    a, *b = input('Введите название страны и ее города: ').split()
+    country_city_dict[a] = b
 
 m = int(input('Введите количество городов: '))
 city_list = []
@@ -45,6 +41,6 @@ for _ in range(m):
 for city in city_list:
     countries = []
     for key, value in country_city_dict.items():
-        if city in value:                   # на случай, если один город в нескольких странах
+        if city in value:
             countries.append(key)
     print(', '.join(countries))
