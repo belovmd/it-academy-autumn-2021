@@ -11,17 +11,14 @@
     Для каждого из запроса выведите название страны, в котором находится данный город.
 '''
 
-N = int(input('Введите кол-во стран: '))
+amount_of_countries = int(input('Введите кол-во стран: '))
 dct_ = {}
-for _ in range(N):
-    str_ = input('Введите названия стран/городов: ').split()
-    dct1 = {str_[0]: str_[1::], }
-    dct_.update(dct1)
+for _ in range(amount_of_countries):
+    country, *cities = input('Введите названия стран/городов: ').split()
+    dct_[country] = cities
 
-
-M = int(input('Введите кол-во городов: '))
-for i in range(M):
-    town = input('Введите город: ')
-    for key, val in dct_.items():
-        if town in val:
-            print(key)
+amount_of_cities = int(input('Введите кол-во городов: '))
+for _ in range(amount_of_cities):
+    city = input('Введите город: ')
+    z = [key for key, val in dct_.items() if city in val]
+    print(*z)
