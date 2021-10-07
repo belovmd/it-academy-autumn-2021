@@ -5,12 +5,11 @@
 Скопируйте список и добавьте в него элемент '2a'
  так чтобы в исходном списке этого элемента не было.'''
 
-s = 'abcd'
-lst = [s[x] + s[z] for x in range(2) for z in range(1, 4)]
+lst = [i + k for i in 'ab' for k in 'bcd']
 print(lst)
 lst1 = lst[::2]
 print(lst1)
-lst2 = [str(u) + "a" for u in range(1, 5)]
+lst2 = [str(u) + "a" for u in "1234"]
 print(lst2)
 print(lst2.pop(1))
 lst3 = lst2.copy()
