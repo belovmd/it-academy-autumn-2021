@@ -6,9 +6,9 @@
 
 a = int(input())
 b = int(input())
-while a and b:
+while a != b:
     if a > b:
-        a = a % b
+        a = a - b
     else:
-        b = b % a
-print('НОД =', a + b)
+        b = b - a
+print('НОД =', b)

@@ -6,5 +6,5 @@
 
 lst1 = [1, 2, 3, 6]
 lst2 = [3, 6, 8, 9]
-set_ = set(lst1) | set(lst2)
-print(len(set_))
+set1, set2 = set(lst1), set(lst2)
+print('Колличество разных числел в списках: ', len(set1 & set2))
