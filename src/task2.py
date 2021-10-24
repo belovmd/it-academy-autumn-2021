@@ -15,7 +15,7 @@
 Russia Moscow Petersburg Novgorod Kaluga
 France Brest Paris
 Ukraine Kiev Donetsk Odessa
-Belarus Minsk Brest	
+Belarus Minsk Brest
 
 
 3
