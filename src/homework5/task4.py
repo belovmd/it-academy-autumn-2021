@@ -1,5 +1,5 @@
 """
-В файле хранятся данные с сайта IMDB. Скопированные данные хранятся в файле ./data_hw5/ ratings3.list.
+В файле хранятся данные с сайта IMDB. Скопированные данные хранятся в файле./data_hw5/ratings.list.
 Откройте и прочитайте файл(если его нет необходимо вывести ошибку).
 Найдите ТОП250 фильмов и извлеките заголовки.
 Программа создает 3 файла  top250_movies.txt – названия файлов, ratings.txt – гистограмма
@@ -59,14 +59,14 @@ for elem in year_list:
 # записываем данные гистограммы рейтингов в файл
 fh_ratings = open("ratings.txt", "w")
 for el, val in dct_rating.items():
-    str_ = str(el) + str(val)+'\n'
+    str_ = str(el) + str(val) + '\n'
     fh_ratings.write(str_)
 fh_ratings.close()
 
 # записываем данные гистограммы фильмов в файл
 fh_years = open("years.txt", "w")
 for el, val in dct_years.items():
-    str_ = str(el) + str(val)+'\n'
+    str_ = str(el) + str(val) + '\n'
     fh_years.write(str_)
 fh_years.close()
 

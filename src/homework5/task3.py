@@ -14,18 +14,18 @@ def get_ranges(lst):
     new_lst = []
     jst_str += str(lst[0])
 
-    for num in range(leng-1):
-        if lst[num+1] - lst[num] == 1:
-            jst_str += '-' + str(lst[num+1])
+    for num in range(leng - 1):
+        if lst[num + 1] - lst[num] == 1:
+            jst_str += '-' + str(lst[num + 1])
         else:
-            jst_str += ',' + str(lst[num+1])
+            jst_str += ',' + str(lst[num + 1])
 
     jst_str = jst_str.split(',')
 
     for i in jst_str:
         p = i.split("-")
         if len(p) >= 2:
-            new_lst.append(p[0]+'-'+p[-1])
+            new_lst.append(p[0] + '-' + p[-1])
         else:
             new_lst.append(i)
 
