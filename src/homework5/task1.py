@@ -1,5 +1,7 @@
 import task1a
+
 from inspect import isfunction
+
 from inspect import getmembers
 
 
