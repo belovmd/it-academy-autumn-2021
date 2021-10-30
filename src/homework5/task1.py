@@ -1,8 +1,9 @@
-# runner()
 import task1a
-from inspect import getmembers, isfunction
+from inspect import getmembers
+from inspect import isfunction
 
 
+# runner
 def runer():
     task1a.slova()
     task1a.strany()
