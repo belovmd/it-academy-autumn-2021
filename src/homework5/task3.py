@@ -18,7 +18,7 @@ def get_ranges(range_list):
     string_from_list = string_from_list.split(',')
 
     for element in string_from_list:
-        intermediate_string = el.split('-')
+        intermediate_string = element.split('-')
         if len(intermediate_string) >= 2:
             result_list.append(intermediate_string[0] + '-' + intermediate_string[-1])
         else:
