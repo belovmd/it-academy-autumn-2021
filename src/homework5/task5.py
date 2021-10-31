@@ -5,10 +5,10 @@ def nearest_power_of_two(n):
     i = 1
     while n >= 2**i:
         i += 1
-    if abs(n-(2**(i-1))) <= abs(n - 2 ** i):
-        print(2**(i-1))
+    if abs(n-(2 ** (i - 1))) <= abs(n - 2 ** i):
+        print(2 ** (i - 1))
     else:
-        print(2**i)
+        print(2 ** i)
     return
 
 
