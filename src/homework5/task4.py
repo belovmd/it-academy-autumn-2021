@@ -6,7 +6,7 @@
 # ratings.txt – гистограмма рейтингов, years.txt – гистограмма годов
 
 import matplotlib.pyplot as plt
-import pandas
+# import pandas
 
 reader = open('ratings.list', 'r')
 
