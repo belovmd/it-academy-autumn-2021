@@ -3,18 +3,28 @@
 import datetime
 
 
-def call_time():
+def decorator_function(func):
     result = []
-    try:
-        with open('result_storage.txt', 'a') as fh:
-            calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
-            fh.write('function was called at: ' + calltime + '\n')
-            result.append(calltime)
-    except IOError:
-        with open('result_storage.txt', 'w') as fh:
-            calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
-            fh.write('function was called at: ' + calltime + '\n')
-            result.append(calltime)
+
+    def wrapper():
+        try:
+            with open('result_storage.txt', 'a') as fh:
+                calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
+                fh.write('function was called at: ' + calltime + '\n')
+                result.append(calltime)
+        except IOError:
+            with open('result_storage.txt', 'w') as fh:
+                calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
+                fh.write('function was called at: ' + calltime + '\n')
+                result.append(calltime)
+        func()
+    return wrapper
+
+
+@decorator_function
+def call_time():
+    calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
+    print('function was called at: ' + calltime + '\n')
 
 
 call_time()
