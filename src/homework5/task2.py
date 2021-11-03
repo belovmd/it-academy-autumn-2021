@@ -24,7 +24,7 @@ def decorator_function(func):
 @decorator_function
 def call_time():
     calltime = datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S")
-    print('function was called at: ' + calltime + '\n')
+    print('function was called at: ', calltime)
 
 
 call_time()
