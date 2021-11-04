@@ -40,6 +40,7 @@ try:
         ys = rate_hist[0]
         xs = rate_hist[1]
         plt.savefig('ratings.png')
+        plt.close()
 
         year_hist = plt.hist(years, bins=50)
         plt.title('Years')
@@ -49,6 +50,7 @@ try:
         ys = year_hist[0]
         xs = year_hist[1]
         plt.savefig('years.png')
+        plt.close()
 
 
 except IOError:
