@@ -42,7 +42,7 @@ def get_ranges(s):
 
     else:  # если список состоит из одного элемента
         roll_up = str(s[0])
-        
+
     return roll_up
 
 

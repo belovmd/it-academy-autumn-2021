@@ -2,12 +2,13 @@
 1 Оформите решение задач из прошлых домашних работ в функции.
   Напишите функцию runner. (все станет проще когда мы изучим модули, getattr и setattr)
 a runner() – все фукнции вызываются по очереди
-b runner(‘func_name’) – вызывается только функцию func_name. 
-c runner(‘func’, ‘func1’...) - вызывает все переданные функции 
+b runner(‘func_name’) – вызывается только функцию func_name.
+c runner(‘func’, ‘func1’...) - вызывает все переданные функции
   Задачу поместите в файл task1.py в папке src/homework5.
 """
 
 import fun_lib
+
 
 def runner():
     print()
@@ -18,7 +19,9 @@ def runner():
     fun_lib.hw3task5()
     fun_lib.hw3task6()
 
+
 runner()
+
 
 def runner(func):
     print()
@@ -28,7 +31,9 @@ def runner(func):
     else:
         print('Функция "', func, '" не найдена!')
 
+
 runner('hw3task5')
+
 
 def runner(*args):
     print()
@@ -38,5 +43,6 @@ def runner(*args):
             getattr(fun_lib, arg)()
         else:
             print('\n\nФункция "', arg, '" не найдена!')
+
 
 runner('hw3task3', 'hw3task4', 'hw3task5')
