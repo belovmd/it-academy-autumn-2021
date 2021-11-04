@@ -7,7 +7,7 @@ def max_divider(n):
     while not n % divider:
         divider = divider << 1
         i += 1
-    divider = 2 ** (i-1)
+    divider = 2 ** (i - 1)
     return print(divider)
 
 
