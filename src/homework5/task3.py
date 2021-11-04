@@ -13,6 +13,7 @@ def get_ranges(lst):
             result += ',' + str(lst[i])
     return result
 
+
 print(get_ranges([0, 3, 2, 3, 4, 7, 8, 10]))
 print(get_ranges([4, 7, 10]))
 print(get_ranges([2, 3, 8, 9]))
