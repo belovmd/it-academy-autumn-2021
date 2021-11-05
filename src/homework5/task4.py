@@ -59,8 +59,8 @@ else:
 
     for i in range(len(top_films)):
         line = '  ' + '-' * (68 - len(top250[i]))
-        str_ = top250[i] + line + ' ' + top_films[i][2] + ' : ' + draw_rating(float(top_films[i][2]))
-        ratings.append(str_)
+        st = top250[i] + line + ' ' + top_films[i][2] + ' : ' + draw_rating(float(top_films[i][2]))
+        ratings.append(st)
 
     with open('ratings.txt', 'w') as f_ratings:
         for i in range(len(ratings)):
