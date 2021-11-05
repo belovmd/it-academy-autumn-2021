@@ -17,6 +17,7 @@ def runner():
     my_func.cubes()
     my_func.pairs()
 
+
 runner()
 
 
@@ -27,6 +28,7 @@ def runner(func_name):
     else:
         print('Not found')
 
+
 runner('fizzbuzz')
 
 
@@ -36,5 +38,6 @@ def runner(*args):
             getattr(my_func, arg)()
         else:
             print('Not found')
+
 
 runner('fizzbuzz', 'cubes', 'pairs')

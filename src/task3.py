@@ -7,6 +7,7 @@
  get_ranges([2, 3, 8, 9]) // "2-3,8-9"
 '''
 
+
 def get_ranges(lst):
     for index, item in enumerate(lst):
         lst[index] = str(item)

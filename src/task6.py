@@ -16,6 +16,7 @@ def divider(num):
 
     return degree
 
+
 print(divider(20))
 print(divider(18))
 print(divider(56))
