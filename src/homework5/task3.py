@@ -10,6 +10,7 @@ def get_ranges(lst):
     for index, item in enumerate(lst):
         lst[index] = str(item)
     new_ranges = []
+    prev_item = 0
     for item in lst:
         if not new_ranges:
             new_ranges.append([item])
