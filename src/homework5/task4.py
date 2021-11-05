@@ -59,8 +59,8 @@ else:
 
     for i in range(len(top_films)):
         line_after_film = '  ' + '-' * (68 - len(top250[i]))
-        ratings.append(top250[i] + line_after_film + ' ' + top_films[i][2] + ' : ' +
-                       draw_rating(float(top_films[i][2])))
+        ratings.append(top250[i] + line_after_film + ' ' + top_films[i][2]
+                       + ' : ' + draw_rating(float(top_films[i][2])))
 
     with open('ratings.txt', 'w') as f_ratings:
         for i in range(len(ratings)):
@@ -86,8 +86,8 @@ else:
 
     with open('years.txt', 'w') as f_years:
         for el in list_keys:
-            str_to_write = str(el + ' : ' + str(years_dict[el]) + ' ' +
-                               draw_rating(years_dict[el]) + '\n')
+            str_to_write = str(el + ' : ' + str(years_dict[el]) + ' '
+                               + draw_rating(years_dict[el]) + '\n')
             f_years.write(str_to_write)
 
     print('Файл years.txt успешно записан')
