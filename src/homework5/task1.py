@@ -12,38 +12,36 @@
 import inspect
 from inspect import getmembers
 from inspect import isfunction
+
 import previous_tasks
 
 
-def runner():
-    functions_list = getmembers(previous_tasks, isfunction)
-    func_names_list = []
+def runner(*args):
+    if not args:
+        functions_list = getmembers(previous_tasks, isfunction)
+        func_names_list = []
+        for func in functions_list:
+            func_name = func[0]
+            func_to_call = getattr(previous_tasks, func_name)
+            func_names_list.append(func_to_call)
 
-    for func in functions_list:
-        func_name = func[0]
-        func_to_call = getattr(previous_tasks, func_name)
-        func_names_list.append(func_to_call)
-
-    runner_func_list(func_names_list)
+        runner_func_list(func_names_list)
+    else:
+        for func_name in args:
+            getattr(previous_tasks, func_name)()
 
 
 def runner_func_list(funcs):
     for func in funcs:
         func_to_call = getattr(previous_tasks, func.__name__)
-        runner_func(func_to_call)
+        func_to_call_signature = inspect.signature(func_to_call)
+        params = []
+        if len(func_to_call_signature.parameters) != 0:
+            for _ in func_to_call_signature.parameters:
+                params.append(None)
+        func_to_call(*params)
 
 
-def runner_func(func):
-    func_to_call = getattr(previous_tasks, func.__name__)
-    func_to_call_signature = inspect.signature(func_to_call)
-    params = []
-    if len(func_to_call_signature.parameters) != 0:
-        for par in func_to_call_signature.parameters:
-            params.append(None)
-
-    func_to_call(*params)
-
-
-runner()
-runner_func(previous_tasks.palindrome)
-runner_func_list([previous_tasks.unique_symbols, previous_tasks.fibonacci_numbers])
+# runner()
+# runner('palindrome')
+# runner('palindrome', 'fibonacci_numbers')
