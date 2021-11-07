@@ -11,7 +11,7 @@ with open(r'D:\python\it-academy-autumn-2021\src\homework5\data_hw5\ratings.list
         i += 1
         # determining the required line
         if 'note: for this top 250, only votes from regular voters are considered.' in line:
-                req_line = i
+            req_line = i
         if 28 < i < 279:
             target_list.append(line.strip())
     for el in range(len(target_list)):
@@ -25,7 +25,8 @@ with open(r'D:\python\it-academy-autumn-2021\src\homework5\data_hw5\ratings.list
         TOP250.append(target_list[line][3:-1])
         TOP250[line] = ' '.join(TOP250[line])
 
-    with open(r'D:\python\it-academy-autumn-2021\src\homework5\data_hw5\top250_movies.txt', 'w') as top_movies:
+    with open(r'D:\python\it-academy-autumn-2021\src\homework5\data_hw5\top250_movies.txt',
+              'w') as top_movies:
         i = 1
         for movie in TOP250:
             top_movies.write(str(i) + '.' + ' ' + str(movie) + '\n')
