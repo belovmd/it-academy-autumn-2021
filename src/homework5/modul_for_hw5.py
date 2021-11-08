@@ -1,6 +1,7 @@
 ''' Решения задач из Homework3, преобразованные в функции.
 '''
 
+
 def task1():
     vivod = []
     for element in range(1, 101):
