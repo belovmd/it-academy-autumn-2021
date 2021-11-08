@@ -6,7 +6,7 @@
 def two_in_power(num):
     power = 1
     while power < num:
-        power = power << 1   
+        power = power << 1
     if power - num < num - (power >> 1):
         return f'Ближайшая степень двойки: {power}'
     else:
