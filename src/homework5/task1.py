@@ -13,7 +13,8 @@ def runner(*args):
         func_list = getmembers(homework3_funcs, isfunction)
         for func in func_list:
             func_name = func[0]
-            print(f'результат функции {func_name}:', getattr(homework3_funcs, func_name)(), sep='\n')
+            print(f'результат функции {func_name}:', getattr(homework3_funcs, func_name)(),
+                  sep='\n')
     for func_name in args:
         print(f'результат функции {func_name}:', getattr(homework3_funcs, func_name)(), sep='\n')
 
