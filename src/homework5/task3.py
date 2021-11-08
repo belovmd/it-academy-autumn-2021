@@ -9,12 +9,12 @@
 
 def get_ranges(lst):
     result = []
-    a = b = lst[0]                                           # a and b are range's bounds
+    a = b = lst[0]  # a and b are range's bounds
     for element in lst[1:]:
         if element == b + 1:
-            b = element                                      # range grows
-        else:                                                # range ended
-            result.append(str(a) if a == b else f'{a}-{b}')  # is a single or a range
-            a = b = element                                  # start again with a single
-    result.append(str(a) if a == b else f'{a}-{b}')          # case for last single/range
+            b = element
+        else:
+            result.append(str(a) if a == b else f'{a}-{b}')
+            a = b = element
+    result.append(str(a) if a == b else f'{a}-{b}')
     return result
