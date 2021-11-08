@@ -6,7 +6,8 @@
 '''
 
 
-from inspect import getmembers, isfunction
+from inspect import getmembers
+from inspect import isfunction
 import modul_for_hw5
 
 
