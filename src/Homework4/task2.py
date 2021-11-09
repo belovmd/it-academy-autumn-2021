@@ -15,7 +15,7 @@
 Russia Moscow Petersburg Novgorod Kaluga
 France Brest Paris
 Ukraine Kiev Donetsk Odessa
-Belarus Minsk Brest	
+Belarus Minsk Brest
 3
 Odessa
 Moscow
@@ -26,9 +26,9 @@ Russia
 France Belarus
 '''
 
-n = int(input())     
-dct = {}                                 
-for _ in range(n):           
+n = int(input())
+dct = {}
+for _ in range(n):
     country, *cities = input().split()
     for city in cities:
         if city in dct:
@@ -37,4 +37,4 @@ for _ in range(n):
             for _ in range(m):
                 print(dct[input()])
         else:
-            dct[city] = country            
+            dct[city] = country
