@@ -26,15 +26,15 @@ Russia
 France Belarus
 '''
 
-n = int(input())
-dct = {}
-for _ in range(n):
+n = int(input())     
+dct = {}                                 
+for _ in range(n):           
     country, *cities = input().split()
     for city in cities:
         if city in dct:
             dct[city] = dct[city] + ' ' + country
+            m = int(input())
+            for _ in range(m):
+                print(dct[input()])
         else:
-            dct[city] = country
-m = int(input())
-for _ in range(m):
-    print(dct[input()])
+            dct[city] = country  

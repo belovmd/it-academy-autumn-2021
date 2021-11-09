@@ -25,23 +25,21 @@ French
 1
 Russian
 5
-Belarusian
 English
+Russian
 French
 Italian
-Russian
+Belarusian
 '''
 
 intersection = set()
 all_ = set()
-n = int(input())
-for element in range(n):
-    m = int(input())
-    a = {input() for j in range(m)}
-    all_ |= a
-    if element == 1:
-        intersection |= a
-    else:
-        intersection &= a
-print(len(intersection), '\n', ' '.join(intersection))
-print(len(all_), '\n', ' '.join(all_))
+dct = {}
+for element in range(int(input('Количество школьников: '))):
+    dct[element] = {input() for j in range(int(input('Количество языков, которые знает школьник: ')))}
+intersection = set.intersection(*dct.values())
+all_ = set.union(*dct.values())
+print(len(intersection))      # языки, которые знают все школьники
+print('\n'.join(intersection))
+print(len(all_))               # языки, которые знает хотя бы один из школьников
+print('\n'.join(all_))
